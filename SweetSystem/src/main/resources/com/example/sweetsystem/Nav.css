@@ -1,5 +1,6 @@
 .ParentPane{
     -fx-background-color: #303138;
+    -fx-border-radius: 20px;
 }
 .close-btn{
     -fx-background-color: transparent;
@@ -12,4 +13,11 @@
 }
 .min-btn:hover{
     -fx-background-color: #171717;
+}
+.Nav{
+    -fx-background-color: #80a3ff;
+
+}
+.label{
+    -fx-text-fill:#ADADADA;
 }

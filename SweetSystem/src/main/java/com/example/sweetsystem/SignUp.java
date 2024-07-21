@@ -14,6 +14,7 @@ private AnchorPane ParentPane;
     public void switchtoLogin() throws IOException {
     AnchorPane root=FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Login.fxml")));
     ParentPane.getChildren().setAll(root);
+    Index.header.setText("Login Page");
     }
 
 
