@@ -8,9 +8,11 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class HelloApplication extends Application {
+
     public static Stage stage=null;
     @Override
     public void start(Stage stage) throws IOException {

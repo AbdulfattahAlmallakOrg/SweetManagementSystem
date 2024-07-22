@@ -1,0 +1,14 @@
+.alert-icon{
+    -fx-background-color: red;
+
+    -fx-background-radius:  10px 0px 0px 10px;
+}
+.text{
+    -fx-background-color: #80a3ff;
+}
+
+.alert2-icon{
+    -fx-background-color: green;
+
+    -fx-background-radius:  10px 0px 0px 10px;
+}

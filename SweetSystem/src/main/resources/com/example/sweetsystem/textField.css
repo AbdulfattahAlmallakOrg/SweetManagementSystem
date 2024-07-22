@@ -1,0 +1,10 @@
+.icon{
+    -fx-background-color: #80a3ff;
+    -fx-border-radius: 10px 0px 0px 10px;
+    -fx-background-radius: 10px 0px 0px 10px;
+}
+.field{
+    -fx-background-radius: 0px 10px 10px 0px;
+    -fx-border-radius: 10px 10px 10px 10px;
+
+}

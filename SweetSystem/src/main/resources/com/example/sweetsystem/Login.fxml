@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="parentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Login">
+<AnchorPane fx:id="parentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1024.0" styleClass="ParentPane" stylesheets="@Nav.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Login">
    <children>
-      <HBox alignment="CENTER" layoutX="429.0" layoutY="428.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="304.0">
+      <HBox alignment="CENTER" layoutX="402.0" layoutY="446.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="304.0">
          <children>
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Dont have account?  " HBox.hgrow="ALWAYS">
                <font>
@@ -22,5 +25,37 @@
             </Button>
          </children>
       </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="429.0" layoutY="143.0" prefHeight="50.0" prefWidth="250.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="icon" stylesheets="@textField.css">
+               <graphic>
+                  <FontAwesomeIcon glyphName="USER" glyphStyle="-fx-fill:white" size="2.3em" />
+               </graphic>
+            </Label>
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" promptText="Username" styleClass="field" stylesheets="@textField.css" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="429.0" layoutY="244.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="250.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="icon" stylesheets="@textField.css">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="LOCK" size="2.3em" />
+               </graphic>
+            </Label>
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" promptText="Password" styleClass="field" stylesheets="@textField.css" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+         </children></HBox>
+      <Button contentDisplay="CENTER" layoutX="479.0" layoutY="333.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" styleClass="secondary-btn" stylesheets="@Buttons.css" text="Login">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
