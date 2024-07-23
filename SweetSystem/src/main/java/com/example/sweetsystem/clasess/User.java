@@ -6,17 +6,22 @@ public class User {
     private String userName;
     private String email;
     private String password;
+    private String type;
 
-
-    public User(String userName, String email, String password){
+    public User(String userName, String email, String password,String type){
         this.email=email;
         this.userName=userName;
         this.password=password;
+        this.type=type;
 
     }
+
+
 //getters
 
-
+    public String getType(){
+        return type;
+    }
     public String getEmail() {
         return email;
     }
@@ -29,6 +34,11 @@ public class User {
         return userName;
     }
 //setters
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }

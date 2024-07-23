@@ -1,5 +1,6 @@
 package com.example.sweetsystem;
 
+import com.example.sweetsystem.clasess.Client;
 import com.example.sweetsystem.clasess.User;
 import com.example.sweetsystem.clasess.UsersList;
 import javafx.fxml.FXML;
@@ -40,7 +41,7 @@ private HBox alert3;
     }
     private void makeUser(){
     if(UsersList.search(usernamef.getText())==-1) {
-        User user = new User(usernamef.getText(), emailf.getText(), passwordf.getText());
+        User user = new Client(usernamef.getText(), emailf.getText(), passwordf.getText(),"Client");
         UsersList.users.add(user);
         alert2.setVisible(true);
         UsersList.printAll();

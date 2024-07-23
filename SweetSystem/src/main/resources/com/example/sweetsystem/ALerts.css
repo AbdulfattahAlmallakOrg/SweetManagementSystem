@@ -12,3 +12,7 @@
 
     -fx-background-radius:  10px 0px 0px 10px;
 }
+.close{
+    -fx-background-radius: 50%;
+    -fx-background-color: red;
+}

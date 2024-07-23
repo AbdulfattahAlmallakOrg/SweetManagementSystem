@@ -32,14 +32,21 @@ private Label alertMessage;
 private boolean checkInputs(){
     return !password.getText().isEmpty()&&!username.getText().isEmpty();
 }
-public void loginBtnClick(){
+public void loginBtnClick() throws IOException {
     if(checkInputs()) {
         int index = UsersList.search(username.getText());
         if (index != -1) {
             User user=UsersList.users.get(index);
             if(user.getPassword().equals(password.getText())){
                 UsersList.currentUser=user;
-                goToPrimaryPage();
+              if(UsersList.currentUser.getType().equals("Client")){
+                  goToPrimaryPage("Main");
+              } else if (UsersList.currentUser.getType().equals("Admin")) {
+                  goToPrimaryPage("Admin");
+              }
+              else{
+                  goToPrimaryPage("Sup");
+              }
             }
             else{
                 alertMessage.setText("Password is not correct");
@@ -58,8 +65,9 @@ public void loginBtnClick(){
 
 }
 
-    private void goToPrimaryPage() {
-
+    private void goToPrimaryPage(String page) throws IOException {
+    AnchorPane root =FXMLLoader.load(Objects.requireNonNull(getClass().getResource(page+".fxml")));
+        parentPane.getChildren().setAll(root);
     }
 
     public void closeAlert(){
