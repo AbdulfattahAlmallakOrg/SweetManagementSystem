@@ -1,5 +1,7 @@
 package com.example.sweetsystem;
 
+import com.example.sweetsystem.clasess.User;
+import com.example.sweetsystem.clasess.UsersList;
 import javafx.fxml.FXML;
 
 import javafx.fxml.FXMLLoader;

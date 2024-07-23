@@ -1,4 +1,6 @@
-package com.example.sweetsystem;
+package com.example.sweetsystem.clasess;
+
+import com.example.sweetsystem.clasess.User;
 
 import java.util.ArrayList;
 

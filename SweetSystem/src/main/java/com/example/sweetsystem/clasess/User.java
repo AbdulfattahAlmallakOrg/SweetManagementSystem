@@ -1,4 +1,4 @@
-package com.example.sweetsystem;
+package com.example.sweetsystem.clasess;
 
 import java.util.ArrayList;
 
@@ -7,10 +7,12 @@ public class User {
     private String email;
     private String password;
 
-    User(String userName,String email ,String password){
+
+    public User(String userName, String email, String password){
         this.email=email;
         this.userName=userName;
         this.password=password;
+
     }
 //getters
 
