@@ -16,7 +16,7 @@ public class UsersList {
     public static void printAll(){
         System.out.println("***********************************************************");
         for(User user:users){
-            System.out.println(user.getUserName()+" "+user.getEmail()+" "+user.getPassword());
+            System.out.println(user.getUserName()+" "+user.getPassword()+" "+user.getEmail());
         }
         System.out.println("***********************************************************");
     }
