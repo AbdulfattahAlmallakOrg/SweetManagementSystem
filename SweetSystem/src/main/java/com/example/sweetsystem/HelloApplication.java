@@ -22,6 +22,7 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         HelloApplication.stage =stage;
         stage.show();
+        //osamas
     }
 
     public static void main(String[] args) {
