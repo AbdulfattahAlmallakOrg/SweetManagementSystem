@@ -7,14 +7,29 @@ import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 import java.util.Objects;
 
-public class Main {
+public class Main  {
 @FXML
 private AnchorPane ParentPane;
+
+
 
 
     public void goToManageAccount() throws IOException {
         AnchorPane root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ManageAccount.fxml")));
         ParentPane.getChildren().setAll(root);
+        Index.header.setText("Profile page");
+
     }
+    public void goToLoginPage() throws IOException {
+        AnchorPane root=FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Login.fxml")));
+        ParentPane.getChildren().setAll(root);
+        Index.header.setText("Login page");
+
+    }
+    public void addrecipecs() throws IOException {
+        AnchorPane root=FXMLLoader.load(Objects.requireNonNull(getClass().getResource("addUserPage.fxml")));
+        ParentPane.getChildren().setAll(root);
+    }
+
 
 }

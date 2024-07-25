@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="620.0" styleClass="Card-body" stylesheets="@Card.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.RecipesCardController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="172.0" styleClass="image" stylesheets="@Card.css">
+         <children>
+            <ImageView fx:id="cakeImage" fitHeight="200.0" fitWidth="162.0" layoutX="5.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+               <image>
+                  <Image url="@Images/Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="250.0">
+         <children>
+            <Label fx:id="cakeName" contentDisplay="RIGHT" prefHeight="49.0" prefWidth="254.0" text="Title" textFill="WHITE">
+               <font>
+                  <Font name="Wingdings 2" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</HBox>

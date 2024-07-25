@@ -3,7 +3,9 @@ package com.example.sweetsystem.clasess;
 import java.util.ArrayList;
 
 public class User {
+    public static int count=0;
     private String userName;
+    private int id;
     private String email;
     private String password;
     private String type;
@@ -13,6 +15,9 @@ public class User {
         this.userName=userName;
         this.password=password;
         this.type=type;
+        count++;
+        this.id=count;
+
 
     }
 
@@ -52,4 +57,11 @@ public class User {
     }
 
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

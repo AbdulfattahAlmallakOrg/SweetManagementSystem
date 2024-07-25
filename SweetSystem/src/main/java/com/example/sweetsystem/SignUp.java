@@ -41,7 +41,7 @@ private HBox alert3;
     }
     private void makeUser(){
     if(UsersList.search(usernamef.getText())==-1) {
-        User user = new Client(usernamef.getText(), emailf.getText(), passwordf.getText(),"Client");
+        Client user = new Client(usernamef.getText(), emailf.getText(), passwordf.getText(),"Client");
         UsersList.users.add(user);
         alert2.setVisible(true);
         UsersList.printAll();

@@ -28,7 +28,7 @@
                   </Label>
                </graphic>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="rounded" stylesheets="@RoundedBtn.css" VBox.vgrow="ALWAYS">
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addrecipecs" prefHeight="60.0" prefWidth="60.0" styleClass="rounded" stylesheets="@RoundedBtn.css" VBox.vgrow="ALWAYS">
                <graphic>
                   <Label>
                      <graphic>
@@ -37,7 +37,7 @@
                   </Label>
                </graphic>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="rounded" stylesheets="@RoundedBtn.css">
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="60.0" prefWidth="60.0" styleClass="rounded" stylesheets="@RoundedBtn.css">
                <graphic>
                   <Label>
                      <graphic>

@@ -68,6 +68,8 @@ public void loginBtnClick() throws IOException {
     private void goToPrimaryPage(String page) throws IOException {
     AnchorPane root =FXMLLoader.load(Objects.requireNonNull(getClass().getResource(page+".fxml")));
         parentPane.getChildren().setAll(root);
+        Index.header.setText("Sweet Page");
+
     }
 
     public void closeAlert(){
@@ -80,5 +82,6 @@ public void loginBtnClick() throws IOException {
         parentPane.getChildren().setAll(root);
         Index.header.setText("SignUp Page");
    }
+
 
 }

@@ -1,0 +1,11 @@
+.Card-body{
+    -fx-background-radius: 10px;
+    -fx-background-color:#707281;
+    -fx-border-radius: 10px;
+}
+
+.image{
+    -fx-background-radius: 20px; /* Adjust for rounded corners */
+    -fx-border-radius: 20px;     /* Adjust for rounded corners */
+    -fx-background-color: transparent;
+}
