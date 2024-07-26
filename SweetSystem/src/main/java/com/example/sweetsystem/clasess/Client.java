@@ -18,5 +18,6 @@ public class Client extends User {
     }
     public void addRecipe(Recipe r){
         Recipes.add(r);
+        System.out.println( Recipes.get(0).getImage());
     }
 }

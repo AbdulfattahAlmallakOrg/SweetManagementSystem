@@ -7,20 +7,29 @@ public class Recipe {
     public static int id;
     private String Name;
     private String Image;
-    private ArrayList<String> Needs=new ArrayList<String>();
+    private String Description;
     private ArrayList<Comment> Comments=new ArrayList<Comment>();
 
     private ArrayList<String> allergy=new ArrayList<String>(3);
 
-    public Recipe(String name,String url,String Needs){
+    public Recipe(String name,String url,String description,String needs,String allergy){
         this.Name=name;
         this.Image=url;
         id++;
-        fillNeeds();
+
+        fillAllergy(allergy);
+        this.Description=description+"\n The needs:"+needs;
     }
 
-    private void fillNeeds() {
+    private void fillAllergy(String a) {
+        String []arr=a.split(",");
+
+        this.allergy.add(arr[0]);
+        this.allergy.add(arr[1]);
+        this.allergy.add(arr[2]);
+
     }
+
 
     public String getName() {
         return Name;
@@ -38,13 +47,9 @@ public class Recipe {
         Image = image;
     }
 
-    public ArrayList<String> getNeeds() {
-        return Needs;
-    }
 
-    public void setNeeds(ArrayList<String> needs) {
-        Needs = needs;
-    }
+
+
 
     public ArrayList<Comment> getComments() {
         return Comments;
@@ -65,5 +70,21 @@ public class Recipe {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public ArrayList<String> getAllergy() {
+        return allergy;
+    }
+
+    public void setAllergy(ArrayList<String> allergy) {
+        this.allergy = allergy;
+    }
+
+    public String getDescription() {
+        return Description;
+    }
+
+    public void setDescription(String description) {
+        Description = description;
     }
 }

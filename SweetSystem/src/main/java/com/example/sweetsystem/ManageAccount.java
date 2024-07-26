@@ -158,14 +158,7 @@ private Label nameHeader;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Recipe r = new Recipe("fff","C:/Users/osama/Desktop/draw_svg20210602-26376-1v1hun8.svg.png");
-        Client c=(Client)UsersList.currentUser;
-        c.addRecipe(r);
-        r= new Recipe("fff","C:/Users/osama/Desktop/draw_svg20210602-26376-1v1hun8.svg.png");
-        c.addRecipe(r);
-        c.addRecipe(r);
-        c.addRecipe(r);
-        c.addRecipe(r);
+
         setRespies();
         setName();
     }
@@ -174,16 +167,11 @@ private Label nameHeader;
         Client client=(Client)UsersList.currentUser;
         ArrayList<Recipe>r=client.getRecipes();
         try {
-            System.out.println("d");
         for(int i=0;i<r.size();i++){
             FXMLLoader fx=new FXMLLoader();
-            System.out.println("dd");
             fx.setLocation(getClass().getResource("RecipesCard.fxml"));
-            System.out.println("ddd");
-
             HBox card=fx.load();
             RecipesCardController controller=fx.getController();
-
             controller.setData(r.get(i));
             recipesCont.getChildren().add(card);
             }

@@ -17,11 +17,18 @@ public class RecipesCardController {
 
     @FXML
     private Label cakeName;
+    @FXML
+    private Label description;
     public void setData(Recipe r) throws FileNotFoundException {
         FileInputStream input = new FileInputStream(r.getImage());
         Image img = new Image(input);
         cakeImage.setImage(img);
-    cakeName.setText(r.getName());
+        cakeName.setText(r.getName());
+        description.setText(r.getDescription());
+
 
     }
 }
+
+
+
