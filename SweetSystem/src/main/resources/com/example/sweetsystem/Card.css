@@ -1,11 +1,23 @@
 .Card-body{
-    -fx-background-radius: 10px;
+    -fx-background-radius: 15px;
     -fx-background-color:#707281;
-    -fx-border-radius: 10px;
+    -fx-border-radius: 15px;
 }
 
 .image{
     -fx-background-radius: 20px; /* Adjust for rounded corners */
     -fx-border-radius: 20px;     /* Adjust for rounded corners */
     -fx-background-color: transparent;
+}
+
+.tag{
+    -fx-background-color: #80a3ff;
+    -fx-text-fill: white;
+    -fx-background-radius: 16px ;
+    -fx-border-radius: 16px;
+}
+.text-areaa{
+    -fx-control-inner-background: #707281; /* Light gray background */
+    -fx-text-fill: snow;
+    -fx-background-color: #707281;
 }

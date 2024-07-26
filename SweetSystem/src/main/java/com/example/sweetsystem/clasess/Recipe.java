@@ -4,16 +4,24 @@ import java.util.ArrayList;
 
 public class Recipe {
 
-    private int id;
+    public static int id;
     private String Name;
     private String Image;
     private ArrayList<String> Needs=new ArrayList<String>();
     private ArrayList<Comment> Comments=new ArrayList<Comment>();
 
-    public Recipe(String name,String url){
+    private ArrayList<String> allergy=new ArrayList<String>(3);
+
+    public Recipe(String name,String url,String Needs){
         this.Name=name;
         this.Image=url;
+        id++;
+        fillNeeds();
     }
+
+    private void fillNeeds() {
+    }
+
     public String getName() {
         return Name;
     }
@@ -45,7 +53,12 @@ public class Recipe {
     public void setComments(ArrayList<Comment> comments) {
         Comments = comments;
     }
-
+    public Comment getComment(int x){
+        return Comments.get(x);
+    }
+    public void addComment(Comment c){
+        Comments.add(c);
+    }
     public int getId() {
         return id;
     }
