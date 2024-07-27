@@ -50,12 +50,12 @@
                   <Font name="Artifakt Element Black Italic" size="14.0" />
                </font>
             </Label>
-            <TextArea cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="55.0" prefWidth="129.0" promptText="Your Comment" scaleShape="false" stylesheets="@Card.css" wrapText="true" />
-            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="109.0" styleClass="secondary-btn" stylesheets="@Buttons.css" text="Post Comment">
+            <TextArea fx:id="commentField" cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="55.0" prefWidth="129.0" promptText="Your Comment" scaleShape="false" stylesheets="@Card.css" wrapText="true" />
+            <Button mnemonicParsing="false" onAction="#commentBtn" prefHeight="33.0" prefWidth="109.0" styleClass="secondary-btn" stylesheets="@Buttons.css" text="Post Comment">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-            <Label alignment="CENTER" prefHeight="42.0" prefWidth="139.0" text="View All 9 Comments" textFill="WHITE" underline="true">
+            <Label fx:id="commentText" alignment="CENTER" prefHeight="42.0" prefWidth="139.0" text="View All 9 Comments" textFill="WHITE" underline="true">
                <font>
                   <Font size="11.0" />
                </font>

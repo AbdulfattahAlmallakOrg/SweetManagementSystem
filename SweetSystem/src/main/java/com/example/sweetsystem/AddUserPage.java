@@ -2,6 +2,7 @@ package com.example.sweetsystem;
 
 import com.example.sweetsystem.clasess.Client;
 import com.example.sweetsystem.clasess.Recipe;
+import com.example.sweetsystem.clasess.RecipesList;
 import com.example.sweetsystem.clasess.UsersList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -64,13 +65,11 @@ FileChooser chooser=new FileChooser();
         Recipe r=new Recipe(RName.getText(),ImagePath,RDescription.getText(),Rneed.getText(),RAllerg.getText());
         Client c=(Client) UsersList.currentUser;
         c.addRecipe(r);
+        RecipesList.Recipes.add(r);
     }
 
     private boolean chekAllDataFill() {
-        if(Rneed.getText().isEmpty()||ImagePath.isEmpty()||RAllerg.getText().isEmpty()||RDescription.getText().isEmpty()||RName.getText().isEmpty()){
-            return false;
-        }
-        return true;
+        return !Rneed.getText().isEmpty() && !ImagePath.isEmpty()  && !RDescription.getText().isEmpty() && !RName.getText().isEmpty();
     }
 
     @Override

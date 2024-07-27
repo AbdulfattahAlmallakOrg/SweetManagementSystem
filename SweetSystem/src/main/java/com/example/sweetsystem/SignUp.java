@@ -11,6 +11,8 @@ import javafx.scene.layout.HBox;
 
 import java.io.IOException;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SignUp {
     @FXML
@@ -39,6 +41,15 @@ private HBox alert3;
     private boolean checkAllInput(){
     return !emailf.getText().isEmpty()&&!usernamef.getText().isEmpty()&&!passwordf.getText().isEmpty();
     }
+    public static boolean isValidEmail(String email) {
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@" + "(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+        Pattern pattern = Pattern.compile(emailRegex);
+        if (email == null) {
+            return false;
+        }
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
+    }
     private void makeUser(){
     if(UsersList.search(usernamef.getText())==-1) {
         Client user = new Client(usernamef.getText(), emailf.getText(), passwordf.getText(),"Client");
@@ -53,7 +64,7 @@ private HBox alert3;
     }
     }
 public void signupBtn(){
-    if(checkAllInput()){
+    if(checkAllInput()&&isValidEmail(emailf.getText())){
         makeUser();
     }
     else{

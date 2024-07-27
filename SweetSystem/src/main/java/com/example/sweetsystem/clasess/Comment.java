@@ -4,7 +4,10 @@ public class Comment {
     private String WriterName;
     private String Message;
 
-
+public Comment(String person,String message){
+    this.WriterName=person;
+    this.Message=message;
+}
     public String getMessage() {
         return Message;
     }

@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 public class Recipe {
 
-    public static int id;
+    private int id;
+    public static int count=0;
     private String Name;
     private String Image;
     private String Description;
@@ -15,19 +16,32 @@ public class Recipe {
     public Recipe(String name,String url,String description,String needs,String allergy){
         this.Name=name;
         this.Image=url;
-        id++;
-
+        fillId();
         fillAllergy(allergy);
         this.Description=description+"\n The needs:"+needs;
     }
 
+    private void fillId() {
+        count ++;
+        id=count;
+    }
+
     private void fillAllergy(String a) {
         String []arr=a.split(",");
+        if(1==arr.length){
+            this.allergy.add(arr[0]);
 
-        this.allergy.add(arr[0]);
-        this.allergy.add(arr[1]);
-        this.allergy.add(arr[2]);
+        }
+        else if(2==arr.length){
+            this.allergy.add(arr[0]);
+            this.allergy.add(arr[1]);
 
+        }
+        else if(3==arr.length) {
+            this.allergy.add(arr[0]);
+            this.allergy.add(arr[1]);
+            this.allergy.add(arr[2]);
+        }
     }
 
 
