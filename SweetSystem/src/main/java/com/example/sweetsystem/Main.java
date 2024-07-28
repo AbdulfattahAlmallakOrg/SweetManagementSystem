@@ -1,14 +1,12 @@
 package com.example.sweetsystem;
 
-import com.example.sweetsystem.clasess.Client;
 import com.example.sweetsystem.clasess.Recipe;
 import com.example.sweetsystem.clasess.RecipesList;
-import com.example.sweetsystem.clasess.UsersList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -32,10 +30,17 @@ private HBox topLeft;
 private HBox topRight;
 @FXML
 private ScrollPane postsScroll;
+
 @FXML
-private  VBox commentPane;
-
-
+private Pane filterPane;
+@FXML
+private TextField allergeField;
+@FXML
+private TextField searchField;
+@FXML
+private ScrollPane commentScroll;
+@FXML
+private VBox commentCont;
 
 
     public void toggleBtns(HBox box1,HBox box2){
@@ -93,7 +98,7 @@ private  VBox commentPane;
                 RecipesCardController controller=fx.getController();
 
 
-                controller.setData(recipes.get(i));
+                controller.setData(recipes.get(i),commentCont,commentScroll);
 
                 recipesCont.getChildren().add(card);
             }
@@ -101,6 +106,69 @@ private  VBox commentPane;
         catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void openFilter(){
+        filterPane.setVisible(true);
+        allergeField.clear();
+        searchField.clear();
+
+    }
+
+    public void closeFilter(){
+        if(allergeField.getText().isEmpty()&&searchField.getText().isEmpty()){
+            recipesCont.getChildren().clear();
+            setResipes(RecipesList.Recipes);
+        }
+        filterPane.setVisible(false);
+        allergeField.clear();
+        searchField.clear();
+
+    }
+
+    public void searchButton(){
+
+        ArrayList<Recipe> answer=new ArrayList<Recipe>();
+        ArrayList<Recipe> recipe=RecipesList.Recipes;
+        if(searchField.getText().isEmpty()&&!allergeField.getText().isEmpty()){
+            answer=searchByAllergy(recipe);
+        }
+        else if(!searchField.getText().isEmpty()&&allergeField.getText().isEmpty()){
+            answer=searchByName(recipe);
+        }
+        else{
+            answer=searchByAllergy(recipe);
+            answer=searchByName(answer);
+        }
+        clearRecipes();
+        setResipes(answer);
+        closeFilter();
+    }
+
+    private ArrayList<Recipe> searchByName(ArrayList<Recipe> recipe) {
+        ArrayList<Recipe> answer=new ArrayList<Recipe>();
+        for(int i=0;i<recipe.size();i++){
+            if(recipe.get(i).getName().equals(searchField.getText())){
+                answer.add(recipe.get(i));
+            }
+        }
+        return answer;
+    }
+
+    private ArrayList<Recipe> searchByAllergy(ArrayList<Recipe> recipe) {
+        ArrayList<Recipe> answer=new ArrayList<Recipe>();
+
+        String allergy=allergeField.getText();
+        for(int i=0;i<recipe.size();i++){
+            if(recipe.get(i).findAllerge(allergy)){
+                answer.add(recipe.get(i));
+            }
+        }
+        return answer;
+    }
+
+    private void clearRecipes() {
+        recipesCont.getChildren().clear();
     }
 
 }

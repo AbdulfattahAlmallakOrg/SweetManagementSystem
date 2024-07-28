@@ -101,4 +101,12 @@ public class Recipe {
     public void setDescription(String description) {
         Description = description;
     }
+    public boolean findAllerge(String a){
+        for(int i=0;i<allergy.size();i++){
+            if(allergy.get(i).equals(a)){
+                return true;
+            }
+        }
+        return false;
+    }
 }

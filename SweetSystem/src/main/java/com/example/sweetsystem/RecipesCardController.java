@@ -5,15 +5,16 @@ import com.example.sweetsystem.clasess.Recipe;
 import com.example.sweetsystem.clasess.UsersList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class RecipesCardController {
 
@@ -34,8 +35,14 @@ public class RecipesCardController {
     @FXML
     private TextArea commentField;
     private Recipe recipe;
-    public void setData(Recipe r) throws FileNotFoundException {
+    private VBox commentBox;
+    private ScrollPane scroll;
+    public void setData(Recipe r, VBox vBox, ScrollPane scrollPane) throws FileNotFoundException {
         recipe=r;
+        commentBox=vBox;
+        scroll=scrollPane;
+        System.out.println(commentBox);
+        System.out.println(scroll);
         cakeName.setText(r.getName());
         description.setText(r.getDescription());
         fillImage(r);
@@ -92,6 +99,29 @@ public class RecipesCardController {
         }
         fillComment(recipe);
     }
+    public void showComents(){
+        scroll.setVisible(true);
+        clearBox();
+        HBox commentElementBox;
+        Label userName;
+        Label comment;
+        ArrayList<Comment>c=recipe.getComments();
+        for(int i=0;i<c.size();i++){
+        userName=new Label(c.get(i).getWriterName());
+        comment=new Label(c.get(i).getMessage());
+            commentElementBox=new HBox();
+            commentElementBox.getChildren().add(userName);
+            commentElementBox.getChildren().add(comment);
+            commentBox.getChildren().add(commentElementBox);
+        }
+
+    }
+
+    private void clearBox() {
+        commentBox.getChildren().clear();
+    }
+
+
 
 
 }

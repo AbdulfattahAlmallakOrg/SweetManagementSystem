@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -172,7 +173,7 @@ private Label nameHeader;
             fx.setLocation(getClass().getResource("RecipesCard.fxml"));
             HBox card=fx.load();
             RecipesCardController controller=fx.getController();
-            controller.setData(r.get(i));
+            controller.setData(r.get(i),new VBox(),new ScrollPane());
             recipesCont.getChildren().add(card);
             }
         }

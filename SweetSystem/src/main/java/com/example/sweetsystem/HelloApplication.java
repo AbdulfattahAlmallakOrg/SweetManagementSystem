@@ -21,9 +21,7 @@ public class HelloApplication extends Application {
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
         HelloApplication.stage =stage;
-
         stage.show();
-        //osamas
     }
 
     public static void main(String[] args) {
