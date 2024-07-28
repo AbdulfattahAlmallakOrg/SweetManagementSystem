@@ -43,7 +43,7 @@
       </Pane>
       <HBox fx:id="checkAlert" layoutX="774.0" layoutY="461.0" prefHeight="50.0" prefWidth="250.0" visible="false">
          <children>
-            <Label fx:id="checkLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="alert2-icon" stylesheets="@ALerts.css">
+            <Label fx:id="checkLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeAlertS" prefHeight="50.0" prefWidth="50.0" styleClass="alert2-icon" stylesheets="@ALerts.css">
                <graphic>
                   <FontAwesomeIcon glyphName="CHECK" glyphStyle="-fx-fill:white" size="2.3em" />
                </graphic>
@@ -57,7 +57,7 @@
       </HBox>
       <HBox fx:id="closeAlert" layoutX="774.0" layoutY="461.0" prefHeight="50.0" prefWidth="250.0" visible="false">
          <children>
-            <Label fx:id="closeLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="alert-icon" stylesheets="@ALerts.css">
+            <Label fx:id="closeLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeAlertF" prefHeight="50.0" prefWidth="50.0" styleClass="alert-icon" stylesheets="@ALerts.css">
                <graphic>
                   <FontAwesomeIcon glyphName="CLOSE" glyphStyle="-fx-fill:white" size="2.3em" />
                </graphic>

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ParentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Main">
+<AnchorPane fx:id="ParentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1024.0" styleClass="ParentPane" stylesheets="@Nav.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Main">
    <children>
       <VBox alignment="CENTER" layoutX="944.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="80.0" spacing="30.0">
          <children>
@@ -54,7 +54,7 @@
       </VBox>
       <HBox layoutX="234.0" layoutY="14.0" prefHeight="68.0" prefWidth="555.0">
          <children>
-            <HBox fx:id="topLeft" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="top-bar-left" stylesheets="@Nav.css" HBox.hgrow="ALWAYS">
+            <HBox fx:id="topLeft" alignment="CENTER" onMouseClicked="#showPostsBox" prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 30px 0px  0px 30px;" styleClass="top-bar-selected" stylesheets="@Nav.css" HBox.hgrow="ALWAYS">
                <children>
                   <Label alignment="CENTER" prefHeight="45.0" prefWidth="85.0" text="Posts" textFill="WHITE">
                      <font>
@@ -66,7 +66,7 @@
                   </Label>
                </children>
             </HBox>
-            <HBox fx:id="topRight" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="top-bar-right" stylesheets="@Nav.css" HBox.hgrow="ALWAYS">
+            <HBox fx:id="topRight" alignment="CENTER" onMouseClicked="#showProductBox" prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 0px 30px  30px 0px;" styleClass="top-bar" stylesheets="@Nav.css" HBox.hgrow="ALWAYS">
                <children>
                   <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="134.0" text="Products" textFill="WHITE">
                      <font>
@@ -80,10 +80,11 @@
             </HBox>
          </children>
       </HBox>
-      <ScrollPane layoutX="163.0" layoutY="89.0" prefHeight="463.0" prefWidth="693.0">
+      <ScrollPane fx:id="postsScroll" layoutX="163.0" layoutY="89.0" prefHeight="463.0" prefWidth="707.0" style="-fx-background-color: #303138;" styleClass="ParentPane" stylesheets="@Nav.css">
          <content>
-            <VBox fx:id="recipesCont" prefHeight="200.0" prefWidth="690.0" spacing="10.0" />
+            <VBox fx:id="recipesCont" prefHeight="461.0" prefWidth="690.0" spacing="10.0" styleClass="ParentPane" stylesheets="@Nav.css" />
          </content>
       </ScrollPane>
+      <VBox fx:id="CommentBox" prefHeight="365.0" prefWidth="365.0" style="-fx-background-color: red;" visible="false" />
    </children>
 </AnchorPane>

@@ -57,6 +57,7 @@ private HBox alert3;
         alert2.setVisible(true);
         UsersList.printAll();
         clearInputs();
+
     }
     else{
         alert3.setVisible(true);

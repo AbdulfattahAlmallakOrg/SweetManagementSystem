@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -84,15 +85,15 @@ public class RecipesCardController {
         if(!commentField.getText().isEmpty()){
             Comment c=new Comment(UsersList.currentUser.getUserName(),commentField.getText());
             recipe.addComment(c);
-            for(int i=0;i<recipe.getComments().size();i++){
-                System.out.println(recipe.getComment(i).getMessage()+" "+recipe.getComment(i).getWriterName());
-            }
+            commentField.clear();
         }
         else{
 
         }
         fillComment(recipe);
     }
+
+
 }
 
 

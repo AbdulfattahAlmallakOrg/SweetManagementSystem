@@ -1,5 +1,8 @@
 package com.example.sweetsystem;
 
+import com.example.sweetsystem.clasess.Client;
+import com.example.sweetsystem.clasess.User;
+import com.example.sweetsystem.clasess.UsersList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -24,6 +27,10 @@ public class Index implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        Client c=new Client("osama","osama1111222@gmail.com","1","Client");
+        User c2=new User("Waleed","ex@gmail.com","1","Admin");
+        UsersList.users.add(c);
+        UsersList.users.add(c2);
         header=PageName;
         pageTitel("Main Page");
 

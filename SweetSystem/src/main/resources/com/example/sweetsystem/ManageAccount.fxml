@@ -127,7 +127,7 @@
       </Label>
       <ScrollPane layoutX="16.0" layoutY="180.0" prefHeight="370.0" prefWidth="698.0" styleClass="ParentPane" stylesheets="@Nav.css">
          <content>
-            <VBox fx:id="recipesCont" prefHeight="367.0" prefWidth="693.0" spacing="10.0" styleClass="ParentPane" stylesheets="@Nav.css" />
+            <VBox fx:id="recipesCont" prefHeight="367.0" prefWidth="695.0" spacing="10.0" styleClass="ParentPane" stylesheets="@Nav.css" />
          </content>
       </ScrollPane>
    </children>
