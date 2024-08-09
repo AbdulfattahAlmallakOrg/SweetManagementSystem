@@ -1,0 +1,73 @@
+package com.example.sweetsystem;
+
+import java.util.HashMap;
+
+public class Product {
+    private static int idCounter = 0;
+    private final int id;
+    private final int ownerID;
+    private String name;
+    private String description;
+    private double price;
+    private int quantity;
+    private static final HashMap<Integer, Product> map = new HashMap<>();
+
+    public Product(String name, String description, double price, int quantity, int ownerID) {
+        this.id = idCounter;
+        idCounter++;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.quantity = quantity;
+        this.ownerID = ownerID;
+        map.put(this.id, this);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getOwnerID() {
+        return ownerID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public static Product getProduct(int id) {
+        return map.getOrDefault(id, null);
+    }
+
+    public static void removeProduct(int id) {
+        map.remove(id);
+    }
+}
