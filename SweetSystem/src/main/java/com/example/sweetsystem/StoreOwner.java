@@ -1,4 +1,4 @@
-package org.example.sweetmanagementsystem;
+package com.example.sweetsystem;
 
 import java.util.List;
 

@@ -1,4 +1,6 @@
-package org.example.sweetmanagementsystem;
+package com.example.sweetsystem;
+
+import com.example.sweetsystem.classes.User;
 
 import java.util.ArrayList;
 import java.util.HashMap;

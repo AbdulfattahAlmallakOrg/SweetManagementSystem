@@ -1,4 +1,4 @@
-package org.example.sweetmanagementsystem;
+package com.example.sweetsystem.classes;
 
 public class User {
     private static int count = 0;

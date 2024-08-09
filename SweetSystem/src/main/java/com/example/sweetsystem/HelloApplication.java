@@ -1,4 +1,4 @@
-package org.example.sweetmanagementsystem;
+package com.example.sweetsystem;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

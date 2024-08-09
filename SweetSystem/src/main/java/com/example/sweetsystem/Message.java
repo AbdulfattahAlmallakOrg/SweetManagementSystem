@@ -1,4 +1,4 @@
-package org.example.sweetmanagementsystem;
+package com.example.sweetsystem;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
