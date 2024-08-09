@@ -19,9 +19,9 @@ public class Message {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Sender: ");
-        sb.append(OwnerAndSupplier.getOwnerSupplier(senderId).getName());
+        sb.append(OwnerAndSupplier.getOwnerSupplier(senderId).getUserName());
         sb.append("\nReceiver: ");
-        sb.append(OwnerAndSupplier.getOwnerSupplier(receiverId).getName());
+        sb.append(OwnerAndSupplier.getOwnerSupplier(receiverId).getUserName());
         sb.append("\nTimestamp: ");
         sb.append(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss").format(time));
         sb.append("\nMessage: ");

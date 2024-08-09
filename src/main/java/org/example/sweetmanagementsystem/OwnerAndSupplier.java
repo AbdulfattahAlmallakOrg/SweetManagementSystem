@@ -4,12 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class OwnerAndSupplier {
-    private static int idCounter = 0;
-    private final int id;
-    private String name;
-    private String email;
-    private String accountDetails;
+public class OwnerAndSupplier extends User {
     private static final HashMap<Integer, OwnerAndSupplier> map = new HashMap<>();
     private final List<Message> sentMessages;
     private final List<Message> readMessages;
@@ -17,12 +12,8 @@ public class OwnerAndSupplier {
     private final List<Product> products;
     private static final String INVALID_ID_MESSAGE = "ID is invalid";
 
-    public OwnerAndSupplier(String name, String email, String accountDetails) {
-        this.id = idCounter;
-        idCounter++;
-        this.name = name;
-        this.email = email;
-        this.accountDetails = accountDetails;
+    public OwnerAndSupplier(String name, String email, String password, String type) {
+        super(name, email, password, type);
         map.put(id, this);
         sentMessages = new ArrayList<>();
         readMessages = new ArrayList<>();
@@ -30,31 +21,6 @@ public class OwnerAndSupplier {
         products = new ArrayList<>();
     }
 
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return this.email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAccountDetails() {
-        return this.accountDetails;
-    }
-
-    public void setAccountDetails(String accountDetails) {
-        this.accountDetails = accountDetails;
-    }
-
-    //still not implemented
     public int sendMessage(String content, int receiverId) {
         Message message = new Message(this.id, receiverId, content);
         OwnerAndSupplier receiver = getOwnerSupplier(receiverId);
@@ -119,4 +85,6 @@ public class OwnerAndSupplier {
             System.out.println(INVALID_ID_MESSAGE);
         }
     }
+
+
 }
