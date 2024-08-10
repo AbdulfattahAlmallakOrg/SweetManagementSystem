@@ -6,11 +6,13 @@ import com.example.sweetsystem.clasess.UsersList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
@@ -37,12 +39,18 @@ private Label nameHeader;
 
     @FXML
     private TextField editPassword;
-
+    @FXML
+    private Pane backgroundPane;
     @FXML
     private TextField editUserName;
     @FXML
     private Label wronginfo;
-
+    @FXML
+    private ScrollPane commentScroll;
+    @FXML
+    private VBox commentBox;
+    @FXML
+    private Label closeComment;
     private boolean checkAllEmpty(){
     return editUserName.getText().isEmpty()&&editPassword.getText().isEmpty()&&editEmail.getText().isEmpty();
     }
@@ -173,7 +181,7 @@ private Label nameHeader;
             fx.setLocation(getClass().getResource("RecipesCard.fxml"));
             HBox card=fx.load();
             RecipesCardController controller=fx.getController();
-            controller.setData(r.get(i),new VBox(),new ScrollPane());
+            controller.setData(r.get(i),commentBox,commentScroll,closeComment);
             recipesCont.getChildren().add(card);
             }
         }
@@ -184,5 +192,10 @@ private Label nameHeader;
 
     private void setName() {
         nameHeader.setText("Welcome "+UsersList.currentUser.getUserName());
+    }
+
+    public void setCloseComment(){
+        commentScroll.setVisible(false);
+        closeComment.setVisible(false);
     }
 }

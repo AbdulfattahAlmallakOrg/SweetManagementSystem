@@ -5,6 +5,8 @@ import com.example.sweetsystem.clasess.RecipesList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -41,7 +43,8 @@ private TextField searchField;
 private ScrollPane commentScroll;
 @FXML
 private VBox commentCont;
-
+@FXML
+private Label closeComment;
 
     public void toggleBtns(HBox box1,HBox box2){
     box1.getStyleClass().remove("top-bar");
@@ -98,7 +101,7 @@ private VBox commentCont;
                 RecipesCardController controller=fx.getController();
 
 
-                controller.setData(recipes.get(i),commentCont,commentScroll);
+                controller.setData(recipes.get(i),commentCont,commentScroll,closeComment);
 
                 recipesCont.getChildren().add(card);
             }
@@ -171,4 +174,8 @@ private VBox commentCont;
         recipesCont.getChildren().clear();
     }
 
+    public void setCloseComment(){
+        commentScroll.setVisible(false);
+        closeComment.setVisible(false);
+    }
 }

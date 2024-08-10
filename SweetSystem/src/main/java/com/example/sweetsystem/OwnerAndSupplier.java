@@ -1,6 +1,6 @@
 package com.example.sweetsystem;
 
-import com.example.sweetsystem.classes.User;
+import com.example.sweetsystem.clasess.User;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,7 +16,7 @@ public class OwnerAndSupplier extends User {
 
     public OwnerAndSupplier(String name, String email, String password, String type) {
         super(name, email, password, type);
-        map.put(id, this);
+        map.put(getId(), this);
         sentMessages = new ArrayList<>();
         readMessages = new ArrayList<>();
         unreadMessages = new ArrayList<>();
@@ -24,7 +24,7 @@ public class OwnerAndSupplier extends User {
     }
 
     public int sendMessage(String content, int receiverId) {
-        Message message = new Message(this.id, receiverId, content);
+        Message message = new Message(this.getId(), receiverId, content);
         OwnerAndSupplier receiver = getOwnerSupplier(receiverId);
         if (receiver == null) {
             return 1;
@@ -54,7 +54,7 @@ public class OwnerAndSupplier extends User {
 
     public void increaseProductQuantity(int id, int quantity) {
         Product product = Product.getProduct(id);
-        if (product != null && product.getOwnerID() == this.id) {
+        if (product != null && product.getOwnerID() == this.getId()) {
             product.setQuantity(product.getQuantity() + quantity);
         } else {
             System.out.println(INVALID_ID_MESSAGE);
@@ -62,13 +62,13 @@ public class OwnerAndSupplier extends User {
     }
 
     public void addNewProduct(String name, String description, double price, int quantity) {
-        Product product = new Product(name, description, price, quantity, this.id);
+        Product product = new Product(name, description, price, quantity, this.getId());
         products.add(product);
     }
 
     public void updateProduct(int id, String name, String description, double price, int quantity) {
         Product product = Product.getProduct(id);
-        if (product != null && product.getOwnerID() == this.id) {
+        if (product != null && product.getOwnerID() == this.getId()) {
             product.setName(name);
             product.setDescription(description);
             product.setPrice(price);
@@ -80,7 +80,7 @@ public class OwnerAndSupplier extends User {
 
     public void deleteProduct(int id) {
         Product product = Product.getProduct(id);
-        if (product != null && product.getOwnerID() == this.id) {
+        if (product != null && product.getOwnerID() == this.getId()) {
             products.remove(product);
             Product.removeProduct(id);
         } else {

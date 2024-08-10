@@ -14,7 +14,7 @@ public class StoreOwner extends OwnerAndSupplier {
         if (!(supplier instanceof Supplier)) {
             return 1;
         }
-        Order order = new Order(this.id, supplierId, "pending", quantity, productId);
+        Order order = new Order(this.getId(), supplierId, "pending", quantity, productId);
         ((Supplier) supplier).receiveOrder(order);
         return 0;
     }
