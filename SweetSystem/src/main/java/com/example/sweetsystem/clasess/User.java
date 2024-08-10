@@ -1,7 +1,5 @@
 package com.example.sweetsystem.clasess;
 
-import java.util.ArrayList;
-
 public class User {
     public static int count=0;
     private String userName;
