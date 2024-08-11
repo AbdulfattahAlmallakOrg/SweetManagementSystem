@@ -8,9 +8,16 @@ public class Product {
     private final int ownerID;
     private String name;
     private String description;
+
     private double price;
     private int quantity;
     private static final HashMap<Integer, Product> map = new HashMap<>();
+
+
+    private String image;//the url of the product.
+
+
+
 
     public Product(String name, String description, double price, int quantity, int ownerID) {
         this.id = idCounter;

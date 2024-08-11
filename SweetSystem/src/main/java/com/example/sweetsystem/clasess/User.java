@@ -7,12 +7,13 @@ public class User {
     private String email;
     private String password;
     private String type;
-
-    public User(String userName, String email, String password,String type){
+    private String location;
+    public User(String userName, String email, String password,String type,String location){
         this.email=email;
         this.userName=userName;
         this.password=password;
         this.type=type;
+        this.location=location;
         count++;
         this.id=count;
 

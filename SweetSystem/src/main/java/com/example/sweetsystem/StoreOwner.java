@@ -4,8 +4,8 @@ import java.util.List;
 
 public class StoreOwner extends OwnerAndSupplier {
     private List<String> products;
-    public StoreOwner(String name, String email, String type, String password, List<String> products) {
-        super(name, email, password, type);
+    public StoreOwner(String name, String email, String type, String password,String location, List<String> products) {
+        super(name, email, password, type,location);
         this.products = products;
     }
 

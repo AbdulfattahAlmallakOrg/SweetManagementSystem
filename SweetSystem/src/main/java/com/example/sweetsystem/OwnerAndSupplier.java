@@ -14,8 +14,8 @@ public class OwnerAndSupplier extends User {
     private final List<Product> products;
     private static final String INVALID_ID_MESSAGE = "ID is invalid";
 
-    public OwnerAndSupplier(String name, String email, String password, String type) {
-        super(name, email, password, type);
+    public OwnerAndSupplier(String name, String email, String password, String type,String location) {
+        super(name, email, password, type,location);
         map.put(getId(), this);
         sentMessages = new ArrayList<>();
         readMessages = new ArrayList<>();
