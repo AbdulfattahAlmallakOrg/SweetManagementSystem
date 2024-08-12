@@ -1,6 +1,6 @@
 package com.example.sweetsystem;
 
-import com.example.sweetsystem.classes.User;
+import com.example.sweetsystem.clasess.User;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,9 +16,9 @@ public class OwnerAndSupplier extends User {
     private static final String INVALID_PRICE_MESSAGE = "Price is invalid";
     private static final String INVALID_QUANTITY_MESSAGE = "Quantity is invalid";
 
-    public OwnerAndSupplier(String name, String email, String password, String type) {
-        super(name, email, password, type);
-        map.put(id, this);
+    public OwnerAndSupplier(String name, String email, String password, String type, String location) {
+        super(name, email, password, type, location);
+        map.put(getId(), this);
         sentMessages = new ArrayList<>();
         readMessages = new ArrayList<>();
         unreadMessages = new ArrayList<>();
@@ -26,7 +26,7 @@ public class OwnerAndSupplier extends User {
     }
 
     public int sendMessage(String content, int receiverId) {
-        Message message = new Message(this.id, receiverId, content);
+        Message message = new Message(getId(), receiverId, content);
         OwnerAndSupplier receiver = getOwnerSupplier(receiverId);
         if (receiver == null) {
             return 1;
@@ -58,7 +58,7 @@ public class OwnerAndSupplier extends User {
         if (quantity < 0) System.out.println(INVALID_QUANTITY_MESSAGE);
         else {
             Product product = Product.getProduct(name);
-            if (product != null && product.getOwnerID() == this.id) {
+            if (product != null && product.getOwnerID() == getId()) {
                 product.setQuantity(product.getQuantity() + quantity);
             }
             else System.out.println(INVALID_NAME_MESSAGE);
@@ -72,7 +72,7 @@ public class OwnerAndSupplier extends User {
         else {
             Product product = Product.getProduct(name);
             if (product == null) {
-                product = new Product(name, description, price, quantity, this.id);
+                product = new Product(name, description, price, quantity, getId());
                 products.add(product);
             }
             else product.setQuantity(product.getQuantity() + quantity);
@@ -83,7 +83,7 @@ public class OwnerAndSupplier extends User {
         Product product = Product.getProduct(name);
         if (price < 0) System.out.println(INVALID_PRICE_MESSAGE);
         else if (quantity < 0) System.out.println(INVALID_QUANTITY_MESSAGE);
-        else if (product != null && product.getOwnerID() == this.id) {
+        else if (product != null && product.getOwnerID() == getId()) {
             product.setDescription(description);
             product.setPrice(price);
             product.setQuantity(quantity);
@@ -93,9 +93,9 @@ public class OwnerAndSupplier extends User {
 
     public void deleteProduct(String name) {
         Product product = Product.getProduct(name);
-        if (product != null && product.getOwnerID() == this.id) {
+        if (product != null && product.getOwnerID() == getId()) {
             products.remove(product);
-            Product.removeProduct(id);
+            Product.removeProduct(product.getId());
         } else {
             System.out.println(INVALID_NAME_MESSAGE);
         }
