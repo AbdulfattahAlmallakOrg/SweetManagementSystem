@@ -10,7 +10,7 @@ public class Product {
     private String description;
     private double price;
     private int quantity;
-    private static final HashMap<Integer, Product> map = new HashMap<>();
+    private static final HashMap<String, Product> map = new HashMap<>();
 
     public Product(String name, String description, double price, int quantity, int ownerID) {
         this.id = idCounter;
@@ -20,7 +20,7 @@ public class Product {
         this.price = price;
         this.quantity = quantity;
         this.ownerID = ownerID;
-        map.put(this.id, this);
+        map.put(this.name, this);
     }
 
     public int getId() {
@@ -63,8 +63,8 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public static Product getProduct(int id) {
-        return map.getOrDefault(id, null);
+    public static Product getProduct(String name) {
+        return map.getOrDefault(name, null);
     }
 
     public static void removeProduct(int id) {
