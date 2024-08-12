@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Client extends User {
     private ArrayList<Recipe>Recipes=new ArrayList<Recipe>();
-    public Client(String userName, String email, String password,String type) {
-        super(userName, email, password,type);
+    public Client(String userName, String email, String password,String type,String location) {
+        super(userName, email, password,type,location);
     }
 
 

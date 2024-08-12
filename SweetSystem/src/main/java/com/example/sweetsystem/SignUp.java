@@ -1,5 +1,6 @@
 package com.example.sweetsystem;
 
+import com.example.sweetsystem.clasess.Admin;
 import com.example.sweetsystem.clasess.Client;
 import com.example.sweetsystem.clasess.User;
 import com.example.sweetsystem.clasess.UsersList;
@@ -29,7 +30,10 @@ private HBox alert1;
 private HBox alert2;
 @FXML
 private HBox alert3;
-
+@FXML
+private TextField locationf;
+    @FXML
+    private TextField rolef;
 
 
 @FXML
@@ -39,7 +43,7 @@ private HBox alert3;
     Index.header.setText("Login Page");
     }
     private boolean checkAllInput(){
-    return !emailf.getText().isEmpty()&&!usernamef.getText().isEmpty()&&!passwordf.getText().isEmpty();
+    return !emailf.getText().isEmpty()&&!usernamef.getText().isEmpty()&&!passwordf.getText().isEmpty()&&!locationf.getText().isEmpty()&&!rolef.getText().isEmpty();
     }
     public static boolean isValidEmail(String email) {
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@" + "(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
@@ -52,7 +56,15 @@ private HBox alert3;
     }
     private void makeUser(){
     if(UsersList.search(usernamef.getText())==-1) {
-        Client user = new Client(usernamef.getText(), emailf.getText(), passwordf.getText(),"Client");
+        User user=null;
+        if(rolef.getText().equals("Admin")){
+            user=new Admin(usernamef.getText(), emailf.getText(), passwordf.getText(),rolef.getText(),locationf.getText());
+        }
+        else if(rolef.getText().equals("Client")){
+           user = new Client(usernamef.getText(), emailf.getText(), passwordf.getText(),rolef.getText(),locationf.getText());
+        }
+        System.out.println(rolef.getText());
+        System.out.println(locationf.getText());
         UsersList.users.add(user);
         alert2.setVisible(true);
         UsersList.printAll();
@@ -65,7 +77,7 @@ private HBox alert3;
     }
     }
 public void signupBtn(){
-    if(checkAllInput()&&isValidEmail(emailf.getText())){
+    if(checkAllInput()&&isValidEmail(emailf.getText())&&isValidRole(rolef.getText())){
         makeUser();
     }
     else{
@@ -73,7 +85,14 @@ alert1.setVisible(true);
     }
 }
 
-public void closeAlert(){
+    private boolean isValidRole(String text) {
+    if(text.equals("Client")||text.equals("Owner")){
+        return true;
+    }
+    return false;
+    }
+
+    public void closeAlert(){
     alert1.setVisible(false);
 }
 public void closeAlert2(){
@@ -87,6 +106,8 @@ public void clearInputs(){
     emailf.setText("");
     passwordf.setText("");
     usernamef.setText("");
+    rolef.setText("");
+    locationf.setText("");
 }
 
 

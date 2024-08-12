@@ -13,7 +13,7 @@
 
 <AnchorPane fx:id="ParentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1024.0" styleClass="ParentPane" stylesheets="@Nav.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.SignUp">
    <children>
-      <VBox alignment="CENTER" layoutX="431.0" layoutY="136.0" prefHeight="200.0" prefWidth="100.0" spacing="25.0">
+      <VBox alignment="CENTER" layoutX="431.0" layoutY="101.0" prefHeight="286.0" prefWidth="250.0" spacing="25.0">
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="250.0">
                <children>
@@ -57,9 +57,23 @@
                   </TextField>
                </children>
             </HBox>
+            <HBox prefHeight="50.0" prefWidth="250.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="50.0" styleClass="icon" stylesheets="@textField.css">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="GLOBE" glyphStyle="-fx-fill:white" size="2.3em" text="" />
+                     </graphic>
+                  </Label>
+                  <TextField fx:id="locationf" prefHeight="65.0" prefWidth="204.0" promptText="Location" styleClass="field" stylesheets="@textField.css">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
          </children>
       </VBox>
-      <HBox alignment="CENTER" layoutX="414.0" layoutY="450.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="284.0" spacing="10.0">
+      <HBox alignment="CENTER" layoutX="414.0" layoutY="467.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="284.0" spacing="10.0">
          <children>
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Already Have An Account?">
                <font>
@@ -69,7 +83,7 @@
             <Button mnemonicParsing="false" onAction="#switchtoLogin" prefHeight="28.0" prefWidth="60.0" styleClass="Primary-btn" stylesheets="@Buttons.css" text="Login" HBox.hgrow="ALWAYS" />
          </children>
       </HBox>
-      <Button layoutX="481.0" layoutY="380.0" mnemonicParsing="false" onAction="#signupBtn" prefHeight="34.0" prefWidth="150.0" styleClass="secondary-btn" stylesheets="@Buttons.css" text="SignUp">
+      <Button layoutX="481.0" layoutY="411.0" mnemonicParsing="false" onAction="#signupBtn" prefHeight="34.0" prefWidth="150.0" styleClass="secondary-btn" stylesheets="@Buttons.css" text="SignUp">
          <font>
             <Font size="16.0" />
          </font>
@@ -112,5 +126,6 @@
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="214.0" styleClass="text" stylesheets="@ALerts.css" text="The Username Is Taken" textFill="WHITE" />
          </children>
       </HBox>
+      <TextField fx:id="rolef" layoutX="271.0" layoutY="231.0" />
    </children>
 </AnchorPane>

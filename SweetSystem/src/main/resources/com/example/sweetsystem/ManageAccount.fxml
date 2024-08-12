@@ -127,8 +127,18 @@
       </Label>
       <ScrollPane layoutX="16.0" layoutY="180.0" prefHeight="370.0" prefWidth="698.0" styleClass="ParentPane" stylesheets="@Nav.css">
          <content>
-            <VBox fx:id="recipesCont" prefHeight="367.0" prefWidth="695.0" spacing="10.0" styleClass="ParentPane" stylesheets="@Nav.css" />
+            <VBox fx:id="recipesCont" alignment="CENTER" prefHeight="377.0" prefWidth="681.0" spacing="30.0" styleClass="ParentPane" stylesheets="@Nav.css" />
          </content>
       </ScrollPane>
+      <ScrollPane fx:id="commentScroll" layoutX="16.0" layoutY="179.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="351.0" prefWidth="740.0" visible="false">
+         <content>
+            <VBox fx:id="commentBox" prefHeight="348.0" prefWidth="735.0" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="closeComment" alignment="CENTER" layoutX="107.0" layoutY="137.0" onMouseClicked="#setCloseComment" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%; -fx-background-color: red;" styleClass="close-btn" stylesheets="@Buttons.css" visible="false">
+         <graphic>
+            <FontAwesomeIcon glyphName="CLOSE" glyphStyle="-fx-fill:white" size="2.3em" />
+         </graphic>
+      </Label>
    </children>
 </AnchorPane>

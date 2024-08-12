@@ -1,6 +1,6 @@
 package com.example.sweetsystem;
 
-public class Admin {
+public class AdminController {
 
 
 }
