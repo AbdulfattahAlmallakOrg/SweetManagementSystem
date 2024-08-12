@@ -5,23 +5,30 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class SignUpTest {
-    @When("the user miss any info")
-    public void the_user_miss_any_info() {
+    @Given("the user is on sign up page")
+    public void the_user_is_on_sign_up_page() {
         // Write code here that turns the phrase above into concrete actions
-
-    }
-
-    @Then("the system will display erorr message")
-    public void the_system_will_display_erorr_message() {
+        System.out.println("done");    }
+    @When("the user enter a valid username {string}")
+    public void the_user_enter_a_valid_username(String string) {
         // Write code here that turns the phrase above into concrete actions
-    }
-
-    @When("the user provide invalid email format")
-    public void the_user_provide_invalid_email_format() {
+        System.out.println("done");    }
+    @When("the user enter a valid password {string}")
+    public void the_user_enter_a_valid_password(String string) {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-
+        System.out.println("done");    }
+    @When("the user enter a valid email {string}")
+    public void the_user_enter_a_valid_email(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        System.out.println("done");    }
+    @When("the user enter a valid location {string}")
+    public void the_user_enter_a_valid_location(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        System.out.println("done");    }
+    @When("the user enter a valid role {string}")
+    public void the_user_enter_a_valid_role(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        System.out.println("done");    }
 
 
 

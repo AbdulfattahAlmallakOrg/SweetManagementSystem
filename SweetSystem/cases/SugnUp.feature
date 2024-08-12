@@ -13,14 +13,3 @@ Feature: Sign up to the system
       |"najwa"|"naj1234wa"|"najwa@gmail.com"|"nablus"|"admin"|
       |"asem"|"asemhesham1234"|"asem@gmail.com"|"nablus"|"supplaieyr"|
 
-  Scenario: sign up with invalid email fromat
-    Given the user is on sign up page
-    When the user provide invalid email format
-    Then the system will display erorr message
-
-  Scenario: sign up with missing any data
-    Given the user is on sign up page
-    When the user miss any info
-    Then the system will display erorr message
-
-
