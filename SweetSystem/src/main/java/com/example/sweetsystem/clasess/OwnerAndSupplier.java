@@ -1,6 +1,6 @@
-package com.example.sweetsystem;
+package com.example.sweetsystem.clasess;
 
-import com.example.sweetsystem.clasess.User;
+import com.example.sweetsystem.Message;
 
 import java.util.ArrayList;
 import java.util.HashMap;

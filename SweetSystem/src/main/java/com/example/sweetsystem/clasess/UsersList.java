@@ -22,4 +22,9 @@ public class UsersList {
         }
         System.out.println("***********************************************************");
     }
+    public static boolean checkAllInput(String userNamefText, String passwordfText, String emailfText, String locationfText, String rolefText){
+            return !emailfText.isEmpty()&&!userNamefText.isEmpty()&&!passwordfText.isEmpty()&&!locationfText.isEmpty()&&!rolefText.isEmpty();
+
+    }
+
 }

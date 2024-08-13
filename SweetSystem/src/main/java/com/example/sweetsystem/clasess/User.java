@@ -21,6 +21,7 @@ public class User {
     }
 
 
+
 //getters
 
     public String getType(){

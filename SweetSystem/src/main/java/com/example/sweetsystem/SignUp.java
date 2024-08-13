@@ -6,24 +6,27 @@ import com.example.sweetsystem.clasess.User;
 import com.example.sweetsystem.clasess.UsersList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class SignUp {
+public class SignUp implements Initializable {
     @FXML
 private AnchorPane ParentPane;
     @FXML
-private TextField passwordf;
+    public TextField passwordf;
     @FXML
-private TextField usernamef;
+    public TextField usernamef;
     @FXML
-private TextField emailf;
+    public TextField emailf;
     @FXML
 private HBox alert1;
     @FXML
@@ -31,20 +34,21 @@ private HBox alert2;
 @FXML
 private HBox alert3;
 @FXML
-private TextField locationf;
+public TextField locationf;
     @FXML
-    private TextField rolef;
+    public TextField rolef;
 
 
+
+
+    public boolean makeUserTestFlag=false;
 @FXML
     public void switchtoLogin() throws IOException {
     AnchorPane root=FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Login.fxml")));
     ParentPane.getChildren().setAll(root);
     Index.header.setText("Login Page");
     }
-    private boolean checkAllInput(){
-    return !emailf.getText().isEmpty()&&!usernamef.getText().isEmpty()&&!passwordf.getText().isEmpty()&&!locationf.getText().isEmpty()&&!rolef.getText().isEmpty();
-    }
+
     public static boolean isValidEmail(String email) {
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@" + "(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
         Pattern pattern = Pattern.compile(emailRegex);
@@ -54,7 +58,7 @@ private TextField locationf;
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
-    private void makeUser(){
+    public void makeUser(){
     if(UsersList.search(usernamef.getText())==-1) {
         User user=null;
         if(rolef.getText().equals("Admin")){
@@ -76,8 +80,21 @@ private TextField locationf;
         UsersList.printAll();
     }
     }
+public void makeUserTest(String username,String password,String location,String rol,String email){
+
+    usernamef.setText(username);
+
+    passwordf.setText(password);
+    locationf.setText(location);
+    rolef.setText(rol);
+    emailf.setText(email);
+    makeUserTestFlag=false;
+    makeUser();
+
+}
+
 public void signupBtn(){
-    if(checkAllInput()&&isValidEmail(emailf.getText())&&isValidRole(rolef.getText())){
+    if(UsersList.checkAllInput(usernamef.getText(),passwordf.getText(),emailf.getText(),locationf.getText(),rolef.getText())&&isValidEmail(emailf.getText())&&isValidRole(rolef.getText())){
         makeUser();
     }
     else{
@@ -85,7 +102,7 @@ alert1.setVisible(true);
     }
 }
 
-    private boolean isValidRole(String text) {
+    public static boolean isValidRole(String text) {
     if(text.equals("Client")||text.equals("Owner")){
         return true;
     }
@@ -111,4 +128,8 @@ public void clearInputs(){
 }
 
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }

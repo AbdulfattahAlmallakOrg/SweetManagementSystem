@@ -7,4 +7,5 @@ module com.example.sweetsystem {
     exports com.example.sweetsystem;
     exports com.example.sweetsystem.clasess;
     opens com.example.sweetsystem.clasess to javafx.fxml;
+
 }

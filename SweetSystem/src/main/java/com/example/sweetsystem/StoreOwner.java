@@ -1,5 +1,9 @@
 package com.example.sweetsystem;
 
+import com.example.sweetsystem.clasess.Order;
+import com.example.sweetsystem.clasess.OwnerAndSupplier;
+import com.example.sweetsystem.clasess.Supplier;
+
 import java.util.List;
 
 public class StoreOwner extends OwnerAndSupplier {

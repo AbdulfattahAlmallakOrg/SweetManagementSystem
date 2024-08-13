@@ -1,4 +1,4 @@
-package com.example.sweetsystem;
+package com.example.sweetsystem.clasess;
 
 import java.util.HashMap;
 

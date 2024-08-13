@@ -73,7 +73,12 @@
             <version> 7.18.0</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.testfx</groupId>
+            <artifactId>testfx-core</artifactId>
+            <version>4.0.18</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 
