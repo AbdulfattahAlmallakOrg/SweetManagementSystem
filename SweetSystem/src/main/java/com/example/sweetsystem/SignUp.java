@@ -41,7 +41,6 @@ public TextField locationf;
 
 
 
-    public boolean makeUserTestFlag=false;
 @FXML
     public void switchtoLogin() throws IOException {
     AnchorPane root=FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Login.fxml")));
@@ -49,52 +48,20 @@ public TextField locationf;
     Index.header.setText("Login Page");
     }
 
-    public static boolean isValidEmail(String email) {
-        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@" + "(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
-        Pattern pattern = Pattern.compile(emailRegex);
-        if (email == null) {
-            return false;
-        }
-        Matcher matcher = pattern.matcher(email);
-        return matcher.matches();
-    }
-    public void makeUser(){
-    if(UsersList.search(usernamef.getText())==-1) {
-        User user=null;
-        if(rolef.getText().equals("Admin")){
-            user=new Admin(usernamef.getText(), emailf.getText(), passwordf.getText(),rolef.getText(),locationf.getText());
-        }
-        else if(rolef.getText().equals("Client")){
-           user = new Client(usernamef.getText(), emailf.getText(), passwordf.getText(),rolef.getText(),locationf.getText());
-        }
-        System.out.println(rolef.getText());
-        System.out.println(locationf.getText());
-        UsersList.users.add(user);
-        alert2.setVisible(true);
-        UsersList.printAll();
-        clearInputs();
 
+    private void makeUser(){
+    if(UsersList.makeUser(usernamef.getText(),emailf.getText(),passwordf.getText(),locationf.getText(),rolef.getText())) {
+        alert2.setVisible(true);
+        clearInputs();
     }
     else{
         alert3.setVisible(true);
-        UsersList.printAll();
     }
     }
-public void makeUserTest(String username,String password,String location,String rol,String email){
 
-    usernamef.setText(username);
-
-    passwordf.setText(password);
-    locationf.setText(location);
-    rolef.setText(rol);
-    emailf.setText(email);
-    makeUserTestFlag=false;
-    makeUser();
-
-}
 
 public void signupBtn(){
-    if(UsersList.checkAllInput(usernamef.getText(),passwordf.getText(),emailf.getText(),locationf.getText(),rolef.getText())&&isValidEmail(emailf.getText())&&isValidRole(rolef.getText())){
+    if(UsersList.checkAllInput(usernamef.getText(),passwordf.getText(),emailf.getText(),locationf.getText(),rolef.getText())&&UsersList.isValidEmail(emailf.getText())&&UsersList.isValidRole(rolef.getText())){
         makeUser();
     }
     else{
@@ -102,30 +69,26 @@ alert1.setVisible(true);
     }
 }
 
-    public static boolean isValidRole(String text) {
-    if(text.equals("Client")||text.equals("Owner")){
-        return true;
-    }
-    return false;
-    }
 
-    public void closeAlert(){
-    alert1.setVisible(false);
-}
-public void closeAlert2(){
-    alert2.setVisible(false);
-}
-public void closeAlert3(){
-        alert3.setVisible(false);
-}
 
-public void clearInputs(){
+
+
+private void clearInputs(){
     emailf.setText("");
     passwordf.setText("");
     usernamef.setText("");
     rolef.setText("");
     locationf.setText("");
 }
+    public void closeAlert(){
+        alert1.setVisible(false);
+    }
+    public void closeAlert2(){
+        alert2.setVisible(false);
+    }
+    public void closeAlert3(){
+        alert3.setVisible(false);
+    }
 
 
     @Override
