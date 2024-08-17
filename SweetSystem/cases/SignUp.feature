@@ -1,4 +1,4 @@
-@tag1
+@tag2
 Feature: Sign up to the system
   Scenario Outline: User SignUp with valid inputs
     Given the user is on sign up page
@@ -6,10 +6,10 @@ Feature: Sign up to the system
     Then the alert show success signUp
     Examples:
       | userName | password        | email          | location | role    |
-      | osamaa    | oossaammaa1234  | os@gmail.com   | nablus   | Admin   |
-      | ahmed    | ahmed123        | ahmed@gmail.com| jnien    | Client  |
+      | osamaa   | oossaammaa1234  | os@gmail.com   | nablus   | Admin   |
+      | mohammed | ahmed123        | ahmed@gmail.com| jnien    | Client  |
       | hamoda   | osamaammar      | najwa@gmail.com| nablus   | Admin   |
-
+      | ahmedd   | ffff            | g@gmail.com    | nablus   | Admin   |
 
   Scenario Outline: User SignUp with one of the input empty
     Given the user is on sign up page
@@ -38,4 +38,12 @@ Feature: Sign up to the system
     And the user enter a valid role "Admin"
     Then the alert show faile signUp UserName the same
 
+  Scenario: User SignUp with invalid Email
+    Given the user is on sign up page
+    When the user enter a wrong email "kmdsv"
+    Then the alert show faile signUp wrong Email format
 
+  Scenario: User SignUp with invalid Role
+    Given the user is on sign up page
+    When the user enter a wrong Role "Admin"
+    Then the alert show faile signUp wrong Role format

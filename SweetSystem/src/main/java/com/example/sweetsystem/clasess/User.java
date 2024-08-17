@@ -40,9 +40,6 @@ public class User {
     }
 //setters
 
-    public void setType(String type) {
-        this.type = type;
-    }
 
     public void setEmail(String email) {
         this.email = email;
@@ -61,7 +58,4 @@ public class User {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 }

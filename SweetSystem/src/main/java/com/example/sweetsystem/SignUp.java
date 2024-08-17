@@ -73,7 +73,8 @@ alert1.setVisible(true);
 
 
 
-private void clearInputs(){
+public void clearInputs(){
+
     emailf.setText("");
     passwordf.setText("");
     usernamef.setText("");

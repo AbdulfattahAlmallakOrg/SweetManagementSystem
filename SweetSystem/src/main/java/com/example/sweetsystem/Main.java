@@ -87,8 +87,6 @@ private Label closeComment;
     }
 
     private void setResipes(ArrayList<Recipe>recipes) {
-
-
         try {
             for(int i=0;i<recipes.size();i++){
                 FXMLLoader fx=new FXMLLoader();

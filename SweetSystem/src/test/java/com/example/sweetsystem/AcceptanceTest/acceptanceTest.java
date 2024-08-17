@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         monochrome = true,
         snippets = SnippetType.CAMELCASE,
         glue = {"com.example.sweetsystem.AcceptanceTest"},
-        tags = "@tag1"
+        tags = "@tag2"
 )
 public class acceptanceTest {
 }

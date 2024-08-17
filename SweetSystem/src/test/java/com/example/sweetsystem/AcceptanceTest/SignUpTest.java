@@ -19,14 +19,15 @@ import org.w3c.dom.ls.LSOutput;
 import java.io.IOException;
 
 
-@Tag("tag1")
+@Tag("tag2")
 public class SignUpTest  {
     public UsersList list;
     public String userName;
+    public boolean validemail;
 
     @Given("the user is on sign up page")
-    public void theUserIsOnSignUpPage()  {
-        list=new UsersList();
+    public void theUserIsOnSignUpPage() throws IOException {
+     list=new UsersList();
      list.setUserCurrentPage("SignUp");
      String page="SignUp";
      Assert.assertEquals(list.getUserCurrentPage(),page);
@@ -46,6 +47,7 @@ public class SignUpTest  {
     }
     @When("the user enter a valid password {string}")
     public void theUserEnterAValidPassword(String string) {
+        Assertions.assertNotNull(string);
 
     }
     @When("the user enter a valid email {string}")
@@ -63,7 +65,7 @@ public class SignUpTest  {
     }
     @When("the user enter a valid username {string} and {string} and {string} and {string} and {string}")
     public void theUserEnterAValidUsernameAndAndAndAnd(String string, String string2, String string3, String string4, String string5) {
-       UsersList.CanMakeUserName=false;
+       UsersList.setCanMakeUserName(false);
         if(UsersList.checkAllInput(string,string2,string3,string4,string5)){
             if(!UsersList.makeUser(string,string3,string2,string4,string5))
                 Assertions.fail("the user in the system");
@@ -92,7 +94,7 @@ public class SignUpTest  {
         if(!UsersList.makeUser(string,"osama@gmail.com","pass","location","Admin"))
         Assertions.assertTrue(true,"User not created . . !");
         else
-            Assertions.fail("User should not have been created as the username already exists");
+            Assertions.fail("User created,but it should not have been created as the username already exists");
     }
     @When("the user enter an empty username {string} or  {string}  or {string} or {string} or {string}")
     public void theUserEnterAnEmptyUsernameOrOrOrOr(String string, String string2, String string3, String string4, String string5) {
@@ -107,7 +109,7 @@ public class SignUpTest  {
     }
     @When("the user enter a wrong email {string}")
     public void theUserEnterAWrongEmail(String string) {
-
+        validemail=UsersList.isValidEmail(string);
     }
 
 
@@ -121,7 +123,11 @@ public class SignUpTest  {
     }
     @Then("the alert show faile signUp wrong Email format")
     public void theAlertShowFaileSignUpWrongEmailFormat() {
-
+    if (validemail){
+        Assertions.fail("the user enter invalid email");
+    }
+    else
+        Assertions.assertFalse(validemail);
     }
     @Then("the alert show success signUp")
     public void theAlertShowSuccessSignUp() {
@@ -143,6 +149,18 @@ public class SignUpTest  {
             Assertions.fail("user is allredy in the system and make it agaien?? ... ! ");
 
     }
+    public boolean validRole;
+    @When("the user enter a wrong Role {string}")
+    public void theUserEnterAWrongRole(String string) {
+        validRole=UsersList.isValidRole(string);
+    }
+    @Then("the alert show faile signUp wrong Role format")
+    public void theAlertShowFaileSignUpWrongRoleFormat() {
+        if(validRole){
+            Assertions.fail("the role is not ok ");        }
+        else Assertions.assertFalse(validRole);
+    }
+
 
 
 }

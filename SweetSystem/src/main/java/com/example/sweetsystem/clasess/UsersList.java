@@ -8,9 +8,18 @@ public class UsersList {
 
 
     public static void fillData(){
-        User u=new User("osama","osama@gmail.com","1234","Client","nablus");
-        if(search("osama")==-1){
+        User u=new User("ahmed","osama@gmail.com","ah123","Admin","nablus");
+        User u2=new User("osama","osama@gmail.com","1234","Client","nablus");
+        User u3=new User("smsm","osama@gmail.com","1234","Owner","nablus");
+
+        if(search(u2.getUserName())==-1){
+            UsersList.users.add(u2);
+        }
+        if(search(u.getUserName())==-1){
             UsersList.users.add(u);
+        }
+        if(search(u3.getUserName())==-1){
+            UsersList.users.add(u3);
         }
     }
 
@@ -52,9 +61,6 @@ public class UsersList {
     public static boolean isValidEmail(String email) {
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@" + "(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
         Pattern pattern = Pattern.compile(emailRegex);
-        if (email == null) {
-            return false;
-        }
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
@@ -84,10 +90,13 @@ public class UsersList {
 
     }
 
-    public void setCanMakeUserName(boolean b) {
+    public static void setCanMakeUserName(boolean b) {
         CanMakeUserName=b;
     }
     public static boolean getCanMakeUserName() {
         return CanMakeUserName;
+    }
+    public static void login(){
+        currentUser=UsersList.users.get(0);
     }
 }

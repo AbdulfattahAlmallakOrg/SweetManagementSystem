@@ -1,6 +1,7 @@
 package com.example.sweetsystem;
 
 import com.example.sweetsystem.clasess.Client;
+import com.example.sweetsystem.clasess.ManageAccounrHelper;
 import com.example.sweetsystem.clasess.Recipe;
 import com.example.sweetsystem.clasess.UsersList;
 import javafx.fxml.FXML;
@@ -50,9 +51,7 @@ private Label nameHeader;
     private VBox commentBox;
     @FXML
     private Label closeComment;
-    private boolean checkAllEmpty(){
-    return editUserName.getText().isEmpty()&&editPassword.getText().isEmpty()&&editEmail.getText().isEmpty();
-    }
+
     private void showAlert(int x){
     if(x==1&&!alert){
         hbox1.setVisible(true);
@@ -68,12 +67,12 @@ private Label nameHeader;
         hbox1.setVisible(false);
         hbox2.setVisible(false);
         alert=false;
-    if(checkAllEmpty()){
+    if(ManageAccounrHelper.checkAllEmpty(editUserName.getText(),editPassword.getText(),editEmail.getText())){
         showAlert(1);
     }else{
 
 
-        if(changeUserName()&&changeEmail()&& changePassword()) {
+        if(ManageAccounrHelper.ChangeAllCheck(editUserName.getText(),editPassword.getText(),editEmail.getText())) {
             if(!editUserName.getText().isEmpty()) {
                 UsersList.currentUser.setUserName(editUserName.getText());
             }
@@ -86,6 +85,11 @@ private Label nameHeader;
             setName();
             showAlert(0);
             UsersList.printAll();
+        }
+        else{
+            wronginfo.setText("You cant use the same data !");
+
+            showAlert(1);
         }
         if(alert==false){
             alert=true;
@@ -106,8 +110,8 @@ private Label nameHeader;
 
     private boolean changeUserName() {
 
-        if(!editUserName.getText().equals(UsersList.currentUser.getUserName())&&UsersList.search(editUserName.getText())==-1){
-            System.out.println("line 90");
+        if(ManageAccounrHelper.changeUserName(editUserName.getText())){
+
             return true;
         }
         else {
@@ -118,26 +122,10 @@ private Label nameHeader;
 
     }
 
-    private boolean changePassword() {
 
-        if(!editPassword.getText().equals(UsersList.currentUser.getPassword())){
-            System.out.println("line 106");
-
-            return true;
-        }
-        else {
-
-            wronginfo.setText("You cant use the same password !");
-
-            showAlert(1);
-            return false;
-        }
-    }
 
     private boolean changeEmail() {
-        if(!editEmail.getText().equals(UsersList.currentUser.getEmail())){
-            System.out.println("line 122");
-
+        if(ManageAccounrHelper.changeEmail(editEmail.getText())){
             return true;
         }
         else {

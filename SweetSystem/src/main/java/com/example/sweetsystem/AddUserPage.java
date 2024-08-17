@@ -67,6 +67,7 @@ FileChooser chooser=new FileChooser();
 
     image.setImage(img);
     }
+
     public void addButton() {
         if(!chekAllDataFill()){
             alertF();
