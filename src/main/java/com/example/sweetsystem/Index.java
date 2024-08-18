@@ -50,7 +50,7 @@ private void Close_stage(){
 }
 @FXML
 private void minimize_stage(){
-        HelloApplication.stage.setIconified(true);
+        //HelloApplication.stage.setIconified(true);
 }
 
 }
