@@ -13,11 +13,8 @@ public class Client extends User {
         return Recipes;
     }
 
-    public void setRecipes(ArrayList<Recipe> recipes) {
-        Recipes = recipes;
-    }
+
     public void addRecipe(Recipe r){
         Recipes.add(r);
-        System.out.println( Recipes.get(0).getImage());
     }
 }

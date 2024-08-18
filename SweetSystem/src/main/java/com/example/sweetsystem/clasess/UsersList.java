@@ -8,9 +8,9 @@ public class UsersList {
 
 
     public static void fillData(){
-        User u=new User("ahmed","osama@gmail.com","ah123","Admin","nablus");
-        User u2=new User("osama","osama@gmail.com","1234","Client","nablus");
-        User u3=new User("smsm","osama@gmail.com","1234","Owner","nablus");
+        User u=new Admin("ahmed","osama@gmail.com","ah123","Admin","nablus");
+        User u2=new Client("osama","osama@gmail.com","1234","Client","nablus");
+        User u3=new OwnerAndSupplier("smsm","osama@gmail.com","1234","Owner","nablus");
 
         if(search(u2.getUserName())==-1){
             UsersList.users.add(u2);

@@ -1,4 +1,9 @@
 .rounded{
     -fx-background-radius: 50%;
     -fx-border-radius: 50%;
+    -fx-text-fill: white;
+    -fx-background-color: #80a3ff;
+}
+.rounded:hover{
+    -fx-background-color: rgba(63, 94, 155, 0.96);
 }

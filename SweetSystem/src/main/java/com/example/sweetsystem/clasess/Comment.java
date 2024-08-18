@@ -20,7 +20,4 @@ public Comment(String person,String message){
         return WriterName;
     }
 
-    public void setWriterName(String writerName) {
-        WriterName = writerName;
-    }
 }

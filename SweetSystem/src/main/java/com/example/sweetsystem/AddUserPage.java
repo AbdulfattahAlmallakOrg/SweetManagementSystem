@@ -51,12 +51,8 @@ FileChooser chooser=new FileChooser();
 
 
     public void backToMain() throws IOException {
-        System.out.println("56");
         AnchorPane root=FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main.fxml")));
-        System.out.println("555");
-
         ParentPane.getChildren().setAll(root);
-        System.out.println("56");
     }
 
     public void gitImagePath(){
@@ -69,14 +65,12 @@ FileChooser chooser=new FileChooser();
     }
 
     public void addButton() {
-        if(!chekAllDataFill()){
+        if(!RecipesList.chekAllDataFill(Rneed.getText(),ImagePath,RDescription.getText(),RName.getText())){
             alertF();
             return ;
         }
-        Recipe r=new Recipe(RName.getText(),ImagePath,RDescription.getText(),Rneed.getText(),RAllerg.getText());
-        Client c=(Client) UsersList.currentUser;
-        c.addRecipe(r);
-        RecipesList.Recipes.add(r);
+        RecipesList.makeRecipe(RName.getText(),ImagePath,RDescription.getText(),Rneed.getText(),RAllerg.getText());
+
         clearInputs();
         alertS();
     }
@@ -110,10 +104,4 @@ FileChooser chooser=new FileChooser();
         RDescription.clear();
 
     }
-
-    private boolean chekAllDataFill() {
-        return !Rneed.getText().isEmpty() && !ImagePath.isEmpty()  && !RDescription.getText().isEmpty() && !RName.getText().isEmpty();
-    }
-
-
 }
