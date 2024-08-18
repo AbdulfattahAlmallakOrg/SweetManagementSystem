@@ -16,6 +16,7 @@ public class AddRecipeTest {
     public void userInAddRecipePage() {
         UsersList.fillData();
         UsersList.login();
+        //
     }
     @When("user enter all field and click post {string} and {string} and {string} and {string} and {string}")
     public void user_enter_all_field_and_click_post_and_and_and_and(String string, String string2, String string3, String string4, String string5) {
