@@ -8,10 +8,10 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.util.Objects;
 
-public class HelloApplication  {
+public class HelloApplication extends Application {
 
-  //  public static Stage stage=null;
-   /* @Override
+    public static Stage stage=null;
+   @Override
     public void start(Stage stage) throws IOException {
         Parent root=FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Index.fxml")));
         Scene scene=new Scene(root);
@@ -20,8 +20,8 @@ public class HelloApplication  {
         HelloApplication.stage =stage;
         stage.show();
     }
-*/
+
     public static void main(String[] args) {
-       // launch();
+        launch();
     }
 }
