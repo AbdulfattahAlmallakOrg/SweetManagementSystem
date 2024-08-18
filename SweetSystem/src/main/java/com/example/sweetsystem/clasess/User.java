@@ -7,6 +7,11 @@ public class User {
     private String email;
     private String password;
     private String type;
+
+    public String getLocation() {
+        return location;
+    }
+
     private String location;
     public User(String userName, String email, String password,String type,String location){
         this.email=email;
@@ -16,8 +21,6 @@ public class User {
         this.location=location;
         count++;
         this.id=count;
-
-
     }
 
 
