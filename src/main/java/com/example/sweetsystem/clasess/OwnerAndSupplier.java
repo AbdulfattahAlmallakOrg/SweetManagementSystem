@@ -12,7 +12,7 @@ public class OwnerAndSupplier extends User {
     private final List<Message> readMessages;
     private final List<Message> unreadMessages;
     private final List<Product> products;
-    public static final String INVALID_NAME_MESSAGE = "ID is invalid";
+    public static final String INVALID_NAME_MESSAGE = "Name is invalid";
     public static final String INVALID_PRICE_MESSAGE = "Price is invalid";
     public static final String INVALID_QUANTITY_MESSAGE = "Quantity is invalid";
     public static final String INVALID_PERMISSION_MESSAGE = "Permission is invalid";
@@ -108,16 +108,19 @@ public class OwnerAndSupplier extends User {
         else System.out.println(INVALID_NAME_MESSAGE);
     }
 
-    public void deleteProduct(String name) {
+    public String deleteProduct(String name) {
         Product product = Product.getProduct(name);
         if (product != null && product.getOwnerID() == getId()) {
             products.remove(product);
             Product.removeProduct(product.getName());
         } else if(product == null) {
-            System.out.println(INVALID_NAME_MESSAGE);
+            //System.out.println(INVALID_NAME_MESSAGE);
+            return INVALID_NAME_MESSAGE;
         }
         else {
-            System.out.println(INVALID_PERMISSION_MESSAGE);
+            return INVALID_PERMISSION_MESSAGE;
+            //System.out.println(INVALID_PERMISSION_MESSAGE);
         }
+        return null;
     }
 }

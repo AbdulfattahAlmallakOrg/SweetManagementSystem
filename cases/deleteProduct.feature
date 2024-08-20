@@ -1,3 +1,4 @@
+@tag2
 Feature: Delete a product by name
   As a store owner or supplier,
   I want to delete my product by name
