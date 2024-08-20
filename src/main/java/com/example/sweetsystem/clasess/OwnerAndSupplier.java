@@ -12,9 +12,9 @@ public class OwnerAndSupplier extends User {
     private final List<Message> readMessages;
     private final List<Message> unreadMessages;
     private final List<Product> products;
-    private static final String INVALID_NAME_MESSAGE = "ID is invalid";
-    private static final String INVALID_PRICE_MESSAGE = "Price is invalid";
-    private static final String INVALID_QUANTITY_MESSAGE = "Quantity is invalid";
+    public static final String INVALID_NAME_MESSAGE = "ID is invalid";
+    public static final String INVALID_PRICE_MESSAGE = "Price is invalid";
+    public static final String INVALID_QUANTITY_MESSAGE = "Quantity is invalid";
 
     public OwnerAndSupplier(String name, String email, String password, String type, String location) {
         super(name, email, password, type, location);
