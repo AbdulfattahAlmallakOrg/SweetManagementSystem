@@ -1,12 +1,16 @@
 package com.example.sweetsystem.AcceptanceTest;
 
+import com.example.sweetsystem.clasess.Client;
 import com.example.sweetsystem.clasess.ManageAccounrHelper;
+import com.example.sweetsystem.clasess.Recipe;
 import com.example.sweetsystem.clasess.UsersList;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;
+
+import java.util.ArrayList;
 
 @Tag("tag2")
 public class ManageAccountTest {
@@ -15,6 +19,8 @@ public class ManageAccountTest {
     public void the_user_in_profile_page() {
         UsersList.fillData();
         UsersList.login();
+        Client u=(Client) UsersList.currentUser;
+        ArrayList<Recipe>r=u.getRecipes();
     }
     @When("the user click on editBtn amd all field empty")
     public void the_user_click_on_edit_btn_amd_all_field_empty() {
@@ -40,9 +46,11 @@ public class ManageAccountTest {
     @Then("the alert appear that the User Name change success")
     public void the_alert_appear_that_the_user_name_change_success() {
         System.out.println("the user successufly change user name");
+
     }
     @When("the user click on editBtn and the password only fill with new userName {string}")
     public void the_user_click_on_edit_btn_and_the_password_only_fill_with_new_user_name(String string) {
+
         if(ManageAccounrHelper.changePassword(string)&&!ManageAccounrHelper.isTheSamePassword(string)){
             UsersList.currentUser.setPassword(string);
             Assertions.assertTrue(true);

@@ -1,0 +1,8 @@
+.choice-box .list-cell {
+    -fx-background-color: red;  /* Background color for the list items */
+    -fx-text-fill: snow;        /* Text color for the list items */
+}
+
+.choice-box .list-cell:hover {
+    -fx-background-color: darkred; /* Background color when hovering over an item */
+}

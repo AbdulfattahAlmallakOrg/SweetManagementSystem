@@ -7,6 +7,8 @@ import com.example.sweetsystem.clasess.Product;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import org.junit.jupiter.api.Tag;
+
 
 public class AddProductTest {
 
