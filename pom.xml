@@ -181,6 +181,15 @@
                         <exclude>com/example/sweetsystem/**/BestSellingProductsController.class</exclude>
                         <exclude>com/example/sweetsystem/**/Login.class</exclude>
 
+                        <exclude>com/example/sweetsystem/**/Main.class</exclude>
+                        <exclude>com/example/sweetsystem/**/Message.class</exclude>
+                        <exclude>com/example/sweetsystem/**/ProfitController.class</exclude>
+                        <exclude>com/example/sweetsystem/**/RawSupplierController.class</exclude>
+                        <exclude>com/example/sweetsystem/**/StoreOwner.class</exclude>
+                        <exclude>com/example/sweetsystem/**/RecipesCardController.class</exclude>
+                        <exclude>com/example/sweetsystem/**/Transaction.class</exclude>
+                        <exclude>com/example/sweetsystem/**/UserStatisticsController.class</exclude>
+
 
                     </excludes>
                 </configuration>
