@@ -170,27 +170,25 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <configuration>
                     <excludes>
-                        <exclude>com/example/sweetsystem/**/ManageAccount.class</exclude>
-                        <exclude>com/example/sweetsystem/**/Index.class</exclude>
-                        <exclude>com/example/sweetsystem/**/SignUp.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/ManageAccount.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/Index.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/SignUp.class</exclude>
 
-                        <exclude>com/example/sweetsystem/**/AddUserPage.class</exclude>
-                        <exclude>com/example/sweetsystem/**/Admin.class</exclude>
-                        <exclude>com/example/sweetsystem/**/AdminController.class</exclude>
-                        <exclude>com/example/sweetsystem/**/BestSellingProductsController.class</exclude>
-                        <exclude>com/example/sweetsystem/**/Login.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/AddUserPage.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/Admin.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/AdminController.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/BestSellingProductsController.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/Login.class</exclude>
 
-                        <exclude>com/example/sweetsystem/**/Main.class</exclude>
-                        <exclude>com/example/sweetsystem/**/Message.class</exclude>
-                        <exclude>com/example/sweetsystem/**/ProfitController.class</exclude>
-                        <exclude>com/example/sweetsystem/**/RawSupplierController.class</exclude>
-                        <exclude>com/example/sweetsystem/**/StoreOwner.class</exclude>
-                        <exclude>com/example/sweetsystem/**/RecipesCardController.class</exclude>
-                        <exclude>com/example/sweetsystem/**/Transaction.class</exclude>
-                        <exclude>com/example/sweetsystem/**/UserStatisticsController.class</exclude>
-                        <exclude>com/example/sweetsystem/**/UserStatisticsController.class</exclude>
-
-
+                        <exclude>com/example/sweetsystem/Controllers/**/Main.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/Message.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/ProfitController.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/RawSupplierController.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/StoreOwner.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/RecipesCardController.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/Transaction.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/UserStatisticsController.class</exclude>
+                        <exclude>com/example/sweetsystem/Controllers/**/UserStatisticsController.class</exclude>
                     </excludes>
                 </configuration>
             </plugin>
