@@ -26,7 +26,7 @@ public class SignUpTest  {
      Assert.assertEquals(list.getUserCurrentPage(),page);
      UsersList.fillData();
     }
-
+//
     @When("the user enter an exist valid username {string}")
     public void theUserEnterAnExistValidUsername(String string) {
         UsersList.CanMakeUserName=false;
