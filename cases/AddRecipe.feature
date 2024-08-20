@@ -11,3 +11,18 @@ Feature:Add recipe from user
      | blubbary cake 2| Path3       | a sweet cake  | Egg,Wheet,water   | wheet,milk,Egg   |
      | blubbary cake 3| Path4       | a sweet cake  | Egg,Wheet         | wheet            |
 
+
+
+  Scenario Outline: user enter invalid info to make recipe post
+    Given user in add recipe page
+    When user enter all field  except one and click post '<cakeName>' and '<imagePath>' and '<Decription>' and '<needs>' and '<allerg>'
+    Then the post will not create
+    Examples:
+      | cakeName       | imagePath   | Decription    | needs             | allerg           |
+      |                | Path12      | a sweet cake  | Egg               | wheet            |
+      | blubbary cake 4|             | a sweet cake  | Egg,Wheet         | wheet,milk       |
+      | blubbary cake 2| Path3       |               | Egg,Wheet,water   | wheet,milk,Egg   |
+      | blubbary cake 3| Path4       | a sweet cake  |                   | wheet            |
+
+
+

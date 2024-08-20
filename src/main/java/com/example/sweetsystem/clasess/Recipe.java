@@ -69,9 +69,6 @@ public class Recipe {
         return Comments;
     }
 
-    public void setComments(ArrayList<Comment> comments) {
-        Comments = comments;
-    }
     public Comment getComment(int x){
         return Comments.get(x);
     }
