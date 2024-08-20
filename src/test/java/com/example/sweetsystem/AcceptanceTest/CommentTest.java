@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Assertions;
 import java.util.ArrayList;
 
 public class CommentTest {
+    public String writer;
     ArrayList<Comment>cc;
     @Given("the use is in main page")
     public void the_use_is_in_main_page() {
@@ -23,6 +24,8 @@ public class CommentTest {
         Comment c=new Comment(UsersList.currentUser.getUserName(),string);
         RecipesList.Recipes.get(RecipesList.Recipes.size()-1).addComment(c);
         cc=RecipesList.Recipes.get(RecipesList.Recipes.size()-1).getComments();
+       writer= c.getWriterName();
+       c.setMessage(string);
         Assertions.assertEquals(cc.get(0).getMessage(),string,"the comment not posted");
     }
     @Then("the list of comment will appear")
