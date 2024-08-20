@@ -14,7 +14,7 @@ public class ReadUnreadMessagesTest {
 
     private OwnerAndSupplier receiver;
 
-    /*@Given("a receiver with ID {int} exists")
+    @Given("a receiver with ID {int} exists")
     public void a_receiver_with_id_exists(int receiverId) {
         receiver = new OwnerAndSupplier("Receiver Name", "receiver@example.com", "password", "supplier", "location");
     }
@@ -72,5 +72,5 @@ public class ReadUnreadMessagesTest {
     @Then("the unread messages list should remain empty")
     public void the_unread_messages_list_should_remain_empty() {
         assertEquals(0, receiver.getUnreadMessages().size());
-    }*/
+    }
 }

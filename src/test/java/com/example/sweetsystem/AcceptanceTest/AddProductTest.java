@@ -14,7 +14,7 @@ public class AddProductTest {
     private OwnerAndSupplier owner;
     private String errorMessage;
 
-    /*@Given("I have an empty inventory")
+    @Given("I have an empty inventory")
     public void i_have_an_empty_inventory() {
         owner = new OwnerAndSupplier("Owner Name", "owner@example.com", "password", "owner", "location");
         assertTrue(owner.getProducts().isEmpty());
@@ -76,7 +76,5 @@ public class AddProductTest {
         Product product = owner.getProducts().get(0);
         assertEquals(10, product.getQuantity()); // Assuming 5 was initially added, and 5 more in the scenario.
     }
-    */
-
 }
 
