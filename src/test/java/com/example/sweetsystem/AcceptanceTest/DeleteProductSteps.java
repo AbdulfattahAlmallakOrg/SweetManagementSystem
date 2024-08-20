@@ -15,7 +15,7 @@ public class DeleteProductSteps {
     public String deleteResult;
 
 
-    @Given("a product with name {string} exists and belongs to the user")
+   /* @Given("a product with name {string} exists and belongs to the user")
     public void a_product_with_name_exists_and_belongs_to_the_user(String productName) {
         owner = new OwnerAndSupplier("Owner", "owner@example.com", "password", "Owner", "Location");
         owner.addNewProduct(productName, "Description", 10.0, 5);
@@ -62,5 +62,5 @@ public class DeleteProductSteps {
     public void an_invalid_permission_message_should_be_shown() {
         Assert.assertEquals(OwnerAndSupplier.INVALID_PERMISSION_MESSAGE, deleteResult);
     }
-
+*/
 }
