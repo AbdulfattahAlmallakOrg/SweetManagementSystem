@@ -4,9 +4,12 @@ import com.example.sweetsystem.clasess.Admin;
 import com.example.sweetsystem.clasess.Client;
 import com.example.sweetsystem.clasess.User;
 import com.example.sweetsystem.clasess.UsersList;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -20,7 +23,11 @@ import java.util.regex.Pattern;
 
 public class SignUp implements Initializable {
     @FXML
+    private ChoiceBox RoleBox;
+    public String [] role={"Owner","Client","Supplier"};
+    @FXML
 private AnchorPane ParentPane;
+
     @FXML
     public TextField passwordf;
     @FXML
@@ -94,6 +101,15 @@ public void clearInputs(){
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+    RoleBox.getItems().addAll(role);
+    RoleBox.setOnAction(this::setRole);
+    }
+
+    private void setRole(Event event) {
+        rolef.setText((String) RoleBox.getValue());
 
     }
+
+
+
 }
