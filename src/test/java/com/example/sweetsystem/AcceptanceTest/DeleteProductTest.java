@@ -41,11 +41,7 @@ public class DeleteProductTest {
         assertNull(Product.getProduct(productName));
     }
 
-    @When("the user tries to delete the product with name {string}")
-    public void the_user_tries_to_delete_the_product_with_name(String productName) {
-        owner.deleteProduct(productName);
-        errorMessage = INVALID_NAME_MESSAGE;
-    }
+
 
     @Then("an invalid name message should be shown")
     public void an_invalid_name_message_should_be_shown() {
