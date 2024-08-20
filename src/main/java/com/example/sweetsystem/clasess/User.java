@@ -12,6 +12,10 @@ public class User {
         return location;
     }
 
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
     private String location;
     public User(String userName, String email, String password,String type,String location){
         this.email=email;
