@@ -74,7 +74,7 @@ public class Product {
         return map.getOrDefault(name, null);
     }
 
-    public static void removeProduct(int id) {
-        map.remove(id);
+    public static void removeProduct(String name) {
+        map.remove(name);
     }
 }

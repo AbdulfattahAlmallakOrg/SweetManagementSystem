@@ -95,7 +95,7 @@ public class OwnerAndSupplier extends User {
         Product product = Product.getProduct(name);
         if (product != null && product.getOwnerID() == getId()) {
             products.remove(product);
-            Product.removeProduct(product.getId());
+            Product.removeProduct(product.getName());
         } else {
             System.out.println(INVALID_NAME_MESSAGE);
         }

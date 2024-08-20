@@ -4,8 +4,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Order {
-    public static int count = 0;
-    private int orderID;
+    private static int count = 0;
+    private final int orderID;
     private int senderID;
     private int productID;
     private int supplierID;
@@ -55,20 +55,26 @@ public class Order {
         return orderStatus;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     public void setOrderStatus(String orderStatus) {
         this.orderStatus = orderStatus;
     }
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Sender: ");
-        sb.append(OwnerAndSupplier.getOwnerSupplier(senderID).getUserName());
-        sb.append("\nReceiver: ");
-        sb.append(OwnerAndSupplier.getOwnerSupplier(supplierID).getUserName());
-        sb.append("\nTimestamp: ");
-        sb.append(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss").format(time));
-        sb.append("\n");
-        return sb.toString();
+        return "Sender: " +
+                OwnerAndSupplier.getOwnerSupplier(senderID).getUserName() +
+                "\nReceiver: " +
+                OwnerAndSupplier.getOwnerSupplier(supplierID).getUserName() +
+                "\nTimestamp: " +
+                DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss").format(time) +
+                "\n";
     }
 }
