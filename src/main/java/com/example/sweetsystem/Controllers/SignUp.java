@@ -1,10 +1,7 @@
-package com.example.sweetsystem;
+package com.example.sweetsystem.Controllers;
 
-import com.example.sweetsystem.clasess.Admin;
-import com.example.sweetsystem.clasess.Client;
-import com.example.sweetsystem.clasess.User;
+import com.example.sweetsystem.Controllers.Index;
 import com.example.sweetsystem.clasess.UsersList;
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,8 +15,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class SignUp implements Initializable {
     @FXML

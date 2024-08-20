@@ -1,6 +1,6 @@
 package com.example.sweetsystem.clasess;
 
-import com.example.sweetsystem.Message;
+import com.example.sweetsystem.Controllers.Message;
 
 import java.util.ArrayList;
 import java.util.HashMap;

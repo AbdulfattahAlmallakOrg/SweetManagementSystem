@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.sweetsystem.Message;
+import com.example.sweetsystem.Controllers.Message;
 import com.example.sweetsystem.clasess.OwnerAndSupplier;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;

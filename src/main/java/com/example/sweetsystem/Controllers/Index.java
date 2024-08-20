@@ -1,5 +1,6 @@
-package com.example.sweetsystem;
+package com.example.sweetsystem.Controllers;
 
+import com.example.sweetsystem.Controllers.HelloApplication;
 import com.example.sweetsystem.clasess.Client;
 import com.example.sweetsystem.clasess.User;
 import com.example.sweetsystem.clasess.UsersList;

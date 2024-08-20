@@ -1,17 +1,12 @@
 package com.example.sweetsystem.clasess;
-import com.example.sweetsystem.Transaction;
+import com.example.sweetsystem.Controllers.Transaction;
 /*import com.itextpdf.text. Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;*/
 
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.List;
 import static javafx.application.Application.launch;
-import com.example.sweetsystem.clasess.Product;
-
-import java.util.List;
 
 public class Profit {
     private final List<Transaction> transactions;

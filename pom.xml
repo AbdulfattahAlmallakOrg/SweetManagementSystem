@@ -152,7 +152,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.sweetsystem/com.example.sweetsystem.HelloApplication</mainClass>
+                            <mainClass>com.example.sweetsystem/com.example.sweetsystem.Controllers.HelloApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
@@ -171,6 +171,26 @@
                 <configuration>
                     <excludes>
                         <exclude>com/example/sweetsystem/**/ManageAccount.class</exclude>
+                        <exclude>com/example/sweetsystem/**/Index.class</exclude>
+                        <exclude>com/example/sweetsystem/**/SignUp.class</exclude>
+
+                        <exclude>com/example/sweetsystem/**/AddUserPage.class</exclude>
+                        <exclude>com/example/sweetsystem/**/Admin.class</exclude>
+                        <exclude>com/example/sweetsystem/**/AdminController.class</exclude>
+                        <exclude>com/example/sweetsystem/**/BestSellingProductsController.class</exclude>
+                        <exclude>com/example/sweetsystem/**/Login.class</exclude>
+
+                        <exclude>com/example/sweetsystem/**/Main.class</exclude>
+                        <exclude>com/example/sweetsystem/**/Message.class</exclude>
+                        <exclude>com/example/sweetsystem/**/ProfitController.class</exclude>
+                        <exclude>com/example/sweetsystem/**/RawSupplierController.class</exclude>
+                        <exclude>com/example/sweetsystem/**/StoreOwner.class</exclude>
+                        <exclude>com/example/sweetsystem/**/RecipesCardController.class</exclude>
+                        <exclude>com/example/sweetsystem/**/Transaction.class</exclude>
+                        <exclude>com/example/sweetsystem/**/UserStatisticsController.class</exclude>
+                        <exclude>com/example/sweetsystem/**/UserStatisticsController.class</exclude>
+
+
                     </excludes>
                 </configuration>
             </plugin>

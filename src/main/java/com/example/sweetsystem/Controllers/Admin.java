@@ -1,18 +1,11 @@
-package com.example.sweetsystem;
+package com.example.sweetsystem.Controllers;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Objects;
 
-import com.example.sweetsystem.StoreOwner;
-import com.example.sweetsystem.clasess.User;
-import com.example.sweetsystem.clasess.UsersList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 
 
