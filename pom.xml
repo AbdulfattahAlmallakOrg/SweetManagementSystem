@@ -170,7 +170,6 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <configuration>
                     <excludes>
-
                         <exclude>com/example/sweetsystem/Controllers/**/*</exclude>
                     </excludes>
                 </configuration>
