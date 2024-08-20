@@ -10,6 +10,6 @@ import org.junit.runner.RunWith;
         snippets = SnippetType.CAMELCASE,
         glue = {"com.example.sweetsystem.AcceptanceTest"},
         tags = "@tag2"
-)
+)//
 public class acceptanceTest {
 }
