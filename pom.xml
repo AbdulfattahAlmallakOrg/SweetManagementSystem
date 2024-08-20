@@ -173,6 +173,15 @@
                     <excludes>
                         <exclude>com/example/sweetsystem/**/ManageAccount.class</exclude>
                         <exclude>com/example/sweetsystem/**/Index.class</exclude>
+                        <exclude>com/example/sweetsystem/**/SignUp.class</exclude>
+
+                        <exclude>com/example/sweetsystem/**/AddUserPage.class</exclude>
+                        <exclude>com/example/sweetsystem/**/Admin.class</exclude>
+                        <exclude>com/example/sweetsystem/**/AdminController.class</exclude>
+                        <exclude>com/example/sweetsystem/**/BestSellingProductsController.class</exclude>
+                        <exclude>com/example/sweetsystem/**/Login.class</exclude>
+
+
                     </excludes>
                 </configuration>
             </plugin>
