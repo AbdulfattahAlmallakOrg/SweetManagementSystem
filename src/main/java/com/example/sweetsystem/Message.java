@@ -17,18 +17,20 @@ public class Message {
         this.time = LocalDateTime.now();
     }
 
+    public String getContent() {
+        return content;
+    }
+
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Sender: ");
-        sb.append(OwnerAndSupplier.getOwnerSupplier(senderId).getUserName());
-        sb.append("\nReceiver: ");
-        sb.append(OwnerAndSupplier.getOwnerSupplier(receiverId).getUserName());
-        sb.append("\nTimestamp: ");
-        sb.append(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss").format(time));
-        sb.append("\nMessage: ");
-        sb.append(content);
-        sb.append("\n");
-        return sb.toString();
+        return "Sender: " +
+                OwnerAndSupplier.getOwnerSupplier(senderId).getUserName() +
+                "\nReceiver: " +
+                OwnerAndSupplier.getOwnerSupplier(receiverId).getUserName() +
+                "\nTimestamp: " +
+                DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss").format(time) +
+                "\nMessage: " +
+                content +
+                "\n";
     }
 }

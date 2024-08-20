@@ -25,6 +25,22 @@ public class OwnerAndSupplier extends User {
         products = new ArrayList<>();
     }
 
+    public List<Message> getSentMessages() {
+        return sentMessages;
+    }
+
+    public List<Message> getReadMessages() {
+        return readMessages;
+    }
+
+    public List<Message> getUnreadMessages() {
+        return unreadMessages;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
     public int sendMessage(String content, int receiverId) {
         Message message = new Message(getId(), receiverId, content);
         OwnerAndSupplier receiver = getOwnerSupplier(receiverId);
