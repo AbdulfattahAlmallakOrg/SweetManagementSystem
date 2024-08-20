@@ -16,4 +16,4 @@ Feature: Delete a product by name
   Scenario: Fail to delete a product that does not belong to the user
     Given a product with name "Product2" exists but does not belong to the user
     When the user tries to delete the product with name "Product2"
-    Then an invalid name message should be shown
+    Then an invalid permission message should be shown

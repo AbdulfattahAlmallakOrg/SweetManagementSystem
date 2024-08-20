@@ -15,6 +15,7 @@ public class OwnerAndSupplier extends User {
     public static final String INVALID_NAME_MESSAGE = "ID is invalid";
     public static final String INVALID_PRICE_MESSAGE = "Price is invalid";
     public static final String INVALID_QUANTITY_MESSAGE = "Quantity is invalid";
+    public static final String INVALID_PERMISSION_MESSAGE = "Permission is invalid";
 
     public OwnerAndSupplier(String name, String email, String password, String type, String location) {
         super(name, email, password, type, location);
@@ -112,8 +113,11 @@ public class OwnerAndSupplier extends User {
         if (product != null && product.getOwnerID() == getId()) {
             products.remove(product);
             Product.removeProduct(product.getName());
-        } else {
+        } else if(product == null) {
             System.out.println(INVALID_NAME_MESSAGE);
+        }
+        else {
+            System.out.println(INVALID_PERMISSION_MESSAGE);
         }
     }
 }
