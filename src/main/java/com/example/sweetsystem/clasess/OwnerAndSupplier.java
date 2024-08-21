@@ -80,18 +80,22 @@ public class OwnerAndSupplier extends User {
         }
     }
 
-    public void addNewProduct(String name, String description, double price, int quantity) {
+    public String addNewProduct(String name, String description, double price, int quantity) {
         if (price < 0) {
-            System.out.println(INVALID_PRICE_MESSAGE);
+            return INVALID_PRICE_MESSAGE;
         }
+        else if(quantity < 0) return INVALID_QUANTITY_MESSAGE;
         else {
             Product product = Product.getProduct(name);
             if (product == null) {
                 product = new Product(name, description, price, quantity, getId());
                 products.add(product);
             }
-            else product.setQuantity(product.getQuantity() + quantity);
+            else {
+                product.setQuantity(product.getQuantity() + quantity);
+            }
         }
+        return "s";
     }
 
     public void updateProduct(String name, String description, double price, int quantity) {
