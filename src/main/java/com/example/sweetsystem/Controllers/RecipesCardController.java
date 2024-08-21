@@ -1,10 +1,9 @@
-package com.example.sweetsystem;
+package com.example.sweetsystem.Controllers;
 
 import com.example.sweetsystem.clasess.Comment;
 import com.example.sweetsystem.clasess.Recipe;
 import com.example.sweetsystem.clasess.UsersList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;

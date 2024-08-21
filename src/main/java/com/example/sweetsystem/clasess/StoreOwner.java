@@ -1,8 +1,4 @@
-package com.example.sweetsystem;
-
-import com.example.sweetsystem.clasess.Order;
-import com.example.sweetsystem.clasess.OwnerAndSupplier;
-import com.example.sweetsystem.clasess.Supplier;
+package com.example.sweetsystem.clasess;
 
 import java.util.List;
 

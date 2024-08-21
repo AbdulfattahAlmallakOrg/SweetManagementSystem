@@ -1,20 +1,13 @@
 package com.example.sweetsystem.AcceptanceTest;
 
-import com.example.sweetsystem.HelloApplication;
-import com.example.sweetsystem.Login;
-import com.example.sweetsystem.SignUp;
-import com.example.sweetsystem.clasess.User;
 import com.example.sweetsystem.clasess.UsersList;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import javafx.application.Application;
-import javafx.stage.Stage;
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;
-import org.w3c.dom.ls.LSOutput;
 
 import java.io.IOException;
 

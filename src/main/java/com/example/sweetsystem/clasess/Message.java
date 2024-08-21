@@ -1,6 +1,4 @@
-package com.example.sweetsystem;
-
-import com.example.sweetsystem.clasess.OwnerAndSupplier;
+package com.example.sweetsystem.clasess;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

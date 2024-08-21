@@ -1,4 +1,4 @@
-package com.example.sweetsystem;
+package com.example.sweetsystem.Controllers;
 
 import com.example.sweetsystem.clasess.RawSupplier;
 import javafx.fxml.FXML;
