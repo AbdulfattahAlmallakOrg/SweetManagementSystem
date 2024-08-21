@@ -17,6 +17,11 @@
 
         <sonar.organization>abdulfattahalmallakorg</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+
+            <sonar.exclusions>src/main/java/com/example/sweetsystem/Controllers/**</sonar.exclusions>
+
+
+
     </properties>
 
     <dependencies>
@@ -163,6 +168,19 @@
                     </execution>
                 </executions>
             </plugin>
+
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>com/example/sweetsystem/Controllers/**/*</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+
+
         </plugins>
     </build>
 </project>

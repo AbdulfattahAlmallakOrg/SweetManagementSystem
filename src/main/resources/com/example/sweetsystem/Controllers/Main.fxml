@@ -13,11 +13,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ParentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1024.0" styleClass="ParentPane" stylesheets="@Nav.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Controllers.Main">
+<AnchorPane fx:id="ParentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1024.0" styleClass="ParentPane" stylesheets="@../Nav.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Controllers.Main">
    <children>
       <VBox alignment="CENTER" layoutX="944.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="80.0" spacing="30.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#openFilter" prefHeight="60.0" prefWidth="60.0" styleClass="rounded" stylesheets="@RoundedBtn.css">
+            <Button mnemonicParsing="false" onAction="#openFilter" prefHeight="60.0" prefWidth="60.0" styleClass="rounded" stylesheets="@../RoundedBtn.css">
                <graphic>
                   <Label>
                      <graphic>
@@ -26,7 +26,7 @@
                   </Label>
                </graphic>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToManageAccount" prefHeight="60.0" prefWidth="60.0" styleClass="rounded" stylesheets="@RoundedBtn.css">
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToManageAccount" prefHeight="60.0" prefWidth="60.0" styleClass="rounded" stylesheets="@../RoundedBtn.css">
                <graphic>
                   <Label>
                      <graphic>
@@ -35,7 +35,7 @@
                   </Label>
                </graphic>
             </Button>
-            <Button fx:id="addBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addrecipecs" prefHeight="60.0" prefWidth="60.0" styleClass="rounded" stylesheets="@RoundedBtn.css" VBox.vgrow="ALWAYS">
+            <Button fx:id="addBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addrecipecs" prefHeight="60.0" prefWidth="60.0" styleClass="rounded" stylesheets="@../RoundedBtn.css" VBox.vgrow="ALWAYS">
                <graphic>
                   <Label>
                      <graphic>
@@ -44,7 +44,7 @@
                   </Label>
                </graphic>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="60.0" prefWidth="60.0" styleClass="rounded" stylesheets="@RoundedBtn.css">
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="60.0" prefWidth="60.0" styleClass="rounded" stylesheets="@../RoundedBtn.css">
                <graphic>
                   <Label>
                      <graphic>
@@ -57,7 +57,7 @@
       </VBox>
       <HBox layoutX="234.0" layoutY="14.0" prefHeight="68.0" prefWidth="555.0">
          <children>
-            <HBox fx:id="topLeft" alignment="CENTER" onMouseClicked="#showPostsBox" prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 30px 0px  0px 30px;" styleClass="top-bar-selected" stylesheets="@Nav.css" HBox.hgrow="ALWAYS">
+            <HBox fx:id="topLeft" alignment="CENTER" onMouseClicked="#showPostsBox" prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 30px 0px  0px 30px;" styleClass="top-bar-selected" stylesheets="@../Nav.css" HBox.hgrow="ALWAYS">
                <children>
                   <Label alignment="CENTER" prefHeight="45.0" prefWidth="85.0" text="Posts" textFill="WHITE">
                      <font>
@@ -69,7 +69,7 @@
                   </Label>
                </children>
             </HBox>
-            <HBox fx:id="topRight" alignment="CENTER" onMouseClicked="#showProductBox" prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 0px 30px  30px 0px;" styleClass="top-bar" stylesheets="@Nav.css" HBox.hgrow="ALWAYS">
+            <HBox fx:id="topRight" alignment="CENTER" onMouseClicked="#showProductBox" prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 0px 30px  30px 0px;" styleClass="top-bar" stylesheets="@../Nav.css" HBox.hgrow="ALWAYS">
                <children>
                   <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="134.0" text="Products" textFill="WHITE">
                      <font>
@@ -83,9 +83,9 @@
             </HBox>
          </children>
       </HBox>
-      <ScrollPane fx:id="postsScroll" layoutX="21.0" layoutY="89.0" prefHeight="463.0" prefWidth="849.0" style="-fx-background-color: #303138;" styleClass="ParentPane" stylesheets="@Nav.css">
+      <ScrollPane fx:id="postsScroll" layoutX="21.0" layoutY="89.0" prefHeight="463.0" prefWidth="849.0" style="-fx-background-color: #303138;" styleClass="ParentPane" stylesheets="@../Nav.css">
          <content>
-            <VBox fx:id="recipesCont" prefHeight="461.0" prefWidth="832.0" spacing="20.0" styleClass="ParentPane" stylesheets="@Nav.css" />
+            <VBox fx:id="recipesCont" prefHeight="461.0" prefWidth="832.0" spacing="20.0" styleClass="ParentPane" stylesheets="@../Nav.css" />
          </content>
       </ScrollPane>
       <Pane fx:id="backgroundPane" layoutX="-2.0" layoutY="-2.0" prefHeight="567.0" prefWidth="1027.0" style="-fx-background-color: black; -fx-opacity: 0.4;" visible="false" />
@@ -95,12 +95,12 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="426.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="icon" stylesheets="@textField.css">
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="icon" stylesheets="@../textField.css">
                            <graphic>
                               <FontAwesomeIcon glyphName="CIRCLE" glyphStyle="-fx-fill:white" />
                            </graphic>
                         </Label>
-                        <TextField fx:id="searchField" prefHeight="40.0" prefWidth="341.0" promptText="Search By Resepie Name " style="-fx-background-color: transparent; -fx-border-color: #80a3ff; -fx-border-width: 0px 0px 3px 0px; -fx-font-size: 18px;" styleClass="field" stylesheets="@textField.css" />
+                        <TextField fx:id="searchField" prefHeight="40.0" prefWidth="341.0" promptText="Search By Resepie Name " style="-fx-background-color: transparent; -fx-border-color: #80a3ff; -fx-border-width: 0px 0px 3px 0px; -fx-font-size: 18px;" styleClass="field" stylesheets="@../textField.css" />
                      </children>
                   </HBox>
                   <Label alignment="CENTER" prefHeight="17.0" prefWidth="468.0" text="----------------------------------- Filter -----------------------------------">
@@ -110,18 +110,18 @@
                   </Label>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="icon" stylesheets="@textField.css">
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="icon" stylesheets="@../textField.css">
                            <graphic>
                               <FontAwesomeIcon glyphName="CIRCLE" glyphStyle="-fx-fill:white" />
                            </graphic>
                         </Label>
-                        <TextField fx:id="allergeField" prefHeight="40.0" prefWidth="341.0" promptText="Search By Resepie Allerge" style="-fx-background-color: transparent; -fx-border-color: #80a3ff; -fx-border-width: 0px 0px 3px 0px; -fx-font-size: 18px;" styleClass="field" stylesheets="@textField.css" />
+                        <TextField fx:id="allergeField" prefHeight="40.0" prefWidth="341.0" promptText="Search By Resepie Allerge" style="-fx-background-color: transparent; -fx-border-color: #80a3ff; -fx-border-width: 0px 0px 3px 0px; -fx-font-size: 18px;" styleClass="field" stylesheets="@../textField.css" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#searchButton" prefHeight="40.0" prefWidth="110.0" styleClass="secondary-btn" stylesheets="@Buttons.css" text="Search" />
-                        <Button mnemonicParsing="false" onAction="#closeFilter" prefHeight="40.0" prefWidth="110.0" styleClass="Primary-btn" stylesheets="@Buttons.css" text="Cancel" />
+                        <Button mnemonicParsing="false" onAction="#searchButton" prefHeight="40.0" prefWidth="110.0" styleClass="secondary-btn" stylesheets="@../Buttons.css" text="Search" />
+                        <Button mnemonicParsing="false" onAction="#closeFilter" prefHeight="40.0" prefWidth="110.0" styleClass="Primary-btn" stylesheets="@../Buttons.css" text="Cancel" />
                      </children>
                   </HBox>
                </children>
@@ -133,7 +133,7 @@
             <VBox fx:id="commentCont" prefHeight="380.0" prefWidth="779.0" spacing="10.0" />
          </content>
       </ScrollPane>
-      <Label fx:id="closeComment" alignment="CENTER" layoutX="850.0" layoutY="129.0" onMouseClicked="#setCloseComment" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%; -fx-background-color: red;" styleClass="close-btn" stylesheets="@Buttons.css" visible="false">
+      <Label fx:id="closeComment" alignment="CENTER" layoutX="850.0" layoutY="129.0" onMouseClicked="#setCloseComment" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%; -fx-background-color: red;" styleClass="close-btn" stylesheets="@../Buttons.css" visible="false">
          <graphic>
             <FontAwesomeIcon glyphName="CLOSE" glyphStyle="-fx-fill:white" size="2.3em" />
          </graphic>

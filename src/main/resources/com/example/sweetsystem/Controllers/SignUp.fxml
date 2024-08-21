@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="ParentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1024.0" styleClass="ParentPane" stylesheets="@Nav.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Controllers.SignUp">
+<AnchorPane fx:id="ParentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1024.0" styleClass="ParentPane" stylesheets="@../Nav.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Controllers.SignUp">
    <children>
       <VBox alignment="CENTER" layoutX="356.0" layoutY="42.0" prefHeight="286.0" prefWidth="557.0" spacing="25.0">
          <children>
@@ -21,12 +21,12 @@
                <children>
                   <HBox prefHeight="50.0" prefWidth="250.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="icon" stylesheets="@textField.css">
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="icon" stylesheets="@../textField.css">
                            <graphic>
                               <FontAwesomeIcon glyphName="USER" glyphStyle="-fx-fill:white" size="2.3em" />
                            </graphic>
                         </Label>
-                        <TextField fx:id="usernamef" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" promptText="Username" styleClass="field" stylesheets="@textField.css" HBox.hgrow="ALWAYS">
+                        <TextField fx:id="usernamef" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" promptText="Username" styleClass="field" stylesheets="@../textField.css" HBox.hgrow="ALWAYS">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -35,12 +35,12 @@
                   </HBox>
                   <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="250.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="icon" stylesheets="@textField.css">
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="icon" stylesheets="@../textField.css">
                            <graphic>
                               <FontAwesomeIcon fill="WHITE" glyphName="LOCK" size="2.3em" />
                            </graphic>
                         </Label>
-                        <PasswordField fx:id="passwordf" prefHeight="57.0" prefWidth="201.0" promptText="Password" styleClass="field" stylesheets="@textField.css">
+                        <PasswordField fx:id="passwordf" prefHeight="57.0" prefWidth="201.0" promptText="Password" styleClass="field" stylesheets="@../textField.css">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -53,12 +53,12 @@
                <children>
                   <HBox prefHeight="50.0" prefWidth="250.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="50.0" styleClass="icon" stylesheets="@textField.css">
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="50.0" styleClass="icon" stylesheets="@../textField.css">
                            <graphic>
                               <FontAwesomeIcon glyphName="GLOBE" glyphStyle="-fx-fill:white" size="2.3em" text="" />
                            </graphic>
                         </Label>
-                        <TextField fx:id="locationf" prefHeight="50.0" prefWidth="204.0" promptText="Location" styleClass="field" stylesheets="@textField.css">
+                        <TextField fx:id="locationf" prefHeight="50.0" prefWidth="204.0" promptText="Location" styleClass="field" stylesheets="@../textField.css">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -67,12 +67,12 @@
                   </HBox>
                   <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="250.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="icon" stylesheets="@textField.css">
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="icon" stylesheets="@../textField.css">
                            <graphic>
                               <FontAwesomeIcon fill="WHITE" glyphName="ENVELOPE" size="2.3em" />
                            </graphic>
                         </Label>
-                        <TextField fx:id="emailf" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" promptText="Email" styleClass="field" stylesheets="@textField.css" HBox.hgrow="ALWAYS">
+                        <TextField fx:id="emailf" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" promptText="Email" styleClass="field" stylesheets="@../textField.css" HBox.hgrow="ALWAYS">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -90,22 +90,22 @@
                   <Font size="16.0" />
                </font>
             </Text>
-            <Button mnemonicParsing="false" onAction="#switchtoLogin" prefHeight="28.0" prefWidth="60.0" styleClass="Primary-btn" stylesheets="@Buttons.css" text="Login" HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" onAction="#switchtoLogin" prefHeight="28.0" prefWidth="60.0" styleClass="Primary-btn" stylesheets="@../Buttons.css" text="Login" HBox.hgrow="ALWAYS" />
          </children>
       </HBox>
-      <Button layoutX="560.0" layoutY="411.0" mnemonicParsing="false" onAction="#signupBtn" prefHeight="34.0" prefWidth="150.0" styleClass="secondary-btn" stylesheets="@Buttons.css" text="SignUp">
+      <Button layoutX="560.0" layoutY="411.0" mnemonicParsing="false" onAction="#signupBtn" prefHeight="34.0" prefWidth="150.0" styleClass="secondary-btn" stylesheets="@../Buttons.css" text="SignUp">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
       <HBox fx:id="alert1" layoutX="774.0" layoutY="485.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" visible="false">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeAlert" prefHeight="40.0" prefWidth="40.0" styleClass="alert-icon" stylesheets="@ALerts.css">
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeAlert" prefHeight="40.0" prefWidth="40.0" styleClass="alert-icon" stylesheets="@../ALerts.css">
                <graphic>
                   <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" size="2.3em" />
                </graphic>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="211.0" styleClass="text" stylesheets="@ALerts.css" text="You should fill all field" textFill="WHITE" HBox.hgrow="ALWAYS">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="211.0" styleClass="text" stylesheets="@../ALerts.css" text="You should fill all field" textFill="WHITE" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="16.0" />
                </font>
@@ -114,12 +114,12 @@
       </HBox>
       <HBox fx:id="alert2" layoutX="774.0" layoutY="430.0" prefHeight="40.0" prefWidth="250.0" visible="false">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeAlert2" prefHeight="40.0" prefWidth="40.0" styleClass="alert2-icon" stylesheets="@ALerts.css">
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeAlert2" prefHeight="40.0" prefWidth="40.0" styleClass="alert2-icon" stylesheets="@../ALerts.css">
                <graphic>
                   <FontAwesomeIcon glyphName="CHECK" glyphStyle="-fx-fill:white" size="2.3em" />
                </graphic>
             </Label>
-            <Label alignment="CENTER" prefHeight="57.0" prefWidth="219.0" styleClass="text" stylesheets="@ALerts.css" text="Account made successfully" textFill="WHITE" HBox.hgrow="ALWAYS">
+            <Label alignment="CENTER" prefHeight="57.0" prefWidth="219.0" styleClass="text" stylesheets="@../ALerts.css" text="Account made successfully" textFill="WHITE" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="16.0" />
                </font>
@@ -128,12 +128,12 @@
       </HBox>
       <HBox fx:id="alert3" layoutX="774.0" layoutY="485.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeAlert3" prefHeight="40.0" prefWidth="250.0" visible="false">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="alert-icon" stylesheets="@ALerts.css">
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="alert-icon" stylesheets="@../ALerts.css">
                <graphic>
                   <FontAwesomeIcon glyphName="CLOSE" glyphStyle="-fx-fill:white" size="2.3em" />
                </graphic>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="214.0" styleClass="text" stylesheets="@ALerts.css" text="The Username Is Taken" textFill="WHITE" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="214.0" styleClass="text" stylesheets="@../ALerts.css" text="The Username Is Taken" textFill="WHITE" />
          </children>
       </HBox>
       <TextField fx:id="rolef" layoutX="135.0" layoutY="231.0" visible="false" />

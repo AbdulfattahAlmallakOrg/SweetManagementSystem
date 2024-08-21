@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="parentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1024.0" styleClass="ParentPane" stylesheets="@Nav.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Controllers.Login">
+<AnchorPane fx:id="parentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1024.0" styleClass="ParentPane" stylesheets="@../Nav.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Controllers.Login">
    <children>
       <HBox alignment="CENTER" layoutX="402.0" layoutY="446.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="304.0">
          <children>
@@ -19,7 +19,7 @@
                   <Font size="20.0" />
                </font>
             </Text>
-            <Button mnemonicParsing="false" onAction="#switchToSignUp" prefHeight="35.0" prefWidth="87.0" styleClass="Primary-btn" stylesheets="@Buttons.css" text="Sign Up">
+            <Button mnemonicParsing="false" onAction="#switchToSignUp" prefHeight="35.0" prefWidth="87.0" styleClass="Primary-btn" stylesheets="@../Buttons.css" text="Sign Up">
                <font>
                   <Font size="14.0" />
                </font>
@@ -28,12 +28,12 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" layoutX="429.0" layoutY="143.0" prefHeight="50.0" prefWidth="250.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="icon" stylesheets="@textField.css">
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="icon" stylesheets="@../textField.css">
                <graphic>
                   <FontAwesomeIcon glyphName="USER" glyphStyle="-fx-fill:white" size="2.3em" />
                </graphic>
             </Label>
-            <TextField fx:id="username" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" promptText="Username" styleClass="field" stylesheets="@textField.css" HBox.hgrow="ALWAYS">
+            <TextField fx:id="username" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" promptText="Username" styleClass="field" stylesheets="@../textField.css" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="16.0" />
                </font>
@@ -42,30 +42,30 @@
       </HBox>
       <HBox layoutX="429.0" layoutY="244.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="250.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="icon" stylesheets="@textField.css">
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="icon" stylesheets="@../textField.css">
                <graphic>
                   <FontAwesomeIcon fill="WHITE" glyphName="LOCK" size="2.3em" />
                </graphic>
             </Label>
-            <PasswordField fx:id="password" prefHeight="55.0" prefWidth="204.0" promptText="Password" styleClass="field" stylesheets="@textField.css">
+            <PasswordField fx:id="password" prefHeight="55.0" prefWidth="204.0" promptText="Password" styleClass="field" stylesheets="@../textField.css">
                <font>
                   <Font size="16.0" />
                </font>
             </PasswordField>
          </children></HBox>
-      <Button fx:id="loginBtn" contentDisplay="CENTER" layoutX="479.0" layoutY="333.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loginBtnClick" prefHeight="35.0" prefWidth="150.0" styleClass="secondary-btn" stylesheets="@Buttons.css" text="Login">
+      <Button fx:id="loginBtn" contentDisplay="CENTER" layoutX="479.0" layoutY="333.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loginBtnClick" prefHeight="35.0" prefWidth="150.0" styleClass="secondary-btn" stylesheets="@../Buttons.css" text="Login">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
       <HBox fx:id="alert" layoutX="774.0" layoutY="476.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" visible="false">
          <children>
-            <Label fx:id="closeAlert" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeAlert" prefHeight="40.0" prefWidth="40.0" styleClass="alert-icon" stylesheets="@ALerts.css">
+            <Label fx:id="closeAlert" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeAlert" prefHeight="40.0" prefWidth="40.0" styleClass="alert-icon" stylesheets="@../ALerts.css">
                <graphic>
                   <FontAwesomeIcon glyphName="CLOSE" glyphStyle="-fx-fill:white" size="2.3em" />
                </graphic>
             </Label>
-            <Label fx:id="alertMessage" alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="219.0" styleClass="text" stylesheets="@ALerts.css" text="Account Is Not In The System" textFill="WHITE">
+            <Label fx:id="alertMessage" alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="219.0" styleClass="text" stylesheets="@../ALerts.css" text="Account Is Not In The System" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
