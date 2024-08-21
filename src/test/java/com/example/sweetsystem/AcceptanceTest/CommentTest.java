@@ -7,9 +7,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Tag;
 
 import java.util.ArrayList;
-
+@Tag("tag2")
 public class CommentTest {
     public String writer;
     ArrayList<Comment>cc;
@@ -26,6 +27,7 @@ public class CommentTest {
         cc=RecipesList.Recipes.get(RecipesList.Recipes.size()-1).getComments();
        writer= c.getWriterName();
        c.setMessage(string);
+
         Assertions.assertEquals(cc.get(0).getMessage(),string,"the comment not posted");
     }
     @Then("the list of comment will appear")

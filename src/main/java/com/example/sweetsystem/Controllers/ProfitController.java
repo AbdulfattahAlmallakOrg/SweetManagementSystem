@@ -1,8 +1,5 @@
 package com.example.sweetsystem.Controllers;
-import com.example.sweetsystem.clasess.Product;
-import com.example.sweetsystem.clasess.Profit;
-import com.example.sweetsystem.clasess.User;
-import com.example.sweetsystem.clasess.UsersList;
+import com.example.sweetsystem.clasess.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

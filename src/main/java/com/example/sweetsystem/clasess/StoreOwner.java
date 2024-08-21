@@ -1,4 +1,4 @@
-package com.example.sweetsystem.Controllers;
+package com.example.sweetsystem.clasess;
 
 import com.example.sweetsystem.clasess.Order;
 import com.example.sweetsystem.clasess.OwnerAndSupplier;

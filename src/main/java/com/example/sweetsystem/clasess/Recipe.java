@@ -49,17 +49,11 @@ public class Recipe {
         return Name;
     }
 
-    public void setName(String name) {
-        Name = name;
-    }
 
     public String getImage() {
         return Image;
     }
 
-    public void setImage(String image) {
-        Image = image;
-    }
 
 
 
@@ -69,35 +63,21 @@ public class Recipe {
         return Comments;
     }
 
-    public Comment getComment(int x){
-        return Comments.get(x);
-    }
     public void addComment(Comment c){
         Comments.add(c);
     }
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+
 
     public ArrayList<String> getAllergy() {
         return allergy;
     }
 
-    public void setAllergy(ArrayList<String> allergy) {
-        this.allergy = allergy;
-    }
 
     public String getDescription() {
         return Description;
     }
 
-    public void setDescription(String description) {
-        Description = description;
-    }
     public boolean findAllerge(String a){
         for(int i=0;i<allergy.size();i++){
             if(allergy.get(i).equals(a)){

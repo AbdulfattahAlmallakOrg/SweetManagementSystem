@@ -1,10 +1,13 @@
 package com.example.sweetsystem.clasess;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Product {
     private static int idCounter = 0;
     private final int id;
+    public static ArrayList<Product> products=new ArrayList<Product>();
     private final int ownerID;
     private String name;
     private String description;
@@ -16,6 +19,12 @@ public class Product {
 
     private String image;//the url of the product.
 
+
+    public static void makeTestProduct(){
+        Product p=new Product("product1","nice product",33.3,40,UsersList.currentUser.getId());
+        map.put("product1",p);
+        products.add(p);
+    }
 
 
 

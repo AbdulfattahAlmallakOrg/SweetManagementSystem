@@ -37,7 +37,8 @@ public class ManageAccountTest {
     }
     @When("the user click on editBtn and the UserName only fill with new userName {string}")
     public void the_user_click_on_edit_btn_and_the_user_name_only_fill_with_new_user_name(String string) {
-        if(ManageAccounrHelper.changeUserName(string)&&!ManageAccounrHelper.isTheSameUserName(string)){
+        if(ManageAccounrHelper.changeUserName(string)&&!ManageAccounrHelper.isTheSameUserName(string)&&ManageAccounrHelper.ChangeAllCheck("hello","hi","pay@gmail.com")){
+            System.out.println(UsersList.currentUser.getLocation());
             UsersList.currentUser.setUserName(string);
             Assertions.assertTrue(true);
         }
