@@ -1,6 +1,5 @@
 package com.example.sweetsystem.Controllers;
 
-import com.example.sweetsystem.Controllers.Index;
 import com.example.sweetsystem.clasess.UsersList;
 import javafx.event.Event;
 import javafx.fxml.FXML;

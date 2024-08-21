@@ -1,6 +1,6 @@
 package com.example.sweetsystem.Controllers;
 
-import com.example.sweetsystem.Controllers.HelloApplication;
+import com.example.sweetsystem.HelloApplication;
 import com.example.sweetsystem.clasess.Client;
 import com.example.sweetsystem.clasess.User;
 import com.example.sweetsystem.clasess.UsersList;
@@ -41,7 +41,7 @@ public class Index implements Initializable {
     }
     public void toLogin() throws IOException {
         AnchorPane root=FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login.fxml")));
-        ParentPane.getChildren().setAll(root);
+        homePane.getChildren().setAll(root);
         pageTitel("Login Page");
     }
 

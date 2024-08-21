@@ -11,14 +11,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ParentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1024.0" styleClass="ParentPane" stylesheets="@Nav.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Controllers.AddUserPage">
+<AnchorPane fx:id="ParentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1024.0" styleClass="ParentPane" stylesheets="@../Nav.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Controllers.AddUserPage">
    <children>
-      <Label alignment="CENTER" layoutX="37.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#backToMain" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: red;" styleClass="rounded" stylesheets="@RoundedBtn.css">
+      <Label alignment="CENTER" layoutX="37.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#backToMain" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: red;" styleClass="rounded" stylesheets="@../RoundedBtn.css">
          <graphic>
             <FontAwesomeIcon glyphName="CLOSE" glyphStyle="-fx-fill:white" size="2.3em" />
          </graphic>
       </Label>
-      <Button layoutX="164.0" layoutY="385.0" mnemonicParsing="false" onAction="#gitImagePath" prefHeight="39.0" prefWidth="127.0" styleClass="secondary-btn" stylesheets="@Buttons.css" text="Browse Images">
+      <Button layoutX="164.0" layoutY="385.0" mnemonicParsing="false" onAction="#gitImagePath" prefHeight="39.0" prefWidth="127.0" styleClass="secondary-btn" stylesheets="@../Buttons.css" text="Browse Images">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
@@ -27,12 +27,12 @@
          <children>
             <VBox alignment="CENTER" layoutX="23.0" prefHeight="417.0" prefWidth="399.0" spacing="15.0">
                <children>
-                  <TextField fx:id="RName" promptText="Name" styleClass="field-in" stylesheets="@AddResipes.css" />
-                  <TextField fx:id="RDescription" promptText="Description" styleClass="field-in" stylesheets="@AddResipes.css" />
-                  <TextField fx:id="Rneed" promptText="Needs ex(Egg,wheet,...,...)" styleClass="field-in" stylesheets="@AddResipes.css" />
-                  <TextField fx:id="RAllerg" promptText="Allergs" styleClass="field-in" stylesheets="@AddResipes.css" />
+                  <TextField fx:id="RName" promptText="Name" styleClass="field-in" stylesheets="@../AddResipes.css" />
+                  <TextField fx:id="RDescription" promptText="Description" styleClass="field-in" stylesheets="@../AddResipes.css" />
+                  <TextField fx:id="Rneed" promptText="Needs ex(Egg,wheet,...,...)" styleClass="field-in" stylesheets="@../AddResipes.css" />
+                  <TextField fx:id="RAllerg" promptText="Allergs" styleClass="field-in" stylesheets="@../AddResipes.css" />
                   <Label text="*You Can Add Max 3 Allergs Or No Adding" textFill="WHITE" />
-                  <Button mnemonicParsing="false" onAction="#addButton" prefHeight="39.0" prefWidth="183.0" styleClass="Primary-btn" stylesheets="@Buttons.css" text="Add">
+                  <Button mnemonicParsing="false" onAction="#addButton" prefHeight="39.0" prefWidth="183.0" styleClass="Primary-btn" stylesheets="@../Buttons.css" text="Add">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -43,12 +43,12 @@
       </Pane>
       <HBox fx:id="checkAlert" layoutX="774.0" layoutY="461.0" prefHeight="50.0" prefWidth="250.0" visible="false">
          <children>
-            <Label fx:id="checkLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeAlertS" prefHeight="50.0" prefWidth="50.0" styleClass="alert2-icon" stylesheets="@ALerts.css">
+            <Label fx:id="checkLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeAlertS" prefHeight="50.0" prefWidth="50.0" styleClass="alert2-icon" stylesheets="@../ALerts.css">
                <graphic>
                   <FontAwesomeIcon glyphName="CHECK" glyphStyle="-fx-fill:white" size="2.3em" />
                </graphic>
             </Label>
-            <Label alignment="CENTER" prefHeight="61.0" prefWidth="201.0" styleClass="text" stylesheets="@ALerts.css" text="Label" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="61.0" prefWidth="201.0" styleClass="text" stylesheets="@../ALerts.css" text="Label" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -57,12 +57,12 @@
       </HBox>
       <HBox fx:id="closeAlert" layoutX="774.0" layoutY="461.0" prefHeight="50.0" prefWidth="250.0" visible="false">
          <children>
-            <Label fx:id="closeLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeAlertF" prefHeight="50.0" prefWidth="50.0" styleClass="alert-icon" stylesheets="@ALerts.css">
+            <Label fx:id="closeLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeAlertF" prefHeight="50.0" prefWidth="50.0" styleClass="alert-icon" stylesheets="@../ALerts.css">
                <graphic>
                   <FontAwesomeIcon glyphName="CLOSE" glyphStyle="-fx-fill:white" size="2.3em" />
                </graphic>
             </Label>
-            <Label alignment="CENTER" prefHeight="61.0" prefWidth="201.0" styleClass="text" stylesheets="@ALerts.css" text="Fill All Fields" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="61.0" prefWidth="201.0" styleClass="text" stylesheets="@../ALerts.css" text="Fill All Fields" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
