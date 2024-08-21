@@ -51,7 +51,7 @@ public class ManageAccountTest {
     }
     @When("the user click on editBtn and the password only fill with new userName {string}")
     public void the_user_click_on_edit_btn_and_the_password_only_fill_with_new_user_name(String string) {
-
+        UsersList.currentUser.setLocation("aloo");
         if(ManageAccounrHelper.changePassword(string)&&!ManageAccounrHelper.isTheSamePassword(string)){
             UsersList.currentUser.setPassword(string);
             Assertions.assertTrue(true);
