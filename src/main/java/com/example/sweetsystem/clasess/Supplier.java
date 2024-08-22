@@ -1,10 +1,11 @@
 package com.example.sweetsystem.clasess;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Supplier extends OwnerAndSupplier {
-    private List<Order> orders;
-    Supplier(String name, String email, String password, String type,String location) {
+    private final List<Order> orders = new ArrayList<>();
+    public Supplier(String name, String email, String password, String type,String location) {
         super(name, email, password, type,location);
     }
 
@@ -17,6 +18,4 @@ public class Supplier extends OwnerAndSupplier {
         order.setOrderStatus("done");
         orders.remove(order);
     }
-
-
 }

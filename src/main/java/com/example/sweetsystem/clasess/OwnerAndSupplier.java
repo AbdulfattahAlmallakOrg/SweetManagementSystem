@@ -42,6 +42,10 @@ public class OwnerAndSupplier extends User {
         return products;
     }
 
+    public void setProducts(List<Product> products) {
+        this.products.addAll(products);
+    }
+
     public String sendMessage(String content, int receiverId) {
         Message message = new Message(getId(), receiverId, content);
         OwnerAndSupplier receiver = getOwnerSupplier(receiverId);
