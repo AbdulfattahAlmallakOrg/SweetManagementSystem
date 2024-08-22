@@ -1,7 +1,6 @@
 package com.example.sweetsystem.AcceptanceTest;
 
 import com.example.sweetsystem.clasess.OwnerAndSupplier;
-import com.example.sweetsystem.clasess.Product;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,7 +9,7 @@ import org.junit.jupiter.api.Tag;
 
 @Tag("tag2")
 public class IncreaseProductQuantitySteps {
-    public OwnerAndSupplier owner= new OwnerAndSupplier("Owner", "owner@example.com", "password", "Owner", "Location");;
+    public OwnerAndSupplier owner= new OwnerAndSupplier("Owner", "owner@example.com", "password", "Owner", "Location");
     public String errorMessage;
 
     @Given("a product have name {string} exists and belongs to the user and quantity of {int}")
@@ -42,6 +41,11 @@ public class IncreaseProductQuantitySteps {
     @Then("an invalid name message shown")
     public void an_invalid_name_message_shown() {
         Assert.assertEquals(OwnerAndSupplier.INVALID_NAME_MESSAGE, errorMessage);
+    }
+
+    @Then("an invalid permission message shown")
+    public void an_invalid_permission_message_shown() {
+        Assert.assertEquals(OwnerAndSupplier.INVALID_PERMISSION_MESSAGE, errorMessage);
     }
 
     @Given("a product have name {string} exists but does not belong to the user")

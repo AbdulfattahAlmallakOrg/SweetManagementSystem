@@ -72,14 +72,13 @@ public class OwnerAndSupplier extends User {
 
     public String increaseProductQuantity(String name, int quantity) {
         if (quantity < 0) return INVALID_QUANTITY_MESSAGE;
-        else {
-            Product product = Product.getProduct(name);
-            if (product != null && product.getOwnerID() == getId()) {
-                product.setQuantity(product.getQuantity() + quantity);
-                return SUCCESSFUL_OPERATION;
-            }
-            else return INVALID_NAME_MESSAGE;
+        Product product = Product.getProduct(name);
+        if (product != null && product.getOwnerID() == getId()) {
+            product.setQuantity(product.getQuantity() + quantity);
+            return SUCCESSFUL_OPERATION;
         }
+        if(product == null) return INVALID_NAME_MESSAGE;
+        return INVALID_PERMISSION_MESSAGE;
     }
 
     public String addNewProduct(String name, String description, double price, int quantity) {
