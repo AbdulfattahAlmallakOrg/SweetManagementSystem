@@ -2,6 +2,7 @@ package com.example.sweetsystem.AcceptanceTest;
 
 import com.example.sweetsystem.clasess.OwnerAndSupplier;
 import com.example.sweetsystem.clasess.Product;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -86,5 +87,11 @@ public class AddProductSteps {
     public void an_invalid_quantity_message_should_be_shown() {
         Assert.assertEquals(OwnerAndSupplier.INVALID_QUANTITY_MESSAGE, errorMessage);
     }
+
+    @And("successful operation message be shown")
+    public void successful_operation_message_be_shown() {
+        Assert.assertEquals(OwnerAndSupplier.SUCCESSFUL_OPERATION, errorMessage);
+    }
+
 }
 

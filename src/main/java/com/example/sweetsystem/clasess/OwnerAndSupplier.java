@@ -86,18 +86,16 @@ public class OwnerAndSupplier extends User {
         if (price < 0) {
             return INVALID_PRICE_MESSAGE;
         }
-        else if(quantity < 0) return INVALID_QUANTITY_MESSAGE;
-        else {
-            Product product = Product.getProduct(name);
-            if (product == null || product.getOwnerID() != getId()) {
-                product = new Product(name, description, price, quantity, getId());
-                products.add(product);
-            }
-            else {
-                product.setQuantity(product.getQuantity() + quantity);
-            }
+        if(quantity < 0) return INVALID_QUANTITY_MESSAGE;
+        Product product = Product.getProduct(name);
+        if (product == null || product.getOwnerID() != getId()) {
+            product = new Product(name, description, price, quantity, getId());
+            products.add(product);
         }
-        return "s";
+        else {
+            product.setQuantity(product.getQuantity() + quantity);
+        }
+        return SUCCESSFUL_OPERATION;
     }
 
     public String updateProduct(String name, String description, double price, int quantity) {
@@ -110,10 +108,8 @@ public class OwnerAndSupplier extends User {
             product.setQuantity(quantity);
             return SUCCESSFUL_OPERATION;
         }
-        if(product == null) {
-            return INVALID_NAME_MESSAGE;
-        }
-        else return " " + product.getOwnerID();
+        if(product == null) return INVALID_NAME_MESSAGE;
+        else return INVALID_PERMISSION_MESSAGE;
     }
 
     public String deleteProduct(String name) {
@@ -121,14 +117,8 @@ public class OwnerAndSupplier extends User {
         if (product != null && product.getOwnerID() == getId()) {
             products.remove(product);
             Product.removeProduct(product.getName());
-        } else if(product == null) {
-            //System.out.println(INVALID_NAME_MESSAGE);
-            return INVALID_NAME_MESSAGE;
         }
-        else {
-            return INVALID_PERMISSION_MESSAGE;
-            //System.out.println(INVALID_PERMISSION_MESSAGE);
-        }
-        return null;
+        if(product == null) return INVALID_NAME_MESSAGE;
+        return INVALID_PERMISSION_MESSAGE;
     }
 }

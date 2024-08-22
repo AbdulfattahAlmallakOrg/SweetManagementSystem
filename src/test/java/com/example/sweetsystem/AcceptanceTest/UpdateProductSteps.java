@@ -47,7 +47,7 @@ public class UpdateProductSteps {
 
     @When("the user tries to update the product with name {string}, description {string}, price {double}, and quantity {int}")
     public void the_user_tries_to_update_the_product_with_name_description_price_and_quantity(String name, String description, double price, int quantity) {
-        errorMessage = owner.deleteProduct(name);
+        errorMessage = owner.updateProduct(name, description, price, quantity);
     }
 
     @Then("invalid permission message should be shown")
