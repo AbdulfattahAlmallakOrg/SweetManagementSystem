@@ -1,9 +1,5 @@
 package com.example.sweetsystem.Controllers;
 
-import com.example.sweetsystem.HelloApplication;
-import com.example.sweetsystem.clasess.Client;
-import com.example.sweetsystem.clasess.User;
-import com.example.sweetsystem.clasess.UsersList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

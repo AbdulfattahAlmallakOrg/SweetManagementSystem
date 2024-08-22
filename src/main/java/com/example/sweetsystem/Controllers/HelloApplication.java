@@ -1,4 +1,4 @@
-package com.example.sweetsystem;
+package com.example.sweetsystem.Controllers;
 import com.example.sweetsystem.clasess.Client;
 import com.example.sweetsystem.clasess.Recipe;
 import com.example.sweetsystem.clasess.RecipesList;
