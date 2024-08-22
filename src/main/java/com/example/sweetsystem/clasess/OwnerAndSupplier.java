@@ -15,6 +15,7 @@ public class OwnerAndSupplier extends User {
     public static final String INVALID_QUANTITY_MESSAGE = "Quantity is invalid";
     public static final String INVALID_PERMISSION_MESSAGE = "Permission is invalid";
     public static final String SUCCESSFUL_OPERATION = "successful operation";
+    public static final String RECEIVER_DOESNT_EXIST = "receiver does not exist";
 
     public OwnerAndSupplier(String name, String email, String password, String type, String location) {
         super(name, email, password, type, location);
@@ -41,15 +42,15 @@ public class OwnerAndSupplier extends User {
         return products;
     }
 
-    public int sendMessage(String content, int receiverId) {
+    public String sendMessage(String content, int receiverId) {
         Message message = new Message(getId(), receiverId, content);
         OwnerAndSupplier receiver = getOwnerSupplier(receiverId);
         if (receiver == null) {
-            return 1;
+            return RECEIVER_DOESNT_EXIST;
         }
         sentMessages.add(message);
         receiver.receiveMessage(message);
-        return 0;
+        return SUCCESSFUL_OPERATION;
     }
 
     public void receiveMessage(Message message) {
@@ -65,7 +66,6 @@ public class OwnerAndSupplier extends User {
         }
     }
 
-    //will be moved to User class
     public static OwnerAndSupplier getOwnerSupplier(int id) {
         return map.getOrDefault(id, null);
     }

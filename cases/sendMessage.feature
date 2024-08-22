@@ -1,20 +1,15 @@
+@tag2
 Feature: Send a message to another user
   As a user
   I want to send a message to another user
   So that I can communicate with them
 
   Scenario: Successfully send a message to an existing user
-    Given a user with ID 1 exists
-    And a receiver with ID 2 exists
-    And the receiver is an owner or supplier
-    When the user sends a message "Hello!" to receiver with ID 2
-    Then the message should be added to the user's sent messages
-    And the message should be received by the receiver
-    And the method should return 0
+    Given a user with ID 3 exists and a receiver with ID 4 exists and the receiver is an owner or supplier
+    When the user sends a message "Hello!" to receiver with ID 4
+    Then the message "Hello!" should be added to the user's sent messages and the message should be received by the receiver and successful operation message is shown
 
   Scenario: Fail to send a message to a non-existent receiver
-    Given a user with ID 1 exists
-    And a receiver with ID 3 does not exist
-    When the user sends a message "Hello!" to receiver with ID 3
-    Then the method should return 1
-    And the message should not be added to the user's sent messages
+    Given a user with ID 4 exists and a receiver with ID 2 does not exist
+    When the user send a message "Hello!" to receiver with ID 2
+    Then receiver does not exist message is shown

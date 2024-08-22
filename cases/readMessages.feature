@@ -14,7 +14,7 @@ Feature: Read unread messages
     And the unread messages list should be empty
 
   Scenario: Read messages when there are no unread messages
-    Given a receiver with ID 3 exists
+    Given a receiver with ID 4 exists
     And the receiver has no unread messages
     When the receiver reads all unread messages
     Then the read messages list should remain empty

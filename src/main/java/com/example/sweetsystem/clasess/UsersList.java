@@ -11,6 +11,8 @@ public class UsersList {
         User u=new Admin("ahmed","osama@gmail.com","ah123","Admin","nablus");
         User u2=new Client("osama","osama@gmail.com","1234","Client","nablus");
         User u3=new OwnerAndSupplier("smsm","osama@gmail.com","1234","Owner","nablus");
+        User u4=new OwnerAndSupplier("abd","abd@gmail.com","1234","Owner","attil");
+
 
         if(search(u2.getUserName())==-1){
             UsersList.users.add(u2);
@@ -20,6 +22,9 @@ public class UsersList {
         }
         if(search(u3.getUserName())==-1){
             UsersList.users.add(u3);
+        }
+        if(search(u4.getUserName())==-1){
+            UsersList.users.add(u4);
         }
     }
 
