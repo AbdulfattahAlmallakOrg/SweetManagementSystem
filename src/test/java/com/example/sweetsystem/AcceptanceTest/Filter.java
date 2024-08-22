@@ -35,7 +35,7 @@ public boolean find=false;
 
         String allergy=xx;
         for(int i=0;i<recipe.size();i++){
-            if(recipe.get(i).findAllerge(allergy)){
+            if(recipe.get(i).findAllerge(allergy.toLowerCase())){
                 System.out.println("herew");
                 answer.add(recipe.get(i));
             }
