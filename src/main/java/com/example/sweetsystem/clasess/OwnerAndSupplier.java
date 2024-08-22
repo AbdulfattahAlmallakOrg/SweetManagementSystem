@@ -14,6 +14,7 @@ public class OwnerAndSupplier extends User {
     public static final String INVALID_PRICE_MESSAGE = "Price is invalid";
     public static final String INVALID_QUANTITY_MESSAGE = "Quantity is invalid";
     public static final String INVALID_PERMISSION_MESSAGE = "Permission is invalid";
+    public static final String SUCCESSFUL_OPERATION = "successful operation";
 
     public OwnerAndSupplier(String name, String email, String password, String type, String location) {
         super(name, email, password, type, location);
@@ -69,14 +70,15 @@ public class OwnerAndSupplier extends User {
         return map.getOrDefault(id, null);
     }
 
-    public void increaseProductQuantity(String name, int quantity) {
-        if (quantity < 0) System.out.println(INVALID_QUANTITY_MESSAGE);
+    public String increaseProductQuantity(String name, int quantity) {
+        if (quantity < 0) return INVALID_QUANTITY_MESSAGE;
         else {
             Product product = Product.getProduct(name);
             if (product != null && product.getOwnerID() == getId()) {
                 product.setQuantity(product.getQuantity() + quantity);
+                return SUCCESSFUL_OPERATION;
             }
-            else System.out.println(INVALID_NAME_MESSAGE);
+            else return INVALID_NAME_MESSAGE;
         }
     }
 
@@ -87,7 +89,7 @@ public class OwnerAndSupplier extends User {
         else if(quantity < 0) return INVALID_QUANTITY_MESSAGE;
         else {
             Product product = Product.getProduct(name);
-            if (product == null) {
+            if (product == null || product.getOwnerID() != getId()) {
                 product = new Product(name, description, price, quantity, getId());
                 products.add(product);
             }
@@ -98,16 +100,20 @@ public class OwnerAndSupplier extends User {
         return "s";
     }
 
-    public void updateProduct(String name, String description, double price, int quantity) {
+    public String updateProduct(String name, String description, double price, int quantity) {
         Product product = Product.getProduct(name);
-        if (price < 0) System.out.println(INVALID_PRICE_MESSAGE);
-        else if (quantity < 0) System.out.println(INVALID_QUANTITY_MESSAGE);
-        else if (product != null && product.getOwnerID() == getId()) {
+        if (price < 0) return INVALID_PRICE_MESSAGE;
+        if (quantity < 0) return INVALID_QUANTITY_MESSAGE;
+        if (product != null && product.getOwnerID() == this.getId()) {
             product.setDescription(description);
             product.setPrice(price);
             product.setQuantity(quantity);
+            return SUCCESSFUL_OPERATION;
         }
-        else System.out.println(INVALID_NAME_MESSAGE);
+        if(product == null) {
+            return INVALID_NAME_MESSAGE;
+        }
+        else return " " + product.getOwnerID();
     }
 
     public String deleteProduct(String name) {

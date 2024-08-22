@@ -62,5 +62,4 @@ public class DeleteProductSteps {
     public void an_invalid_permission_message_should_be_shown() {
         Assert.assertEquals(OwnerAndSupplier.INVALID_PERMISSION_MESSAGE, deleteResult);
     }
-
 }
