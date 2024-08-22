@@ -1,4 +1,4 @@
-package com.example.sweetsystem.Controllers;
+package com.example.sweetsystem;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,7 +13,7 @@ public class HelloApplication extends Application {
     public static Stage stage=null;
    @Override
     public void start(Stage stage) throws IOException {
-        Parent root=FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Controllers/Index.fxml")));
+       Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/sweetsystem/Controllers/Index.fxml")));
         Scene scene=new Scene(root);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);

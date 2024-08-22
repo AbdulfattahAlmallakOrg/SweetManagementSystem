@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="250.0" style="-fx-background-radius: 20; -fx-border-radius: 10px; -fx-background-color: #fff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Controllers.ProductCardController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="330.0" prefWidth="230.0" spacing="20.0">
+         <children>
+            <ImageView fx:id="Image" fitHeight="111.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="230.0" spacing="10.0">
+               <children>
+                  <Text fx:id="Name" strokeType="OUTSIDE" strokeWidth="0.0" text="Blue Barry" wrappingWidth="212.89813232421875">
+                     <font>
+                        <Font name="MS Reference Specialty" size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="Description" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, earum." wrappingWidth="219.99285978078842" />
+                  <HBox alignment="CENTER" prefHeight="63.0" prefWidth="230.0">
+                     <children>
+                        <Text fx:id="Price" fill="#59f25e" strokeType="OUTSIDE" strokeWidth="0.0" text="399 $" textAlignment="CENTER" wrappingWidth="78.13671493530273">
+                           <font>
+                              <Font name="System Bold Italic" size="22.0" />
+                           </font>
+                        </Text>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="minBtn" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#minusBtn" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #80a3ff; -fx-background-radius: 50%;">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="MINUS" glyphStyle="-fx-fill:#fff" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="quantity" strokeType="OUTSIDE" strokeWidth="0.0" text="999" />
+                              <Label fx:id="plusBtn" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#plusBtn" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #80a3ff; -fx-background-radius: 50%;">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="PLUS" glyphStyle="-fx-fill:#fff" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Button fx:id="buyBtn" mnemonicParsing="false" prefHeight="29.0" prefWidth="174.0" styleClass="secondary-btn" stylesheets="@../Buttons.css" text="Buy Now">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

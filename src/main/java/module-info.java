@@ -8,5 +8,6 @@ module com.example.sweetsystem {
     exports com.example.sweetsystem.Controllers;
     opens com.example.sweetsystem.Controllers to javafx.fxml;
     opens com.example.sweetsystem to javafx.fxml;
+    exports com.example.sweetsystem;
 
 }

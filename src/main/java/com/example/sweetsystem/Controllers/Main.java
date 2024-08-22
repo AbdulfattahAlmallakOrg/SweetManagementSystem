@@ -1,5 +1,6 @@
 package com.example.sweetsystem.Controllers;
 
+import com.example.sweetsystem.clasess.Product;
 import com.example.sweetsystem.clasess.Recipe;
 import com.example.sweetsystem.clasess.RecipesList;
 import javafx.fxml.FXML;
@@ -44,6 +45,12 @@ private ScrollPane commentScroll;
 private VBox commentCont;
 @FXML
 private Label closeComment;
+@FXML
+private AnchorPane productPane;
+@FXML
+private ScrollPane productScroll;
+@FXML
+private HBox osamaBox;
 
     public void toggleBtns(HBox box1,HBox box2){
     box1.getStyleClass().remove("top-bar");
@@ -54,11 +61,14 @@ private Label closeComment;
 
     public void showProductBox(){
     postsScroll.setVisible(false);
+        productScroll.setVisible(true);
     toggleBtns(topRight,topLeft);
 
     }
     public void showPostsBox(){
         postsScroll.setVisible(true);
+        productScroll.setVisible(false);
+
         toggleBtns(topLeft,topRight);
 
     }
@@ -83,6 +93,7 @@ private Label closeComment;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        setProducts(new ArrayList<Product>());
         setResipes(RecipesList.Recipes);
     }
 
@@ -102,6 +113,48 @@ private Label closeComment;
 
                 recipesCont.getChildren().add(card);
             }
+        }
+        catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    private void setProducts(ArrayList<Product>Products) {
+        try {
+            Product p=new Product("osama","dvdvdv",33.3,20,1);
+            p.setImage("C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\cake2.jpg");
+            for (int i=0;i<5;i++) {
+                System.out.println("here 1");
+                FXMLLoader fx = new FXMLLoader();
+                System.out.println("here 1");
+
+                fx.setLocation(getClass().getResource("/com/example/sweetsystem/Controllers/ProductCard.fxml"));
+                System.out.println(fx.getLocation());
+
+                AnchorPane card = fx.load();
+                System.out.println("here 1");
+                System.out.println(card.toString());
+                ProductCardController controller = fx.getController();
+                System.out.println("here 1");
+
+                controller.setData(p);
+                System.out.println("here 1");
+
+                osamaBox.getChildren().add(card);
+            }
+         /*   for(int i=0;i<2;i++){
+                FXMLLoader fx=new FXMLLoader();
+                fx.setLocation(getClass().getResource("/com/example/sweetsystem/Controllers/ProductCard.fxml"));
+
+                HBox card=fx.load();
+
+
+                ProductCardController controller=fx.getController();
+
+
+                controller.setData(Products.get(i));
+
+                productPane.getChildren().add(card);
+            }*/
         }
         catch (IOException e) {
             throw new RuntimeException(e);

@@ -1,4 +1,6 @@
-package com.example.sweetsystem.clasess;
+package com.example.sweetsystem.Controllers;
+
+import com.example.sweetsystem.clasess.User;
 
 public class AdminOwner extends User {
     private String type;

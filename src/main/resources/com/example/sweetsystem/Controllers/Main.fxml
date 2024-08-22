@@ -141,5 +141,10 @@
             <Insets />
          </opaqueInsets>
       </Label>
+      <ScrollPane fx:id="productScroll" layoutX="19.0" layoutY="152.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="376.0" prefWidth="849.0" style="-fx-background-color: #303138;" styleClass="ParentPane" stylesheets="@../Nav.css" visible="false">
+         <content>
+            <HBox fx:id="osamaBox" prefHeight="360.0" prefWidth="200.0" spacing="15.0" styleClass="ParentPane" stylesheets="@../Nav.css" />
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>
