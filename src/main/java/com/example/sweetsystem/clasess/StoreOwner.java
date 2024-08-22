@@ -9,7 +9,7 @@ public class StoreOwner extends OwnerAndSupplier {
         this.products = products;
     }
 
-    public void requestOrder(int productId, int supplierId, int quantity) {
+    public  void requestOrder(int productId, int supplierId, int quantity) {
         OwnerAndSupplier supplier = getOwnerSupplier(supplierId);
         if (!(supplier instanceof Supplier supplier2)) {
             System.out.println(NOT_AN_INSTANCE_MESSAGE);

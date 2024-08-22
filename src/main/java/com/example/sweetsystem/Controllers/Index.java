@@ -28,10 +28,7 @@ public class Index implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Client c=new Client("osama","osama1111222@gmail.com","1","Client","nablus");
-        User c2=new User("Waleed","ex@gmail.com","1","Admin","nablus");
-        UsersList.users.add(c);
-        UsersList.users.add(c2);
+
         header=PageName;
         pageTitel("Main Page");
 

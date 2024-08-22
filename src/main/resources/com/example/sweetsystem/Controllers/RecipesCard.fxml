@@ -11,14 +11,18 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="678.0" spacing="10.0" styleClass="Card-body" stylesheets="@../Card.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Controllers.RecipesCardController">
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="705.0" spacing="20.0" styleClass="Card-body" stylesheets="@../Card.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Controllers.RecipesCardController">
    <children>
-      <ImageView fx:id="cakeImage" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
-         <image>
-            <Image url="@../Images/Logo.png" />
-         </image>
-      </ImageView>
-      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="297.0" spacing="5.0">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #fff; -fx-background-radius: 15px 0px 0px 15px;">
+         <children>
+            <ImageView fx:id="cakeImage" fitHeight="179.0" fitWidth="179.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+               <image>
+                  <Image url="@../Images/Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="297.0" spacing="5.0" HBox.hgrow="ALWAYS">
          <children>
             <Label fx:id="cakeName" alignment="CENTER" contentDisplay="RIGHT" prefHeight="45.0" prefWidth="297.0" text="Title" textFill="#80a3ff" wrapText="true">
                <font>
@@ -28,7 +32,7 @@
                   <Bloom />
                </effect>
             </Label>
-            <Label fx:id="description" prefHeight="102.0" prefWidth="297.0" text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque ipsa dolorum nisi commodi harum voluptatem temporibus autem dolores sunt adipisci!" textFill="WHITE" wrapText="true">
+            <Label fx:id="description" prefHeight="192.0" prefWidth="297.0" text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque ipsa dolorum nisi commodi harum voluptatem temporibus autem dolores sunt adipisci!" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
@@ -42,8 +46,8 @@
             </HBox>
          </children>
       </VBox>
-      <Line endX="-100.41426086425781" endY="199.29287719726562" startX="-100.0" stroke="#80a3ff" />
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="135.0" spacing="10.0">
+      <Line endX="-100.41426086425781" endY="199.29287719726562" startX="-100.41654968261719" startY="-100.4264907836914" stroke="WHITE" />
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="135.0" spacing="20.0">
          <children>
             <Label alignment="CENTER" prefHeight="44.0" prefWidth="135.0" text="Comment" textFill="WHITE">
                <font>

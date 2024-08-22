@@ -53,7 +53,7 @@
                         </HBox>
                      </children>
                   </HBox>
-                  <Button fx:id="buyBtn" mnemonicParsing="false" prefHeight="29.0" prefWidth="174.0" styleClass="secondary-btn" stylesheets="@../Buttons.css" text="Buy Now">
+                  <Button fx:id="buyBtn" mnemonicParsing="false" onAction="#buyBtn" prefHeight="29.0" prefWidth="174.0" styleClass="secondary-btn" stylesheets="@../Buttons.css" text="Buy Now">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>

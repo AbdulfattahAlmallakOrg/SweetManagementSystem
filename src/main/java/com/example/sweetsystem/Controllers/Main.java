@@ -51,6 +51,8 @@ private AnchorPane productPane;
 private ScrollPane productScroll;
 @FXML
 private HBox osamaBox;
+@FXML
+private HBox alertP;
 
     public void toggleBtns(HBox box1,HBox box2){
     box1.getStyleClass().remove("top-bar");
@@ -136,7 +138,7 @@ private HBox osamaBox;
                 ProductCardController controller = fx.getController();
                 System.out.println("here 1");
 
-                controller.setData(p);
+                controller.setData(p,alertP);
                 System.out.println("here 1");
 
                 osamaBox.getChildren().add(card);
@@ -227,5 +229,8 @@ private HBox osamaBox;
     public void setCloseComment(){
         commentScroll.setVisible(false);
         closeComment.setVisible(false);
+    }
+    public void closeAlertP(){
+        alertP.setVisible(false);
     }
 }

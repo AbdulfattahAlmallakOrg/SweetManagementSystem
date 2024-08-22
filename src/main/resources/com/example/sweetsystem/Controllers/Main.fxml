@@ -12,6 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="ParentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1024.0" styleClass="ParentPane" stylesheets="@../Nav.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Controllers.Main">
    <children>
@@ -83,12 +84,30 @@
             </HBox>
          </children>
       </HBox>
-      <ScrollPane fx:id="postsScroll" layoutX="21.0" layoutY="89.0" prefHeight="463.0" prefWidth="849.0" style="-fx-background-color: #303138;" styleClass="ParentPane" stylesheets="@../Nav.css">
+      <ScrollPane fx:id="postsScroll" layoutX="47.0" layoutY="89.0" prefHeight="463.0" prefWidth="823.0" style="-fx-background-color: #303138;" styleClass="ParentPane" stylesheets="@../Nav.css">
          <content>
-            <VBox fx:id="recipesCont" prefHeight="461.0" prefWidth="832.0" spacing="20.0" styleClass="ParentPane" stylesheets="@../Nav.css" />
+            <VBox fx:id="recipesCont" prefHeight="461.0" prefWidth="805.0" spacing="20.0" styleClass="ParentPane" stylesheets="@../Nav.css" />
          </content>
       </ScrollPane>
       <Pane fx:id="backgroundPane" layoutX="-2.0" layoutY="-2.0" prefHeight="567.0" prefWidth="1027.0" style="-fx-background-color: black; -fx-opacity: 0.4;" visible="false" />
+      <ScrollPane fx:id="commentScroll" layoutX="115.0" layoutY="123.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="783.0" visible="false">
+         <content>
+            <VBox fx:id="commentCont" prefHeight="380.0" prefWidth="779.0" spacing="10.0" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="closeComment" alignment="CENTER" layoutX="850.0" layoutY="129.0" onMouseClicked="#setCloseComment" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%; -fx-background-color: red;" styleClass="close-btn" stylesheets="@../Buttons.css" visible="false">
+         <graphic>
+            <FontAwesomeIcon glyphName="CLOSE" glyphStyle="-fx-fill:white" size="2.3em" />
+         </graphic>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <ScrollPane fx:id="productScroll" layoutX="19.0" layoutY="152.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="376.0" prefWidth="849.0" style="-fx-background-color: #303138;" styleClass="ParentPane" stylesheets="@../Nav.css" visible="false">
+         <content>
+            <HBox fx:id="osamaBox" prefHeight="360.0" prefWidth="200.0" spacing="15.0" styleClass="ParentPane" stylesheets="@../Nav.css" />
+         </content>
+      </ScrollPane>
       <Pane fx:id="filterPane" layoutY="-1.0" prefHeight="564.0" prefWidth="1024.0" style="-fx-background-color: transparent;" visible="false">
          <children>
             <VBox alignment="CENTER" layoutX="289.0" layoutY="133.0" prefHeight="281.0" prefWidth="461.0" spacing="15.0" style="-fx-background-color: snow; -fx-background-radius: 25px;">
@@ -128,23 +147,13 @@
             </VBox>
          </children>
       </Pane>
-      <ScrollPane fx:id="commentScroll" layoutX="115.0" layoutY="123.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="783.0" visible="false">
-         <content>
-            <VBox fx:id="commentCont" prefHeight="380.0" prefWidth="779.0" spacing="10.0" />
-         </content>
-      </ScrollPane>
-      <Label fx:id="closeComment" alignment="CENTER" layoutX="850.0" layoutY="129.0" onMouseClicked="#setCloseComment" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%; -fx-background-color: red;" styleClass="close-btn" stylesheets="@../Buttons.css" visible="false">
-         <graphic>
-            <FontAwesomeIcon glyphName="CLOSE" glyphStyle="-fx-fill:white" size="2.3em" />
-         </graphic>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </Label>
-      <ScrollPane fx:id="productScroll" layoutX="19.0" layoutY="152.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="376.0" prefWidth="849.0" style="-fx-background-color: #303138;" styleClass="ParentPane" stylesheets="@../Nav.css" visible="false">
-         <content>
-            <HBox fx:id="osamaBox" prefHeight="360.0" prefWidth="200.0" spacing="15.0" styleClass="ParentPane" stylesheets="@../Nav.css" />
-         </content>
-      </ScrollPane>
+      <HBox fx:id="alertP" alignment="CENTER" layoutX="807.0" layoutY="485.0" onMouseClicked="#closeAlertP" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: #80a3ff; -fx-background-radius: 10px 0px 0px 10px;" visible="false">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #fff;" text="Product succefully Purchase" wrappingWidth="200.19854736328125">
+               <font>
+                  <Font size="16.0" />
+               </font></Text>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>
