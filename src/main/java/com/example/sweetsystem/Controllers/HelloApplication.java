@@ -1,8 +1,5 @@
 package com.example.sweetsystem.Controllers;
-import com.example.sweetsystem.clasess.Client;
-import com.example.sweetsystem.clasess.Recipe;
-import com.example.sweetsystem.clasess.RecipesList;
-import com.example.sweetsystem.clasess.UsersList;
+import com.example.sweetsystem.clasess.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class HelloApplication extends Application {
@@ -46,7 +45,33 @@ public class HelloApplication extends Application {
 
     private static void makeOwners() {
 
+        StoreOwner o1=new StoreOwner("omar","ah@gmail.com","Owner","1234",new ArrayList<String>(),"Nablus");
+        o1.addNewProduct("vanilla bean cheesecake", "A creamy vanilla bean cheesecake with a cracker crust and a hint of lemon.", 18, 15);
+        o1.getProducts().get(o1.getProducts().size()-1).setImage("C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\ProductImage5.jpg"); // No image path provided
+        Product.products.add(o1.getProducts().get(o1.getProducts().size()-1));
+
+
+        o1.addNewProduct("lemon poppy seed loaf", "A moist lemon loaf cake with poppy seeds, drizzled with a sweet lemon glaze.", 12, 20);
+        o1.getProducts().get(o1.getProducts().size()-1).setImage("C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\ProductImage2.jpg"); // No image path provided
+        Product.products.add(o1.getProducts().get(o1.getProducts().size()-1));
+
+        o1.addNewProduct("red velvet cupcakes", "Classic red velvet cupcakes topped with a rich cream cheese frosting.", 16, 25);
+        o1.getProducts().get(o1.getProducts().size()-1).setImage("C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\ProductImage3.jpg"); // No image path provided
+        Product.products.add(o1.getProducts().get(o1.getProducts().size()-1));
+
+        o1.addNewProduct("blueberry muffins", "Soft and fluffy blueberry muffins bursting with fresh blueberries.", 10, 30);
+        o1.getProducts().get(o1.getProducts().size()-1).setImage("C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\ProductImage4.jpg"); // No image path provided
+        Product.products.add(o1.getProducts().get(o1.getProducts().size()-1));
+        StoreOwner o2=new StoreOwner("mohammed","mo@gmail.com","Owner","4321",new ArrayList<String>(),"Nablus");o2.addNewProduct("chocolate strawberry cake","The easiest two-layered chocolate strawberry cake topped with chocolate ganache and fresh strawberries.",22,10);
+        System.out.println(Product.products.get(0).getImage());
+
+
     }
+
+
+
+
+//Done
 
     private static void makeClients() {
         Client u1 = new Client("osama", "osama1111222@gmail.com", "1234", "Client", "nablus");
@@ -71,7 +96,7 @@ public class HelloApplication extends Application {
     private static void makeRecipe4(Client u4) {
 
 
-        Recipe r8 = new Recipe("Chocolate Fudge Cake", "C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake8.jpg", "Decadent chocolate fudge cake Ingredients For the Cake:",
+        Recipe r8 = new Recipe("Chocolate Fudge Cake", "src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake8.jpg", "Decadent chocolate fudge cake Ingredients For the Cake:",
                 "2 cups all-purpose flour\n" +
                         "1 3/4 cups sugar\n" +
                         "1 cup unsweetened cocoa powder\n" +
@@ -83,7 +108,7 @@ public class HelloApplication extends Application {
     }
 
     private static void makeRecipe3(Client u3) {
-        Recipe r6 = new Recipe("Orange Drizzle Cake", "C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake5.jpg", "Moist orange drizzle cake Ingredients For the Cake:",
+        Recipe r6 = new Recipe("Orange Drizzle Cake", "src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake5.jpg", "Moist orange drizzle cake Ingredients For the Cake:",
                 "1 3/4 cups all-purpose flour\n" +
                         "1 cup sugar\n" +
                         "1/2 cup orange juice\n" +
@@ -91,7 +116,7 @@ public class HelloApplication extends Application {
                         "1 tsp orange zest",
                 "Orange,Wheat");
 
-        Recipe r7 = new Recipe("Toffee Nut Brownies", "C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake4.jpg", "Chewy toffee nut brownies Ingredients For the Brownies:",
+        Recipe r7 = new Recipe("Toffee Nut Brownies", "src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake4.jpg", "Chewy toffee nut brownies Ingredients For the Brownies:",
                 "1 cup all-purpose flour\n" +
                         "1 cup sugar\n" +
                         "1/2 cup toffee bits\n" +
@@ -107,7 +132,7 @@ public class HelloApplication extends Application {
     }
 
     private static void makeRecipe2(Client u2) {
-        Recipe r4 = new Recipe("Toffee Caramel Cake", "C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake6.jpg", "Rich toffee caramel cake Ingredients For the Cake:",
+        Recipe r4 = new Recipe("Toffee Caramel Cake", "src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake6.jpg", "Rich toffee caramel cake Ingredients For the Cake:",
                 "2 cups all-purpose flour\n" +
                         "1 1/2 cups sugar\n" +
                         "1 cup toffee bits\n" +
@@ -115,7 +140,7 @@ public class HelloApplication extends Application {
                         "1/2 cup milk",
                 "Toffee,Wheat");
 
-        Recipe r5 = new Recipe("Chocolate Orange Tart", "C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake7.jpg", "Zesty chocolate orange tart Ingredients For the Tart:",
+        Recipe r5 = new Recipe("Chocolate Orange Tart", "src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake7.jpg", "Zesty chocolate orange tart Ingredients For the Tart:",
                 "1 1/2 cups all-purpose flour\n" +
                         "1/4 cup cocoa powder\n" +
                         "1/2 cup sugar\n" +
@@ -134,15 +159,15 @@ public class HelloApplication extends Application {
     }
 
     private static void makeRecipe1(Client u1) {
-        Recipe r1=new Recipe("Creamy chocolate","C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake1.jpg","Creamy chocolate cake" +
+        Recipe r1=new Recipe("Creamy chocolate","src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake1.jpg","Creamy chocolate cake" +
                 "Ingredients " +
                 "For the Cake:","2 cups all-purpose flour\n" +
                 "1 3/4 cups sugar\n" +
                 "3/4 cup unsweetened cocoa powder\n" +
                 "2 tsp baking powder\n" +
-                "1 1/2 tsp baking soda","Wheet,Egg");
+                "1 1/2 tsp baking soda","Wheat,Egg");
 
-        Recipe r2 = new Recipe("Vanilla Delight", "C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake2.jpg", "Vanilla cake with a smooth frosting Ingredients For the Cake:",
+        Recipe r2 = new Recipe("Vanilla Delight", "src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake2.jpg", "Vanilla cake with a smooth frosting Ingredients For the Cake:",
                 "2 cups all-purpose flour\n" +
                         "1 1/2 cups sugar\n" +
                         "1 cup unsalted butter\n" +
@@ -150,7 +175,7 @@ public class HelloApplication extends Application {
                         "3 large eggs",
                 "Egg");
 
-        Recipe r3 = new Recipe("Strawberry Shortcake", "C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake3.jpg", "A light and fluffy strawberry shortcake Ingredients For the Cake:",
+        Recipe r3 = new Recipe("Strawberry Shortcake", "src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\UserCake3.jpg", "A light and fluffy strawberry shortcake Ingredients For the Cake:",
                 "1 1/2 cups all-purpose flour\n" +
                         "1/2 cup sugar\n" +
                         "1/4 cup vegetable oil\n" +

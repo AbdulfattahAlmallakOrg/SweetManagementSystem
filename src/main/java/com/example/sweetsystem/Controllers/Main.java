@@ -6,6 +6,7 @@ import com.example.sweetsystem.clasess.RecipesList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
@@ -53,6 +54,10 @@ private ScrollPane productScroll;
 private HBox osamaBox;
 @FXML
 private HBox alertP;
+    @FXML
+    private HBox alertP1;
+    @FXML
+    private Button filterBtn;
 
     public void toggleBtns(HBox box1,HBox box2){
     box1.getStyleClass().remove("top-bar");
@@ -62,12 +67,15 @@ private HBox alertP;
     }
 
     public void showProductBox(){
+        filterBtn.setVisible(false);
+
     postsScroll.setVisible(false);
         productScroll.setVisible(true);
     toggleBtns(topRight,topLeft);
 
     }
     public void showPostsBox(){
+        filterBtn.setVisible(true);
         postsScroll.setVisible(true);
         productScroll.setVisible(false);
 
@@ -95,7 +103,7 @@ private HBox alertP;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        setProducts(new ArrayList<Product>());
+        setProducts();
         setResipes(RecipesList.Recipes);
     }
 
@@ -120,11 +128,9 @@ private HBox alertP;
             throw new RuntimeException(e);
         }
     }
-    private void setProducts(ArrayList<Product>Products) {
+    private void setProducts() {
         try {
-            Product p=new Product("osama","dvdvdv",33.3,20,1);
-            p.setImage("C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\cake2.jpg");
-            for (int i=0;i<5;i++) {
+            for (int i=0;i<Product.products.size();i++) {
                 System.out.println("here 1");
                 FXMLLoader fx = new FXMLLoader();
                 System.out.println("here 1");
@@ -134,11 +140,12 @@ private HBox alertP;
 
                 AnchorPane card = fx.load();
                 System.out.println("here 1");
+                System.out.println("here2");
                 System.out.println(card.toString());
                 ProductCardController controller = fx.getController();
                 System.out.println("here 1");
-
-                controller.setData(p,alertP);
+                System.out.println("here2");
+                controller.setData(Product.products.get(i),alertP,alertP1);
                 System.out.println("here 1");
 
                 osamaBox.getChildren().add(card);
@@ -159,6 +166,7 @@ private HBox alertP;
             }*/
         }
         catch (IOException e) {
+            System.out.println("hereeeeee");
             throw new RuntimeException(e);
         }
     }
@@ -213,7 +221,7 @@ private HBox alertP;
     private ArrayList<Recipe> searchByAllergy(ArrayList<Recipe> recipe) {
         ArrayList<Recipe> answer=new ArrayList<Recipe>();
 
-        String allergy=allergeField.getText();
+        String allergy=allergeField.getText().toLowerCase();
         for(int i=0;i<recipe.size();i++){
             if(recipe.get(i).findAllerge(allergy)){
                 answer.add(recipe.get(i));
@@ -232,5 +240,8 @@ private HBox alertP;
     }
     public void closeAlertP(){
         alertP.setVisible(false);
+    }
+    public void closeAlertP1(){
+        alertP1.setVisible(false);
     }
 }

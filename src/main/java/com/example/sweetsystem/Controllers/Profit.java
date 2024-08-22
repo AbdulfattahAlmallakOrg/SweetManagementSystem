@@ -5,7 +5,6 @@ import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;*/
 
 import com.example.sweetsystem.clasess.Product;
-import com.example.sweetsystem.clasess.Transaction;
 
 import java.util.List;
 import static javafx.application.Application.launch;

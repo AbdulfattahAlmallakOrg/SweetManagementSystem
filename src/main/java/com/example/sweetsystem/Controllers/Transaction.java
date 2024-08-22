@@ -1,4 +1,4 @@
-package com.example.sweetsystem.clasess;
+package com.example.sweetsystem.Controllers;
 
 public class Transaction {
     private final String description;

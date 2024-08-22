@@ -80,7 +80,7 @@ public class Recipe {
 
     public boolean findAllerge(String a){
         for(int i=0;i<allergy.size();i++){
-            if(allergy.get(i).equals(a)){
+            if(allergy.get(i).toLowerCase().equals(a)){
                 return true;
             }
         }

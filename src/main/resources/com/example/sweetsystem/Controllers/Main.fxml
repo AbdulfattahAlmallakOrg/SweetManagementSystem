@@ -18,7 +18,7 @@
    <children>
       <VBox alignment="CENTER" layoutX="944.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="80.0" spacing="30.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#openFilter" prefHeight="60.0" prefWidth="60.0" styleClass="rounded" stylesheets="@../RoundedBtn.css">
+            <Button fx:id="filterBtn" mnemonicParsing="false" onAction="#openFilter" prefHeight="60.0" prefWidth="60.0" styleClass="rounded" stylesheets="@../RoundedBtn.css">
                <graphic>
                   <Label>
                      <graphic>
@@ -84,9 +84,9 @@
             </HBox>
          </children>
       </HBox>
-      <ScrollPane fx:id="postsScroll" layoutX="47.0" layoutY="89.0" prefHeight="463.0" prefWidth="823.0" style="-fx-background-color: #303138;" styleClass="ParentPane" stylesheets="@../Nav.css">
+      <ScrollPane fx:id="postsScroll" layoutX="47.0" layoutY="89.0" prefHeight="480.0" prefWidth="823.0" style="-fx-background-color: #303138;" styleClass="ParentPane" stylesheets="@../Nav.css">
          <content>
-            <VBox fx:id="recipesCont" prefHeight="461.0" prefWidth="805.0" spacing="20.0" styleClass="ParentPane" stylesheets="@../Nav.css" />
+            <VBox fx:id="recipesCont" prefHeight="480.0" prefWidth="805.0" spacing="20.0" styleClass="ParentPane" stylesheets="@../Nav.css" />
          </content>
       </ScrollPane>
       <Pane fx:id="backgroundPane" layoutX="-2.0" layoutY="-2.0" prefHeight="567.0" prefWidth="1027.0" style="-fx-background-color: black; -fx-opacity: 0.4;" visible="false" />
@@ -103,9 +103,9 @@
             <Insets />
          </opaqueInsets>
       </Label>
-      <ScrollPane fx:id="productScroll" layoutX="19.0" layoutY="152.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="376.0" prefWidth="849.0" style="-fx-background-color: #303138;" styleClass="ParentPane" stylesheets="@../Nav.css" visible="false">
+      <ScrollPane fx:id="productScroll" layoutX="19.0" layoutY="152.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="390.0" prefWidth="849.0" style="-fx-background-color: #303138;" styleClass="ParentPane" stylesheets="@../Nav.css" visible="false">
          <content>
-            <HBox fx:id="osamaBox" prefHeight="360.0" prefWidth="200.0" spacing="15.0" styleClass="ParentPane" stylesheets="@../Nav.css" />
+            <HBox fx:id="osamaBox" alignment="CENTER" prefHeight="380.0" prefWidth="200.0" spacing="15.0" styleClass="ParentPane" stylesheets="@../Nav.css" />
          </content>
       </ScrollPane>
       <Pane fx:id="filterPane" layoutY="-1.0" prefHeight="564.0" prefWidth="1024.0" style="-fx-background-color: transparent;" visible="false">
@@ -153,6 +153,15 @@
                <font>
                   <Font size="16.0" />
                </font></Text>
+         </children>
+      </HBox>
+      <HBox fx:id="alertP1" alignment="CENTER" layoutX="817.0" layoutY="495.0" onMouseClicked="#closeAlertP1" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: red; -fx-background-radius: 10px 0px 0px 10px;" visible="false">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #fff;" text="you cant buy this amount" wrappingWidth="200.19854736328125">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
          </children>
       </HBox>
    </children>

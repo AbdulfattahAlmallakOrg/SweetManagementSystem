@@ -45,14 +45,17 @@ public class ProductCardController implements Initializable {
     private int quantityNum;
     private int currentquantity;
     private HBox alert;
+    private HBox alert2;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
 
     }
 
-    public void setData(Product product, HBox com) {
+    public void setData(Product product, HBox com,HBox com2) {
         alert=com;
+        alert2=com2;
         this.thisProduct=product;
         quantityNum=product.getQuantity();
         makeDataApplayed();
@@ -61,8 +64,8 @@ public class ProductCardController implements Initializable {
     private void makeDataApplayed() {
         Name.setText(thisProduct.getName());
         Price.setText(thisProduct.getPrice()+" $");
-        quantity.setText(0+"");
-        currentquantity=0;
+        quantity.setText(1+"");
+        currentquantity=1;
         Description.setText(thisProduct.getDescription()+"");
         Image img = new Image(thisProduct.getImage());
         Image.setImage(img);
@@ -74,7 +77,10 @@ public class ProductCardController implements Initializable {
             quantity.setText(currentquantity+"");
         }
         else{
+
             currentquantity-=1;
+            Price.setText(currentquantity*thisProduct.getPrice()+" $");
+
             quantity.setText(currentquantity+"");
         }
     }
@@ -85,22 +91,30 @@ public class ProductCardController implements Initializable {
         }
         else{
             currentquantity+=1;
+            Price.setText(currentquantity*thisProduct.getPrice()+" $");
+
             quantity.setText(currentquantity+"");
         }
     }
     public void buyBtn(){
-        System.out.println(thisProduct.getQuantity());
-        UserOrder o=new UserOrder(thisProduct.getId(),UsersList.currentUser.getUserName(),currentquantity);
-        UserOrderHelper.orders.add(o);
-        thisProduct.setQuantity(quantityNum-currentquantity);
-        quantityNum=thisProduct.getQuantity();
-        currentquantity=0;
-        alert.setVisible(true);
-        quantity.setText(currentquantity+"");
-        System.out.println(thisProduct.getQuantity());
-        for(int i=0;i< UserOrderHelper.orders.size();i++){
-            System.out.println(UserOrderHelper.orders.get(i).getProductId()+" "+UserOrderHelper.orders.get(i).getQuantity());
+
+        if(thisProduct.getQuantity()>=currentquantity) {
+            System.out.println(thisProduct.getQuantity());
+            UserOrder o=new UserOrder(thisProduct.getId(),UsersList.currentUser.getUserName(),currentquantity);
+            UserOrderHelper.orders.add(o);
+            thisProduct.setQuantity(quantityNum - currentquantity);
+            quantityNum=thisProduct.getQuantity();
+            System.out.println("here: "+quantityNum);
+            alert.setVisible(true);
+            currentquantity=1;
+            quantity.setText(currentquantity+"");
+            Price.setText(thisProduct.getPrice()+" $");
         }
+        else {
+            alert2.setVisible(true);
+        }
+        System.out.println(thisProduct.getQuantity());
+
     }
 
 
