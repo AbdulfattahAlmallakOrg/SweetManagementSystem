@@ -2,7 +2,6 @@ package com.example.sweetsystem.clasess;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class Product {
     private static int idCounter = 0;
