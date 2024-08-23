@@ -8,7 +8,7 @@ public class UsersList {
 
 
     public static void fillData(){
-        User u=new Admin("ahmed","osama@gmail.com","ah123","Admin","nablus");
+        User u=new Adminn("ahmed","osama@gmail.com","ah123","Admin","nablus");
         User u2=new Client("osama","osama@gmail.com","1234","Client","nablus");
         User u3=new OwnerAndSupplier("smsm","osama@gmail.com","1234","Owner","nablus");
         User u4=new OwnerAndSupplier("abd","abd@gmail.com","1234","Owner","attil");
@@ -80,7 +80,7 @@ public class UsersList {
             System.out.println("text");
             User user=null;
             if(rolefText.equals("Admin")){
-                user=new Admin(text, emailfText, passwordfText,rolefText,locationfText);
+                user=new Adminn(text, emailfText, passwordfText,rolefText,locationfText);
             }
             else if(rolefText.equals("Client")){
                 user = new Client(text, emailfText, passwordfText,rolefText,locationfText);

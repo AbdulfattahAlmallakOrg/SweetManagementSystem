@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Objects;
 
 public class HelloApplication extends Application {
@@ -40,7 +40,8 @@ public class HelloApplication extends Application {
     }
 
     private static void makeAdmin() {
-
+    Adminn u1=new Adminn("Waleed","W@gmail.com","1","Admin","nablus");
+    UsersList.users.add(u1);
     }
 
     private static void makeOwners() {
