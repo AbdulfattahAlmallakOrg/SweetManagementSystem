@@ -2,15 +2,12 @@ package com.example.sweetsystem.AcceptanceTest;
 
 import com.example.sweetsystem.clasess.Client;
 import com.example.sweetsystem.clasess.ManageAccounrHelper;
-import com.example.sweetsystem.clasess.Recipe;
 import com.example.sweetsystem.clasess.UsersList;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;
-
-import java.util.ArrayList;
 
 @Tag("tag2")
 public class ManageAccountTest {

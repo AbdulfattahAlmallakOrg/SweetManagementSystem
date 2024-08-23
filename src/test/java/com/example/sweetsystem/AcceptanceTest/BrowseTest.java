@@ -27,9 +27,9 @@ public Product x;
     @Then("all posts will appear with there  info")
     public void all_posts_will_appear_with_there_info() {
        if(RecipesList.Recipes.size()!=0){
-           String x=RecipesList.Recipes.get(0).getAllergy().toString();
+           String x2=RecipesList.Recipes.get(0).getAllergy().toString();
 
-           System.out.println("the recipe is : "+x );
+           System.out.println("the recipe is : "+x2 );
 
            Assertions.assertTrue(true);
        }
