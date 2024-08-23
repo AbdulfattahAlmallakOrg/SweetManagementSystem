@@ -47,20 +47,20 @@ public class HelloApplication extends Application {
 
         StoreOwner o1=new StoreOwner("omar","ah@gmail.com","Owner","1234",new ArrayList<String>(),"Nablus");
         o1.addNewProduct("vanilla bean cheesecake", "A creamy vanilla bean cheesecake with a cracker crust and a hint of lemon.", 18, 15);
-        o1.getProducts().get(o1.getProducts().size()-1).setImage("C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\ProductImage5.jpg"); // No image path provided
+        o1.getProducts().get(o1.getProducts().size()-1).setImage("src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\ProductImage5.jpg"); // No image path provided
         Product.products.add(o1.getProducts().get(o1.getProducts().size()-1));
 
 
         o1.addNewProduct("lemon poppy seed loaf", "A moist lemon loaf cake with poppy seeds, drizzled with a sweet lemon glaze.", 12, 20);
-        o1.getProducts().get(o1.getProducts().size()-1).setImage("C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\ProductImage2.jpg"); // No image path provided
+        o1.getProducts().get(o1.getProducts().size()-1).setImage("src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\ProductImage2.jpg"); // No image path provided
         Product.products.add(o1.getProducts().get(o1.getProducts().size()-1));
 
         o1.addNewProduct("red velvet cupcakes", "Classic red velvet cupcakes topped with a rich cream cheese frosting.", 16, 25);
-        o1.getProducts().get(o1.getProducts().size()-1).setImage("C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\ProductImage3.jpg"); // No image path provided
+        o1.getProducts().get(o1.getProducts().size()-1).setImage("src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\ProductImage3.jpg"); // No image path provided
         Product.products.add(o1.getProducts().get(o1.getProducts().size()-1));
 
         o1.addNewProduct("blueberry muffins", "Soft and fluffy blueberry muffins bursting with fresh blueberries.", 10, 30);
-        o1.getProducts().get(o1.getProducts().size()-1).setImage("C:\\Users\\osama\\Desktop\\SweetManagementSystem\\src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\ProductImage4.jpg"); // No image path provided
+        o1.getProducts().get(o1.getProducts().size()-1).setImage("src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\ProductImage4.jpg"); // No image path provided
         Product.products.add(o1.getProducts().get(o1.getProducts().size()-1));
         StoreOwner o2=new StoreOwner("mohammed","mo@gmail.com","Owner","4321",new ArrayList<String>(),"Nablus");o2.addNewProduct("chocolate strawberry cake","The easiest two-layered chocolate strawberry cake topped with chocolate ganache and fresh strawberries.",22,10);
         System.out.println(Product.products.get(0).getImage());

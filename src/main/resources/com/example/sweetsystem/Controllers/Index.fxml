@@ -4,6 +4,8 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
@@ -47,6 +49,11 @@
                   <Font size="22.0" />
                </font>
             </Text>
+            <ImageView fitHeight="283.0" fitWidth="288.0" layoutX="75.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/purple-cute-cake-logo_452453-229.jpg" />
+               </image>
+            </ImageView>
          </children></AnchorPane>
       <Label layoutX="498.0" layoutY="-24.0" text="Label" />
    </children>

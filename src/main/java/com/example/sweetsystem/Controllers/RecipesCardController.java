@@ -46,8 +46,6 @@ public class RecipesCardController {
         recipe=r;
         commentBox=vBox;
         scroll=scrollPane;
-        System.out.println(commentBox);
-        System.out.println(scroll);
         cakeName.setText(r.getName());
         description.setText(r.getDescription());
         fillImage(r);

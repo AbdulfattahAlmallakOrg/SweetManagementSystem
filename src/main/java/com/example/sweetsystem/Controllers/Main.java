@@ -112,15 +112,9 @@ private HBox alertP;
             for(int i=0;i<recipes.size();i++){
                 FXMLLoader fx=new FXMLLoader();
                 fx.setLocation(getClass().getResource("RecipesCard.fxml"));
-
                 HBox card=fx.load();
-
-
                 RecipesCardController controller=fx.getController();
-
-
                 controller.setData(recipes.get(i),commentCont,commentScroll,closeComment);
-
                 recipesCont.getChildren().add(card);
             }
         }
@@ -131,23 +125,11 @@ private HBox alertP;
     private void setProducts() {
         try {
             for (int i=0;i<Product.products.size();i++) {
-                System.out.println("here 1");
                 FXMLLoader fx = new FXMLLoader();
-                System.out.println("here 1");
-
-                fx.setLocation(getClass().getResource("/com/example/sweetsystem/Controllers/ProductCard.fxml"));
-                System.out.println(fx.getLocation());
-
+                fx.setLocation(getClass().getResource("ProductCard.fxml"));
                 AnchorPane card = fx.load();
-                System.out.println("here 1");
-                System.out.println("here2");
-                System.out.println(card.toString());
                 ProductCardController controller = fx.getController();
-                System.out.println("here 1");
-                System.out.println("here2");
                 controller.setData(Product.products.get(i),alertP,alertP1);
-                System.out.println("here 1");
-
                 osamaBox.getChildren().add(card);
             }
          /*   for(int i=0;i<2;i++){
@@ -166,7 +148,6 @@ private HBox alertP;
             }*/
         }
         catch (IOException e) {
-            System.out.println("hereeeeee");
             throw new RuntimeException(e);
         }
     }

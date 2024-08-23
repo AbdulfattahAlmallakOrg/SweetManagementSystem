@@ -13,7 +13,10 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class ProductCardController implements Initializable {
@@ -67,7 +70,17 @@ public class ProductCardController implements Initializable {
         quantity.setText(1+"");
         currentquantity=1;
         Description.setText(thisProduct.getDescription()+"");
-        Image img = new Image(thisProduct.getImage());
+        try {
+            fillImage(thisProduct);
+
+        }catch (Exception e){
+            System.out.println(Arrays.toString(e.getStackTrace()));
+        }
+    }
+
+    private void fillImage(Product thisProduct) throws FileNotFoundException {
+        FileInputStream input = new FileInputStream(thisProduct.getImage());
+        Image img = new Image(input);
         Image.setImage(img);
     }
 
