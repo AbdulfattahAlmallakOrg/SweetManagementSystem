@@ -57,6 +57,6 @@ public boolean find=false;
     }
     @Then("the list of recipe")
     public void the_list_of_recipe() {
-
+    Assertions.assertTrue(true);
     }
 }

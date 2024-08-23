@@ -20,7 +20,7 @@ public class ManageAccountTest {
         UsersList.fillData();
         UsersList.login();
         Client u=(Client) UsersList.currentUser;
-        ArrayList<Recipe>r=u.getRecipes();
+
     }
     @When("the user click on editBtn amd all field empty")
     public void the_user_click_on_edit_btn_amd_all_field_empty() {
