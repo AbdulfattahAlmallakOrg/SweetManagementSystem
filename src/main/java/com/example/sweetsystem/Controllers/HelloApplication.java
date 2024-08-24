@@ -63,6 +63,7 @@ public class HelloApplication extends Application {
         o1.addNewProduct("blueberry muffins", "Soft and fluffy blueberry muffins bursting with fresh blueberries.", 10, 30);
         o1.getProducts().get(o1.getProducts().size()-1).setImage("src\\main\\resources\\com\\example\\sweetsystem\\Images\\cakes\\ProductImage4.jpg"); // No image path provided
         Product.products.add(o1.getProducts().get(o1.getProducts().size()-1));
+        UsersList.users.add(o1);
         StoreOwner o2=new StoreOwner("mohammed","mo@gmail.com","Owner","4321",new ArrayList<String>(),"Nablus");o2.addNewProduct("chocolate strawberry cake","The easiest two-layered chocolate strawberry cake topped with chocolate ganache and fresh strawberries.",22,10);
         System.out.println(Product.products.get(0).getImage());
 

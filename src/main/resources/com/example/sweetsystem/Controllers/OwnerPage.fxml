@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweetsystem.Controllers.OwnerPageController">
+   <children>
+      <ScrollPane layoutX="135.0" layoutY="99.0" prefHeight="440.0" prefWidth="679.0">
+         <content>
+            <VBox fx:id="UsersOrders" prefHeight="200.0" prefWidth="100.0" />
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER_LEFT" layoutX="135.0" layoutY="61.0" prefHeight="41.0" prefWidth="679.0" style="-fx-background-color: #80a3ff;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Img" textAlignment="CENTER" wrappingWidth="64.98760986328125" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Text>
+            <Line endX="-90.7598876953125" endY="-968.1342163085938" startX="-90.7598876953125" startY="-930.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Line>
+            <Line endX="-90.7598876953125" endY="-968.1342163085938" startX="-90.7598876953125" startY="-930.0" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Information" textAlignment="CENTER" wrappingWidth="268.9877166748047">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Line endX="-90.7598876953125" endY="-968.1342163085938" startX="-90.7598876953125" startY="-930.0" strokeWidth="2.0" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" textAlignment="CENTER" wrappingWidth="150.9877166748047">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Line endX="-90.7598876953125" endY="-968.1342163085938" startX="-90.7598876953125" startY="-930.0" strokeWidth="2.0" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Adminstartion" textAlignment="CENTER" wrappingWidth="110.98770904541016">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

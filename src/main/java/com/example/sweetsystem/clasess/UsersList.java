@@ -79,8 +79,8 @@ public class UsersList {
         if(UsersList.search(text)==-1) {
             System.out.println("text");
             User user=null;
-            if(rolefText.equals("Admin")){
-                user=new Adminn(text, emailfText, passwordfText,rolefText,locationfText);
+            if(rolefText.equals("Owner")){
+                user=new StoreOwner(text, emailfText, rolefText,passwordfText,new ArrayList<String>(),locationfText);
             }
             else if(rolefText.equals("Client")){
                 user = new Client(text, emailfText, passwordfText,rolefText,locationfText);

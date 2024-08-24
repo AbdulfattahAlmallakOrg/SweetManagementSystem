@@ -113,7 +113,7 @@ public class ProductCardController implements Initializable {
 
         if(thisProduct.getQuantity()>=currentquantity) {
             System.out.println(thisProduct.getQuantity());
-            UserOrder o=new UserOrder(thisProduct.getId(),UsersList.currentUser.getUserName(),currentquantity);
+            UserOrder o=new UserOrder(thisProduct.getId(),UsersList.currentUser.getUserName(),currentquantity,thisProduct.getOwnerID(),"Pinding",thisProduct.getPrice());
             UserOrderHelper.orders.add(o);
             thisProduct.setQuantity(quantityNum - currentquantity);
             quantityNum=thisProduct.getQuantity();

@@ -46,7 +46,7 @@ public void loginBtnClick() throws IOException {
                   goToPrimaryPage("Admin");
               }
               else{
-                  goToPrimaryPage("Sup");
+                  goToPrimaryPage("OwnerPage");
               }
             }
             else{

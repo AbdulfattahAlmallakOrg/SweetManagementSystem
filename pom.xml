@@ -20,8 +20,6 @@
 
             <sonar.exclusions>src/main/java/com/example/sweetsystem/Controllers/**</sonar.exclusions>
 
-
-
     </properties>
 
     <dependencies>
