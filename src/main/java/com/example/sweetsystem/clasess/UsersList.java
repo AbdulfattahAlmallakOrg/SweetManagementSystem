@@ -85,6 +85,10 @@ public class UsersList {
             else if(rolefText.equals("Client")){
                 user = new Client(text, emailfText, passwordfText,rolefText,locationfText);
             }
+            else if(rolefText.equals("Admin")){
+                user=new Adminn(text, emailfText, rolefText,passwordfText,locationfText);
+
+            }
 
             UsersList.users.add(user);
             return true;
