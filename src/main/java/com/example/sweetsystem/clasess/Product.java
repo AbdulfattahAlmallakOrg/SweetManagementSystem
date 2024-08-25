@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class Product {
     private static int idCounter = 0;
     private final int id;
-    public static ArrayList<Product> products=new ArrayList<Product>();
+    public static final ArrayList<Product> products=new ArrayList<Product>();
     private final int ownerID;
     private String name;
     private String description;
