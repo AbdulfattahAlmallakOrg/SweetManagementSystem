@@ -1,6 +1,4 @@
 package com.example.sweetsystem.AcceptanceTest;
-
-import com.example.sweetsystem.clasess.Client;
 import com.example.sweetsystem.clasess.ManageAccounrHelper;
 import com.example.sweetsystem.clasess.UsersList;
 import io.cucumber.java.en.Given;
