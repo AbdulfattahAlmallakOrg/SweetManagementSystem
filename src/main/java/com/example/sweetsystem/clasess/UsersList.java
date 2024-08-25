@@ -80,7 +80,7 @@ public class UsersList {
             System.out.println("text");
             User user=null;
             if(rolefText.equals("Owner")){
-                user=new StoreOwner(text, emailfText, rolefText,passwordfText,new ArrayList<String>(),locationfText);
+                user=new StoreOwner(text, emailfText, rolefText,passwordfText,new ArrayList<>(),locationfText);
             }
             else if(rolefText.equals("Client")){
                 user = new Client(text, emailfText, passwordfText,rolefText,locationfText);

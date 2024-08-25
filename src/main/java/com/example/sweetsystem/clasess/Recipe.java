@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Recipe {
 
-    private int id;
     public static int count=0;
     private String Name;
     private String Image;
@@ -23,7 +22,6 @@ public class Recipe {
 
     private void fillId() {
         count ++;
-        id=count;
     }
 
     private void fillAllergy(String a) {

@@ -16,7 +16,6 @@ public class ManageAccountTest {
     public void the_user_in_profile_page() {
         UsersList.fillData();
         UsersList.login();
-        Client u=(Client) UsersList.currentUser;
 
     }
     @When("the user click on editBtn amd all field empty")
